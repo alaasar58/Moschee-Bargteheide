@@ -144,6 +144,16 @@
             : ""
         }
         <p class="entry-card__text">${S.escapeHtml(S.field(item.description))}</p>
+        <div class="entry-card__foot">
+          ${S.icsButton({
+            uid: item.id,
+            date: item.date,
+            time: item.time,
+            title: S.field(item.title),
+            location: place,
+            description: S.field(item.description)
+          })}
+        </div>
       </div>
     </article>`;
   }

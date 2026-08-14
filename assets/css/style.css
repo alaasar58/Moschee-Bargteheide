@@ -29,14 +29,42 @@
   --shadow: 0 1px 2px rgba(24, 60, 60, 0.04), 0 10px 28px rgba(24, 60, 60, 0.07);
   --shadow-sm: 0 1px 2px rgba(24, 60, 60, 0.06);
 
+  --accent: #17706a;
+  --heading: #1a6f68;
+  --notice-bg: #fdf6e7;
+  --notice-text: #7a6224;
+  --notice-border: #eddfbe;
+
   --max: 1120px;
   --header-h: 66px;
 
   --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
 }
 
+/* Dunkler Modus – gilt nur, wenn er ausdruecklich gewaehlt wurde,
+   oder bei der Einstellung "Automatisch" zusammen mit dem Geraet.
+   Ohne Wahl bleibt die Website hell. */
+:root[data-theme="dark"] {
+  --bg: #14201f;
+  --surface: #1b2828;
+  --surface-2: #22302f;
+  --text: #eef4f3;
+  --text-soft: #a9bcbd;
+  --border: #2f403f;
+  --petrol-100: #1e3a38;
+  --sand-100: #2a2519;
+  --sky-100: #1d2f36;
+  --accent: #7fd6cb;
+  --heading: #eef4f3;
+  --notice-bg: #2a2418;
+  --notice-text: #e5d5b4;
+  --notice-border: #3a3222;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root[data-theme="auto"] {
     --bg: #14201f;
     --surface: #1b2828;
     --surface-2: #22302f;
@@ -46,6 +74,11 @@
     --petrol-100: #1e3a38;
     --sand-100: #2a2519;
     --sky-100: #1d2f36;
+    --accent: #7fd6cb;
+    --heading: #eef4f3;
+    --notice-bg: #2a2418;
+    --notice-text: #e5d5b4;
+    --notice-border: #3a3222;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.3);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
   }
@@ -86,7 +119,7 @@ img {
 }
 
 a {
-  color: var(--petrol-700);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -210,7 +243,7 @@ p {
   width: 34px;
   height: 34px;
   flex: 0 0 34px;
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 
 .brand__text {
@@ -261,7 +294,7 @@ p {
   text-decoration: none;
 }
 .nav__link[aria-current="page"] {
-  color: var(--petrol-700);
+  color: var(--accent);
   font-weight: 600;
   background: var(--petrol-100);
 }
@@ -337,7 +370,7 @@ p {
 }
 .lang__option[aria-current="true"] {
   font-weight: 700;
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 .lang__flag {
   font-size: 1.15rem;
@@ -370,7 +403,7 @@ p {
 .mobile-nav__list a:hover,
 .mobile-nav__list a[aria-current="page"] {
   background: var(--petrol-100);
-  color: var(--petrol-700);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -390,34 +423,45 @@ p {
   }
 }
 
-/* Sehr schmale Telefone */
-@media (max-width: 360px) {
-  .container {
-    padding-inline: 14px;
-  }
-  .brand__title,
-  .brand__sub {
-    max-width: 38vw;
+/* Auf schmalen Telefonen genuegt die Flagge – das Sprachkuerzel entfaellt,
+   damit Farbmodus-, Sprach- und Menue-Schaltflaeche nebeneinander passen. */
+@media (max-width: 430px) {
+  .lang__current {
+    display: none;
   }
   .icon-btn {
     padding: 8px;
+    gap: 4px;
+  }
+}
+
+/* Sehr schmale Telefone */
+@media (max-width: 360px) {
+  .container {
+    padding-inline: 12px;
+  }
+  .brand__title,
+  .brand__sub {
+    max-width: 30vw;
+  }
+  .header-inner {
+    gap: 8px;
+  }
+  .header-actions {
+    gap: 6px;
+  }
+  .icon-btn {
+    padding: 8px 7px;
   }
 }
 
 /* ---------- Hinweisbanner ---------- */
 
 .notice-bar {
-  background: var(--sand-100);
-  color: #7a6224;
+  background: var(--notice-bg);
+  color: var(--notice-text);
   font-size: 0.85rem;
-  border-bottom: 1px solid var(--sand-200);
-}
-@media (prefers-color-scheme: dark) {
-  .notice-bar {
-    background: #2a2418;
-    color: #e5d5b4;
-    border-bottom-color: #3a3222;
-  }
+  border-bottom: 1px solid var(--notice-border);
 }
 .notice-bar .container {
   padding-block: 8px;
@@ -461,15 +505,15 @@ p {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold-600);
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid var(--sand-200);
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  border: 1px solid var(--border);
   padding: 5px 14px;
   border-radius: 999px;
   margin-bottom: 14px;
 }
 
 .hero h1 {
-  color: var(--petrol-900);
+  color: var(--heading);
   margin-bottom: 10px;
   max-width: 18ch;
 }
@@ -551,13 +595,19 @@ p {
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.75);
-  border-color: var(--sand-200);
-  color: var(--petrol-900);
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  border-color: var(--border);
+  color: var(--heading);
 }
 .btn--ghost:hover {
-  background: #fff;
+  background: var(--surface);
   border-color: var(--gold-500);
+}
+
+.btn--small {
+  padding: 7px 14px;
+  min-height: 36px;
+  font-size: 0.85rem;
 }
 
 .btn--outline {
@@ -567,7 +617,7 @@ p {
 }
 .btn--outline:hover {
   border-color: var(--petrol-500);
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 
 /* ---------- Gebetszeiten ---------- */
@@ -605,7 +655,7 @@ p {
 .next-prayer__name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 
 .next-prayer__time {
@@ -684,11 +734,11 @@ p {
   box-shadow: 0 0 0 3px rgba(47, 156, 145, 0.18), 0 8px 20px rgba(31, 128, 120, 0.12);
 }
 .time-cell[data-next="true"] .time-cell__name {
-  color: var(--petrol-700);
+  color: var(--accent);
   font-weight: 600;
 }
 .time-cell[data-next="true"] .time-cell__value {
-  color: var(--petrol-900);
+  color: var(--heading);
 }
 .time-cell__name {
   font-size: 0.8rem;
@@ -734,7 +784,7 @@ p {
   font-size: 1.1rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 
 .jumua-box[data-today="true"] {
@@ -743,7 +793,7 @@ p {
   padding: 16px 20px;
 }
 .jumua-box[data-today="true"] .jumua-box__label {
-  color: var(--petrol-900);
+  color: var(--heading);
   font-size: 1.05rem;
 }
 .jumua-box[data-today="true"] .jumua-box__time {
@@ -877,16 +927,9 @@ table.month-table {
   text-transform: uppercase;
   padding: 2px 8px;
   border-radius: 999px;
-  background: var(--sand-100);
-  color: #6b5122;
-  border: 1px solid #e8dcc6;
-}
-@media (prefers-color-scheme: dark) {
-  .badge {
-    background: #2a2418;
-    color: #e5d5b4;
-    border-color: #3a3222;
-  }
+  background: var(--notice-bg);
+  color: var(--notice-text);
+  border: 1px solid var(--notice-border);
 }
 
 .detail-list {
@@ -1023,10 +1066,10 @@ table.month-table {
   padding-block: 36px 22px;
 }
 .site-footer a {
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 .site-footer h3 {
-  color: var(--petrol-700);
+  color: var(--accent);
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1085,7 +1128,7 @@ table.month-table {
 }
 .date-stack__main {
   font-weight: 600;
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 .date-stack__sub {
   font-size: 0.78rem;
@@ -1106,64 +1149,39 @@ table.month-table {
 }
 .hijri-line__value {
   font-weight: 600;
-  color: var(--petrol-700);
+  color: var(--accent);
   background: var(--petrol-100);
   border-radius: 999px;
   padding: 3px 12px;
 }
 
-/* Countdown bis Ramadan */
-.countdown-card {
+/* Ramadan: Countdown bis Iftar oder Sahur */
+.ramadan-card {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  background: linear-gradient(120deg, var(--sky-100), var(--sand-100));
-  border: 1px solid var(--sand-200);
+  background: linear-gradient(120deg, var(--sky-100), var(--petrol-100));
+  border: 1px solid var(--petrol-100);
   border-radius: var(--radius);
   padding: 18px 22px;
 }
-.countdown-card__label {
+.ramadan-card__label {
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--gold-600);
 }
-.countdown-card__title {
-  font-size: 1.3rem;
+.ramadan-card__title {
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--petrol-900);
-  line-height: 1.25;
-}
-.countdown-card__date {
-  font-size: 0.9rem;
-  color: var(--text-soft);
-}
-.countdown-card__value {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-}
-.countdown-card__number {
-  font-size: 2.6rem;
-  font-weight: 700;
-  color: var(--petrol-700);
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-}
-.countdown-card__unit {
-  font-size: 0.9rem;
-  color: var(--text-soft);
+  color: var(--heading);
+  line-height: 1.3;
 }
 
-@media (prefers-color-scheme: dark) {
-  .countdown-card {
-    background: linear-gradient(120deg, var(--surface-2), var(--surface));
-  }
-  .countdown-card__title {
-    color: var(--text);
-  }
+.day-list__actions {
+  margin-top: 8px;
 }
 
 /* Liste der besonderen Tage */
@@ -1191,7 +1209,7 @@ table.month-table {
 }
 .day-list__name {
   font-weight: 600;
-  color: var(--petrol-900);
+  color: var(--heading);
 }
 .day-list__date {
   font-size: 0.88rem;
@@ -1210,7 +1228,7 @@ table.month-table {
 
 .day-list__badge {
   font-size: 0.82rem;
-  color: var(--petrol-700);
+  color: var(--accent);
   background: var(--petrol-100);
   border-radius: 999px;
   padding: 4px 12px;
@@ -1224,12 +1242,6 @@ table.month-table {
   margin-top: 12px;
   font-size: 0.83rem;
   color: var(--text-soft);
-}
-
-@media (prefers-color-scheme: dark) {
-  .day-list__name {
-    color: var(--text);
-  }
 }
 
 /* ---------- Online-Beitritt mit Unterschrift ---------- */
@@ -1294,7 +1306,7 @@ table.month-table {
 .form-status {
   margin-top: 14px;
   font-size: 0.92rem;
-  color: var(--petrol-700);
+  color: var(--accent);
 }
 
 
@@ -1350,10 +1362,13 @@ body[dir="rtl"] .prose {
     visibility: hidden;
   }
   .application-doc,
-  .application-doc * {
+  .application-doc *,
+  .print-doc,
+  .print-doc * {
     visibility: visible;
   }
-  .application-doc {
+  .application-doc,
+  .print-doc {
     position: absolute;
     inset-inline-start: 0;
     top: 0;

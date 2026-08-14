@@ -38,7 +38,8 @@
     "time": "Ora",
     "place": "Vendi",
     "skip": "Kalo te përmbajtja",
-    "oclock": ""
+    "oclock": "",
+    "addToCalendar": "Shto në kalendar"
   },
   "banner": {
     "demo": "Kjo faqe është një draft për prezantim. Të dhënat ende të pakonfirmuara mund të ndryshohen në çdo kohë."
@@ -207,7 +208,8 @@
     "imprint": "Impressum",
     "privacy": "Mbrojtja e të dhënave",
     "rights": "Të gjitha të drejtat e rezervuara.",
-    "prayerSource": "Kohët e namazit përmes Mawaqit"
+    "prayerSource": "Kohët e namazit përmes Mawaqit",
+    "credit": "Dizajni dhe realizimi"
   },
   "legal": {
     "imprintTitle": "Impressum",
@@ -246,5 +248,28 @@
     "arafah": "Dita kur haxhinjtë qëndrojnë në Arafat. Kush nuk është në haxh, shpesh agjëron këtë ditë.",
     "eidAdha": "Kurban Bajrami në përfundim të haxhit: namazi i Bajramit dhe kurbani, mishi i të cilit ndahet.",
     "hajj": "Pelegrinazhi në Mekë – obligim një herë në jetë për atë që ka mundësi."
+  },
+  "theme": {
+    "label": "Modaliteti i ngjyrave",
+    "light": "E ndritshme",
+    "dark": "E errët",
+    "auto": "Automatik (pajisja)"
+  },
+  "ramadan": {
+    "title": "Ramazani",
+    "intro": "Kohët e imsakut dhe iftarit për tërë muajin – sipas kohëve të namazit të xhamisë.",
+    "untilIftar": "Deri në iftar",
+    "untilSahur": "Deri në imsak",
+    "iftar": "Iftari (Akshami)",
+    "sahur": "Syfyri deri (Imsaku)",
+    "imsakiyaTitle": "Imsakija – Ramazani {year}",
+    "day": "Ramazani",
+    "fajr": "Sabahu",
+    "print": "Printo imsakijen",
+    "linkTitle": "Faqja e Ramazanit",
+    "linkText": "Imsakija, kohët e iftarit dhe syfyrit për tërë muajin.",
+    "linkCta": "Te faqja e Ramazanit",
+    "notYet": "Ramazani pritet të fillojë më {date}. Imsakija shfaqet këtu sapo të jenë në dispozicion kohët e namazit për atë periudhë.",
+    "unavailable": "Për Ramazanin ende nuk ka kohë namazi. Sapo Mawaqit t'i publikojë, imsakija shfaqet automatikisht këtu."
   }
 }

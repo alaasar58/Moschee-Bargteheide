@@ -1,0 +1,31 @@
+{
+  "name": "Islamische Gemeinde Bargteheide e.V.",
+  "short_name": "Moschee Bargteheide",
+  "description": "Gebetszeiten, Kurse, Neuigkeiten und Veranstaltungen der Moschee Bargteheide.",
+  "lang": "de",
+  "dir": "auto",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fbfdfd",
+  "theme_color": "#e8f4fa",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Gebetszeiten",
+      "url": "gebetszeiten.html"
+    },
+    {
+      "name": "Ramadan",
+      "url": "ramadan.html"
+    }
+  ]
+}

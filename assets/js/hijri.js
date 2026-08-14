@@ -160,6 +160,12 @@
                 entry.confirmed ? "" : S.t("islamic.approx")
               )}</span>
               <span class="day-list__text">${S.escapeHtml(S.t(`islamicInfo.${entry.id}`, ""))}</span>
+              <span class="day-list__actions">${S.icsButton({
+                uid: `${entry.id}-${entry.iso}`,
+                date: entry.iso,
+                title: S.t(`islamic.${entry.id}`),
+                description: S.t(`islamicInfo.${entry.id}`, "")
+              })}</span>
             </div>
             ${badge}
           </li>`;

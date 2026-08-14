@@ -44,5 +44,10 @@
     "embed": "https://www.google.com/maps?q=Rudolf-Diesel-Stra%C3%9Fe%204,%2022941%20Bargteheide&output=embed",
     "route": "https://www.google.com/maps/dir/?api=1&destination=Rudolf-Diesel-Stra%C3%9Fe+4,+22941+Bargteheide"
   },
-  "demoNotice": true
+  "demoNotice": true,
+  "_credit_hinweis": "Wer die Website erstellt hat. Erscheint in der Fusszeile. Feld 'name' leeren, wenn die Angabe entfallen soll.",
+  "credit": {
+    "name": "Mohammed Alaa Sarhan",
+    "url": "mailto:Alaasarhan@web.de"
+  }
 }

@@ -38,7 +38,8 @@
     "time": "Uhrzeit",
     "place": "Ort",
     "skip": "Zum Inhalt springen",
-    "oclock": "Uhr"
+    "oclock": "Uhr",
+    "addToCalendar": "Zum Kalender"
   },
   "banner": {
     "demo": "Diese Website ist ein Entwurf zur Vorstellung. Noch nicht bestätigte Angaben lassen sich jederzeit anpassen."
@@ -207,7 +208,8 @@
     "imprint": "Impressum",
     "privacy": "Datenschutz",
     "rights": "Alle Rechte vorbehalten.",
-    "prayerSource": "Gebetszeiten über Mawaqit"
+    "prayerSource": "Gebetszeiten über Mawaqit",
+    "credit": "Gestaltung und Umsetzung"
   },
   "legal": {
     "imprintTitle": "Impressum",
@@ -246,5 +248,28 @@
     "arafah": "Der Tag, an dem die Pilger auf der Ebene von Arafat stehen. Wer nicht pilgert, fastet an diesem Tag häufig.",
     "eidAdha": "Das Opferfest zum Abschluss der Pilgerfahrt mit Festgebet und Opfer, dessen Fleisch geteilt wird.",
     "hajj": "Die Pilgerfahrt nach Mekka – einmal im Leben Pflicht für jeden, der dazu in der Lage ist."
+  },
+  "theme": {
+    "label": "Farbmodus",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "auto": "Automatisch (Gerät)"
+  },
+  "ramadan": {
+    "title": "Ramadan",
+    "intro": "Imsak- und Iftar-Zeiten für den ganzen Monat – nach den Gebetszeiten der Moschee.",
+    "untilIftar": "Bis zum Iftar",
+    "untilSahur": "Bis zum Ende des Sahur (Imsak)",
+    "iftar": "Iftar (Maghrib)",
+    "sahur": "Sahur bis (Imsak)",
+    "imsakiyaTitle": "Imsakiya – Ramadan {year}",
+    "day": "Ramadan",
+    "fajr": "Fajr",
+    "print": "Imsakiya drucken",
+    "linkTitle": "Ramadan-Seite",
+    "linkText": "Imsakiya, Iftar- und Sahur-Zeiten für den ganzen Monat.",
+    "linkCta": "Zur Ramadan-Seite",
+    "notYet": "Der Ramadan beginnt voraussichtlich am {date}. Die Imsakiya erscheint hier, sobald die Gebetszeiten für diesen Zeitraum vorliegen.",
+    "unavailable": "Für den Ramadan liegen noch keine Gebetszeiten vor. Sobald Mawaqit sie veröffentlicht, erscheint die Imsakiya hier automatisch."
   }
 }

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,9 +8,17 @@
       name="description"
       content="Gebetszeiten der Moschee Bargteheide: Fajr, Shurūq, Dhuhr, Asr, Maghrib, Isha, Imsak, Iqāma und Freitagsgebet. Quelle: Mawaqit."
     />
-    <meta name="theme-color" content="#14503f" />
+    <meta name="theme-color" content="#e8f4fa" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      // Gespeicherten Farbmodus setzen, bevor die Seite gezeichnet wird.
+      try {
+        var t = localStorage.getItem("mb-theme");
+        document.documentElement.setAttribute("data-theme", t === "dark" || t === "auto" ? t : "light");
+      } catch (e) {}
+    </script>
   </head>
   <body data-page-title-key="nav.prayer">
     <a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
@@ -44,6 +52,9 @@
           <h2 data-i18n="islamic.title">Besondere Tage im Islam</h2>
           <p data-i18n="islamic.intro"></p>
           <div data-islamic-days></div>
+          <p style="margin-top: 18px">
+            <a class="btn btn--outline" href="ramadan.html" data-i18n="ramadan.linkCta">Zur Ramadan-Seite</a>
+          </p>
         </div>
       </section>
     </main>

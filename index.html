@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de">
+<html lang="de" data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,9 +8,17 @@
       name="description"
       content="Islamische Gemeinde Bargteheide e.V. – Moschee Bargteheide, Rudolf-Diesel-Straße 4, 22941 Bargteheide. Gebetszeiten, Kurse, Neuigkeiten und Veranstaltungen."
     />
-    <meta name="theme-color" content="#14503f" />
+    <meta name="theme-color" content="#e8f4fa" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      // Gespeicherten Farbmodus setzen, bevor die Seite gezeichnet wird.
+      try {
+        var t = localStorage.getItem("mb-theme");
+        document.documentElement.setAttribute("data-theme", t === "dark" || t === "auto" ? t : "light");
+      } catch (e) {}
+    </script>
   </head>
   <body data-page-title-key="nav.home">
     <a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
@@ -47,6 +55,12 @@
             <span class="hijri-line__value" data-hijri-date></span>
           </p>
           <div data-prayer="compact"></div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div data-ramadan-box></div>
         </div>
       </section>
 
@@ -111,6 +125,7 @@
     <script src="assets/js/pages.js"></script>
     <script src="assets/js/prayer.js"></script>
     <script src="assets/js/hijri.js"></script>
+    <script src="assets/js/ramadan.js"></script>
     <script src="assets/js/content.js"></script>
   </body>
 </html>

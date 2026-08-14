@@ -22,6 +22,7 @@ Programmierkenntnisse für die Pflege nötig. Inhalte liegen als JSON-Dateien im
 | Kontakt | `kontakt.html` | Adresse, Karte, „Route starten“, Telefon/E-Mail (sobald bestätigt) |
 | Mitglied werden | `mitglied-werden.html` | Ablauf der Mitgliedschaft |
 | Spenden | `spenden.html` | Spendeninformationen und Bankverbindung |
+| Ramadan | `ramadan.html` | Imsakiya für den ganzen Monat sowie Countdown bis Iftar bzw. Sahur |
 | Impressum / Datenschutz | `impressum.html`, `datenschutz.html` | Rechtliche Seiten – von der Gemeinde zu vervollständigen |
 
 Alle Seiten, das Menü, die Fußzeile und die Beschriftungen der Gebetszeiten sind in allen
@@ -57,6 +58,28 @@ Hinweis mit Link zu Mawaqit an – es werden **niemals erfundene Zeiten** angeze
 
 Übernommen werden: Fajr, Shurūq, Dhuhr, Asr, Maghrib, Isha, Imsak (falls in Mawaqit gepflegt),
 Iqāma-Zeiten (falls hinterlegt) und die Zeit(en) des Freitagsgebets.
+
+---
+
+## 2b. Farbmodus, App und Kalender
+
+**Farbmodus.** Oben rechts lässt sich zwischen **Hell**, **Dunkel** und **Automatisch
+(Gerät)** wählen; die Auswahl bleibt im Browser gespeichert. Ohne Auswahl erscheint die
+Website **immer hell** – der Dunkelmodus des Handys wirkt nur bei „Automatisch“.
+Zum Vorführen kann der Modus auch angehängt werden: `?theme=dark`.
+
+**Ramadan.** `ramadan.html` zeigt die Imsakiya des ganzen Monats (Imsak, Fajr, Iftar) und
+lässt sich ausdrucken. Auf der Startseite erscheint ab 30 Tagen vor Ramadan ein Hinweis,
+im Ramadan selbst ein Countdown bis zum Iftar bzw. bis zum Ende des Sahur. Alle Zeiten
+stammen aus denselben Mawaqit-Daten wie die Gebetszeiten.
+
+**App auf dem Handy.** Über `manifest.webmanifest` und `sw.js` lässt sich die Website zum
+Startbildschirm hinzufügen; die Gebetszeiten funktionieren dann auch **ohne Internet**
+(zuletzt geladener Stand). Ein eigenes App-Symbol in 192 und 512 Pixel kann die Gemeinde
+nachreichen – es wird dann in `manifest.webmanifest` unter `icons` ergänzt.
+
+**Kalender.** Bei Veranstaltungen und bei den besonderen Tagen gibt es die Schaltfläche
+„Zum Kalender“; sie erzeugt eine `.ics`-Datei für Handy- und Computerkalender.
 
 ---
 
@@ -125,6 +148,8 @@ erscheinen erst auf der Website, sobald sie in `content/settings.json` eingetrag
 * Bankverbindung für Spenden
 * Mitgliedsbeitrag
 * Angaben in Impressum und Datenschutz (Vorstand, Registereintrag, Hosting-Anbieter)
+* Der Hinweis „Gestaltung und Umsetzung“ in der Fußzeile steht in `content/settings.json`
+  unter `credit` und kann dort geändert oder entfernt werden.
 * **Kurse** – die Kursliste wird erst nach Vorlage der offiziellen Übersicht der Gemeinde
   eingetragen. Bis dahin zeigt die Kursseite einen Hinweis; es werden keine Kurse erfunden.
 

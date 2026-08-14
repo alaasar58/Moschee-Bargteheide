@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Impressum – Islamische Gemeinde Bargteheide e.V.</title>
-    <meta name="robots" content="noindex" />
+    <title>Ramadan – Islamische Gemeinde Bargteheide e.V.</title>
+    <meta name="description" content="Imsakiya der Moschee Bargteheide: Imsak-, Fajr- und Iftar-Zeiten für den ganzen Ramadan." />
     <meta name="theme-color" content="#e8f4fa" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="manifest.webmanifest" />
@@ -17,38 +17,30 @@
       } catch (e) {}
     </script>
   </head>
-  <body data-page-title-key="legal.imprintTitle">
+  <body data-page-title-key="ramadan.title">
     <a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
     <div data-site-header></div>
 
     <main id="main">
       <section class="page-head">
         <div class="container">
-          <h1 data-i18n="legal.imprintTitle">Impressum</h1>
+          <h1 data-i18n="ramadan.title">Ramadan</h1>
+          <p data-i18n="ramadan.intro">Imsak- und Iftar-Zeiten für den ganzen Monat.</p>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div data-ramadan-box></div>
         </div>
       </section>
 
       <section class="section">
-        <div class="container prose">
-          <p class="info-box" data-i18n="legal.placeholder"></p>
-
-          <h2>Angaben gemäß § 5 DDG</h2>
-          <p>
-            Islamische Gemeinde Bargteheide e.V.<br />
-            <span data-address>Rudolf-Diesel-Straße 4, 22941 Bargteheide</span>
+        <div class="container">
+          <div data-imsakiya></div>
+          <p style="margin-top: 20px; font-size: 0.88rem; color: var(--text-soft)" data-i18n="prayer.note">
+            Alle Zeiten in Ortszeit (Europe/Berlin).
           </p>
-
-          <h2>Vertreten durch</h2>
-          <p>[Vorstand – wird von der Gemeinde ergänzt]</p>
-
-          <h2>Kontakt</h2>
-          <div data-contact-details></div>
-
-          <h2>Registereintrag</h2>
-          <p>[Vereinsregister und Registernummer – wird von der Gemeinde ergänzt]</p>
-
-          <h2>Verantwortlich für den Inhalt</h2>
-          <p>[Name und Anschrift – wird von der Gemeinde ergänzt]</p>
         </div>
       </section>
     </main>
@@ -57,5 +49,6 @@
 
     <script src="assets/js/site.js"></script>
     <script src="assets/js/pages.js"></script>
+    <script src="assets/js/ramadan.js"></script>
   </body>
 </html>

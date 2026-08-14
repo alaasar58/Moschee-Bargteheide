@@ -38,7 +38,8 @@
     "time": "Saat",
     "place": "Yer",
     "skip": "İçeriğe geç",
-    "oclock": ""
+    "oclock": "",
+    "addToCalendar": "Takvime ekle"
   },
   "banner": {
     "demo": "Bu web sitesi tanıtım amaçlı bir taslaktır. Henüz onaylanmamış bilgiler istenildiği zaman düzenlenebilir."
@@ -207,7 +208,8 @@
     "imprint": "Künye (Impressum)",
     "privacy": "Gizlilik",
     "rights": "Tüm hakları saklıdır.",
-    "prayerSource": "Namaz vakitleri Mawaqit üzerinden"
+    "prayerSource": "Namaz vakitleri Mawaqit üzerinden",
+    "credit": "Tasarım ve uygulama"
   },
   "legal": {
     "imprintTitle": "Künye (Impressum)",
@@ -246,5 +248,28 @@
     "arafah": "Hacıların Arafat'ta vakfeye durduğu gün. Hacca gitmeyenler bu gün çoğunlukla oruç tutar.",
     "eidAdha": "Haccın tamamlanmasıyla kutlanan Kurban Bayramı: bayram namazı ve eti paylaşılan kurban.",
     "hajj": "Mekke'ye hac yolculuğu – gücü yetene ömürde bir kez farzdır."
+  },
+  "theme": {
+    "label": "Renk modu",
+    "light": "Açık",
+    "dark": "Koyu",
+    "auto": "Otomatik (cihaz)"
+  },
+  "ramadan": {
+    "title": "Ramazan",
+    "intro": "Ay boyunca imsak ve iftar vakitleri – caminin namaz vakitlerine göre.",
+    "untilIftar": "İftara kalan",
+    "untilSahur": "İmsak vaktine kalan",
+    "iftar": "İftar (Akşam)",
+    "sahur": "Sahur bitişi (İmsak)",
+    "imsakiyaTitle": "İmsakiye – Ramazan {year}",
+    "day": "Ramazan",
+    "fajr": "Sabah",
+    "print": "İmsakiyeyi yazdır",
+    "linkTitle": "Ramazan sayfası",
+    "linkText": "Ay boyunca imsakiye, iftar ve sahur vakitleri.",
+    "linkCta": "Ramazan sayfasına",
+    "notYet": "Ramazan tahminen {date} tarihinde başlıyor. İmsakiye, bu döneme ait namaz vakitleri geldiğinde burada görünür.",
+    "unavailable": "Ramazan için henüz namaz vakitleri bulunmuyor. Mawaqit yayınladığında imsakiye otomatik olarak burada görünecektir."
   }
 }

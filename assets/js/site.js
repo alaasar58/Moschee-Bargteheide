@@ -8,6 +8,8 @@
   const LANGS = ["de", "tr", "ar", "sq"];
   const FALLBACK = "de";
   const STORAGE_KEY = "mb-lang";
+  const THEME_KEY = "mb-theme";
+  const THEMES = ["light", "dark", "auto"];
 
   const PAGES = [
     { key: "home", href: "index.html" },
@@ -23,6 +25,7 @@
 
   const state = {
     lang: FALLBACK,
+    theme: "light",
     dict: {},
     settings: {},
     subscribers: []
@@ -136,6 +139,49 @@
     return FALLBACK;
   }
 
+  /* ---------- Farbmodus ---------- */
+
+  /* Standard ist hell. Der Dunkelmodus des Geraets wirkt nur bei "auto". */
+  function detectTheme() {
+    const fromUrl = new URLSearchParams(location.search).get("theme");
+    if (fromUrl && THEMES.includes(fromUrl)) return fromUrl;
+    try {
+      const stored = localStorage.getItem(THEME_KEY);
+      if (stored && THEMES.includes(stored)) return stored;
+    } catch {
+      /* localStorage nicht verfuegbar */
+    }
+    return "light";
+  }
+
+  function applyTheme(theme, save) {
+    state.theme = THEMES.includes(theme) ? theme : "light";
+    document.documentElement.setAttribute("data-theme", state.theme);
+
+    if (save !== false) {
+      try {
+        localStorage.setItem(THEME_KEY, state.theme);
+      } catch {
+        /* ignorieren */
+      }
+    }
+
+    // Farbe der Browserleiste auf dem Handy mitziehen.
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      const dark =
+        state.theme === "dark" ||
+        (state.theme === "auto" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      meta.setAttribute("content", dark ? "#14201f" : "#e8f4fa");
+    }
+  }
+
+  function setTheme(theme) {
+    applyTheme(theme);
+    renderChrome();
+    applyTranslations();
+  }
+
   function applyTranslations(root) {
     const scope = root || document;
 
@@ -229,6 +275,23 @@
     }).join("");
   }
 
+  const THEME_ICONS = {
+    light: "☀️",
+    dark: "🌙",
+    auto: "🌗"
+  };
+
+  function themeMenuItems() {
+    return THEMES.map((code) => {
+      const current = code === state.theme ? ' aria-current="true"' : "";
+      return `<li><button type="button" class="lang__option" data-theme-option="${code}"${current}>
+        <span class="lang__flag" aria-hidden="true">${THEME_ICONS[code]}</span><span>${escapeHtml(
+          t(`theme.${code}`)
+        )}</span>
+      </button></li>`;
+    }).join("");
+  }
+
   function renderHeader() {
     const host = document.querySelector("[data-site-header]");
     if (!host) return;
@@ -260,6 +323,14 @@
 
           <div class="header-actions">
             <div class="lang">
+              <button type="button" class="icon-btn" data-theme-toggle aria-expanded="false" aria-haspopup="true">
+                <span aria-hidden="true">${THEME_ICONS[state.theme]}</span>
+                <span class="sr-only" data-i18n="theme.label">${escapeHtml(t("theme.label"))}</span>
+              </button>
+              <ul class="lang__menu" data-theme-menu>${themeMenuItems()}</ul>
+            </div>
+
+            <div class="lang">
               <button type="button" class="icon-btn" data-lang-toggle aria-expanded="false" aria-haspopup="true">
                 <span aria-hidden="true">${flags[state.lang]}</span>
                 <span class="lang__current">${state.lang.toUpperCase()}</span>
@@ -288,6 +359,8 @@
   function bindHeader(host) {
     const langToggle = host.querySelector("[data-lang-toggle]");
     const langMenu = host.querySelector("[data-lang-menu]");
+    const themeToggle = host.querySelector("[data-theme-toggle]");
+    const themeMenu = host.querySelector("[data-theme-menu]");
     const menuToggle = host.querySelector("[data-menu-toggle]");
     const mobileNav = host.querySelector("[data-mobile-nav]");
 
@@ -310,15 +383,34 @@
       setLang(button.getAttribute("data-lang"));
     });
 
+    themeToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const open = themeMenu.getAttribute("data-open") === "true";
+      closeLang();
+      themeMenu.setAttribute("data-open", open ? "false" : "true");
+      themeToggle.setAttribute("aria-expanded", open ? "false" : "true");
+    });
+
+    themeMenu.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-theme-option]");
+      if (!button) return;
+      setTheme(button.getAttribute("data-theme-option"));
+    });
+
     // Nur einmal registrieren – die Kopfzeile wird bei jedem Sprachwechsel neu aufgebaut.
     if (!bindHeader.globalBound) {
       bindHeader.globalBound = true;
       const closeOpenMenu = () => {
-        const menu = document.querySelector("[data-lang-menu]");
-        const toggle = document.querySelector("[data-lang-toggle]");
-        if (!menu || !toggle) return;
-        menu.setAttribute("data-open", "false");
-        toggle.setAttribute("aria-expanded", "false");
+        [
+          ["[data-lang-menu]", "[data-lang-toggle]"],
+          ["[data-theme-menu]", "[data-theme-toggle]"]
+        ].forEach(([menuSelector, toggleSelector]) => {
+          const menu = document.querySelector(menuSelector);
+          const toggle = document.querySelector(toggleSelector);
+          if (!menu || !toggle) return;
+          menu.setAttribute("data-open", "false");
+          toggle.setAttribute("aria-expanded", "false");
+        });
       };
       document.addEventListener("click", closeOpenMenu);
       document.addEventListener("keydown", (event) => {
@@ -331,6 +423,18 @@
       mobileNav.setAttribute("data-open", open ? "false" : "true");
       menuToggle.setAttribute("aria-expanded", open ? "false" : "true");
     });
+  }
+
+  /** Wer die Website erstellt hat – Angaben aus content/settings.json. */
+  function creditLine() {
+    const credit = state.settings.credit || {};
+    if (!credit.name) return "";
+
+    const name = credit.url
+      ? `<a href="${escapeHtml(credit.url)}">${escapeHtml(credit.name)}</a>`
+      : escapeHtml(credit.name);
+
+    return `<span><span data-i18n="footer.credit">${escapeHtml(t("footer.credit"))}</span>: ${name}</span>`;
   }
 
   function renderFooter() {
@@ -364,7 +468,9 @@
             </div>
             <div>
               <h3 data-i18n="footer.quickLinks">${escapeHtml(t("footer.quickLinks"))}</h3>
-              <ul class="footer-list footer-list--columns">${navItems("")}</ul>
+              <ul class="footer-list footer-list--columns">${navItems("")}
+                <li><a href="ramadan.html" data-i18n="ramadan.title">${escapeHtml(t("ramadan.title"))}</a></li>
+              </ul>
             </div>
             <div>
               <h3 data-i18n="footer.contact">${escapeHtml(t("footer.contact"))}</h3>
@@ -383,6 +489,7 @@
             <span>© ${new Date().getFullYear()} ${escapeHtml(
               state.settings.associationName || "Islamische Gemeinde Bargteheide e.V."
             )} · <span data-i18n="footer.rights">${escapeHtml(t("footer.rights"))}</span></span>
+            ${creditLine()}
             <span>
               <a href="impressum.html" data-i18n="footer.imprint">${escapeHtml(t("footer.imprint"))}</a> ·
               <a href="datenschutz.html" data-i18n="footer.privacy">${escapeHtml(t("footer.privacy"))}</a>
@@ -397,6 +504,98 @@
     renderFooter();
   }
 
+  /* ---------- Kalender-Datei (.ics) ---------- */
+
+  function icsEscape(value) {
+    return String(value || "")
+      .replace(/\\/g, "\\\\")
+      .replace(/;/g, "\\;")
+      .replace(/,/g, "\\,")
+      .replace(/\r?\n/g, "\\n");
+  }
+
+  const pad = (value) => String(value).padStart(2, "0");
+
+  /**
+   * Erzeugt einen Termin als .ics-Datei im Browser.
+   * Ohne Uhrzeit entsteht ein Ganztagstermin.
+   */
+  function downloadIcs(event) {
+    const [year, month, day] = String(event.date).split("-").map(Number);
+    if (!year || !month || !day) return;
+
+    const stamp = new Date().toISOString().replace(/[-:]|\.\d{3}/g, "");
+    const lines = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Islamische Gemeinde Bargteheide e.V.//Website//DE",
+      "CALSCALE:GREGORIAN",
+      "BEGIN:VEVENT",
+      `UID:${event.uid || `${event.date}-${Math.random().toString(36).slice(2)}`}@moschee-bargteheide`,
+      `DTSTAMP:${stamp}`
+    ];
+
+    if (event.time && /^\d{1,2}:\d{2}$/.test(event.time)) {
+      const [hour, minute] = event.time.split(":").map(Number);
+      const start = `${year}${pad(month)}${pad(day)}T${pad(hour)}${pad(minute)}00`;
+      lines.push(`DTSTART;TZID=Europe/Berlin:${start}`);
+      lines.push(`DURATION:PT${event.durationMinutes || 60}M`);
+    } else {
+      const next = new Date(Date.UTC(year, month - 1, day + 1));
+      lines.push(`DTSTART;VALUE=DATE:${year}${pad(month)}${pad(day)}`);
+      lines.push(
+        `DTEND;VALUE=DATE:${next.getUTCFullYear()}${pad(next.getUTCMonth() + 1)}${pad(next.getUTCDate())}`
+      );
+    }
+
+    lines.push(`SUMMARY:${icsEscape(event.title)}`);
+    if (event.location) lines.push(`LOCATION:${icsEscape(event.location)}`);
+    if (event.description) lines.push(`DESCRIPTION:${icsEscape(event.description)}`);
+    lines.push("END:VEVENT", "END:VCALENDAR");
+
+    const blob = new Blob([lines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${String(event.title || "termin").replace(/[^\p{L}\p{N}]+/gu, "-").toLowerCase()}.ics`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  /* Schaltflaechen mit data-ics tragen den Termin als JSON im Attribut. */
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-ics]");
+    if (!button) return;
+    event.preventDefault();
+    try {
+      downloadIcs(JSON.parse(button.getAttribute("data-ics")));
+    } catch (error) {
+      console.error("Termin konnte nicht erzeugt werden.", error);
+    }
+  });
+
+  /** Baut die Schaltflaeche "Zum Kalender hinzufuegen". */
+  function icsButton(event, extraClass) {
+    return `<button type="button" class="btn btn--outline btn--small ${extraClass || ""}"
+      data-ics="${escapeHtml(JSON.stringify(event))}">
+      <span aria-hidden="true">📅</span> ${escapeHtml(t("common.addToCalendar"))}
+    </button>`;
+  }
+
+  /* ---------- App auf dem Handy ---------- */
+
+  function registerServiceWorker() {
+    if (!("serviceWorker" in navigator)) return;
+    if (location.protocol !== "https:" && location.hostname !== "localhost" && location.hostname !== "127.0.0.1") {
+      return;
+    }
+    navigator.serviceWorker.register("sw.js").catch((error) => {
+      console.warn("Offline-Betrieb nicht verfuegbar.", error);
+    });
+  }
+
   /* ---------- Start ---------- */
 
   const ready = (async function init() {
@@ -406,7 +605,9 @@
       console.error("Einstellungen konnten nicht geladen werden.", error);
       state.settings = {};
     }
+    applyTheme(detectTheme(), false);
     await setLang(detectLang(), { notify: false });
+    registerServiceWorker();
     return state;
   })();
 
@@ -428,7 +629,12 @@
     dateStack,
     loadJson,
     applyTranslations,
+    icsButton,
     setLang,
+    setTheme,
+    get theme() {
+      return state.theme;
+    },
     onLangChange(fn) {
       state.subscribers.push(fn);
     }
