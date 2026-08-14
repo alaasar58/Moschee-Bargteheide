@@ -22,7 +22,6 @@
   const EVENTS = [
     { id: "newYear", month: 1, day: 1 },
     { id: "ashura", month: 1, day: 10 },
-    { id: "mawlid", month: 3, day: 12 },
     { id: "isra", month: 7, day: 27 },
     { id: "baraah", month: 8, day: 15 },
     { id: "ramadan", month: 9, day: 1 },
@@ -155,9 +154,10 @@
             running ? S.t("islamic.ramadanRunning") : S.t("islamic.untilRamadan")
           )}</div>
           <div class="countdown-card__title">${S.escapeHtml(S.t("islamic.ramadan"))}</div>
-          <div class="countdown-card__date">${S.escapeHtml(S.formatDate(entry.iso))}${
-            entry.confirmed ? "" : ` · ${S.escapeHtml(S.t("islamic.approx"))}`
-          }</div>
+          <div class="countdown-card__date">${S.dateStack(
+            entry.iso,
+            entry.confirmed ? "" : S.t("islamic.approx")
+          )}</div>
         </div>
         ${
           running
@@ -194,9 +194,11 @@
           return `<li class="day-list__item">
             <div class="day-list__main">
               <span class="day-list__name">${S.escapeHtml(S.t(`islamic.${entry.id}`))}</span>
-              <span class="day-list__date">${S.escapeHtml(S.formatDate(entry.iso))}${
-                entry.confirmed ? "" : ` · ${S.escapeHtml(S.t("islamic.approx"))}`
-              }</span>
+              <span class="day-list__date">${S.dateStack(
+                entry.iso,
+                entry.confirmed ? "" : S.t("islamic.approx")
+              )}</span>
+              <span class="day-list__text">${S.escapeHtml(S.t(`islamicInfo.${entry.id}`, ""))}</span>
             </div>
             ${badge}
           </li>`;

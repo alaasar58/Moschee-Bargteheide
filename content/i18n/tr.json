@@ -37,7 +37,8 @@
     "date": "Tarih",
     "time": "Saat",
     "place": "Yer",
-    "skip": "İçeriğe geç"
+    "skip": "İçeriğe geç",
+    "oclock": ""
   },
   "banner": {
     "demo": "Bu web sitesi tanıtım amaçlı bir taslaktır. Henüz onaylanmamış bilgiler istenildiği zaman düzenlenebilir."
@@ -231,8 +232,19 @@
     "hajj": "Hac",
     "newYear": "Hicri yılbaşı (1 Muharrem)",
     "ashura": "Aşure Günü",
-    "mawlid": "Mevlid Kandili",
     "isra": "İsra ve Miraç",
     "baraah": "Berat Kandili"
+  },
+  "islamicInfo": {
+    "newYear": "Muharrem ayının ilk günü – hicri yılın başlangıcı.",
+    "ashura": "Muharrem'in 10. günü. Birçok Müslümanın nafile oruç tuttuğu bir gündür.",
+    "isra": "Peygamber Muhammed'in ﷺ Mekke'den Kudüs'e gece yolculuğunun ve miracının anılması.",
+    "baraah": "Şaban ayının ortasındaki gece – birçok kişi bu geceyi namaz ve dua ile geçirir.",
+    "ramadan": "Oruç ayının başlangıcı: tan yerinden gün batımına kadar oruç tutulur, namaz kılınır ve iyilik yapılır.",
+    "laylatAlQadr": "Ramazan'ın son on gecesindeki Kadir Gecesi – Kur'an'da bin aydan hayırlı olarak anılır.",
+    "eidFitr": "Ramazan'ın sonundaki bayram: bayram namazı, ziyaretler ve ihtiyaç sahiplerine fitre.",
+    "arafah": "Hacıların Arafat'ta vakfeye durduğu gün. Hacca gitmeyenler bu gün çoğunlukla oruç tutar.",
+    "eidAdha": "Haccın tamamlanmasıyla kutlanan Kurban Bayramı: bayram namazı ve eti paylaşılan kurban.",
+    "hajj": "Mekke'ye hac yolculuğu – gücü yetene ömürde bir kez farzdır."
   }
 }

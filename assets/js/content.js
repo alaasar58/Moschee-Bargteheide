@@ -50,7 +50,7 @@
       ${media(item)}
       <div class="entry-card__body">
         <div class="entry-card__meta">
-          <time datetime="${S.escapeHtml(item.date || "")}">${S.escapeHtml(S.formatDate(item.date))}</time>
+          <time datetime="${S.escapeHtml(item.date || "")}">${S.dateStack(item.date)}</time>
           ${demoBadge(item)}
         </div>
         <h3 class="entry-card__title">${S.escapeHtml(S.field(item.title))}</h3>
@@ -90,7 +90,7 @@
 
       host.innerHTML = `<article class="prose">
         <div class="entry-card__meta" style="margin-bottom:8px">
-          <time datetime="${S.escapeHtml(item.date || "")}">${S.escapeHtml(S.formatDate(item.date))}</time>
+          <time datetime="${S.escapeHtml(item.date || "")}">${S.dateStack(item.date)}</time>
           ${demoBadge(item)}
         </div>
         <h1>${S.escapeHtml(S.field(item.title))}</h1>
@@ -126,14 +126,14 @@
   /* ---------- Veranstaltungen ---------- */
 
   function eventCard(item) {
-    const when = [S.formatDate(item.date), item.time].filter(Boolean).join(" · ");
     const place = S.field(item.location);
 
     return `<article class="entry-card">
       ${media(item)}
       <div class="entry-card__body">
-        <div class="entry-card__meta"><time datetime="${S.escapeHtml(item.date || "")}">${S.escapeHtml(
-          when
+        <div class="entry-card__meta"><time datetime="${S.escapeHtml(item.date || "")}">${S.dateStack(
+          item.date,
+          item.time ? `${item.time} ${S.t("common.oclock", "")}`.trim() : ""
         )}</time>${demoBadge(item)}</div>
         <h3 class="entry-card__title">${S.escapeHtml(S.field(item.title))}</h3>
         ${

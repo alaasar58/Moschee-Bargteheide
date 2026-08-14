@@ -78,6 +78,38 @@
     }
   }
 
+
+  /* ---------- Datum: Hidschri als Hauptangabe ---------- */
+
+  /** Hidschri-Datum (Umm al-Qura) in der aktuellen Sprache. */
+  function formatHijri(iso) {
+    const date = iso instanceof Date ? iso : new Date(`${iso}T12:00:00Z`);
+    if (Number.isNaN(date.getTime())) return "";
+    const locale = (get(state.dict, "meta.locale") || "de-DE").split("-")[0];
+    try {
+      return new Intl.DateTimeFormat(`${locale}-u-ca-islamic-umalqura`, {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        timeZone: "Europe/Berlin"
+      }).format(date);
+    } catch {
+      return "";
+    }
+  }
+
+  /** Datumsangabe mit dem Hidschri-Datum gross und dem gregorianischen klein darunter. */
+  function dateStack(iso, extra) {
+    const hijri = formatHijri(iso);
+    const gregorian = formatDate(iso);
+    if (!hijri) return `<span class="date-stack"><span class="date-stack__main">${escapeHtml(gregorian)}</span></span>`;
+
+    return `<span class="date-stack">
+      <span class="date-stack__main">${escapeHtml(hijri)}</span>
+      <span class="date-stack__sub">${escapeHtml(gregorian)}${extra ? ` · ${escapeHtml(extra)}` : ""}</span>
+    </span>`;
+  }
+
   async function loadJson(path) {
     const response = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
@@ -392,6 +424,8 @@
     escapeHtml,
     paragraphs,
     formatDate,
+    formatHijri,
+    dateStack,
     loadJson,
     applyTranslations,
     setLang,

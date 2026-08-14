@@ -37,7 +37,8 @@
     "date": "Data",
     "time": "Ora",
     "place": "Vendi",
-    "skip": "Kalo te përmbajtja"
+    "skip": "Kalo te përmbajtja",
+    "oclock": ""
   },
   "banner": {
     "demo": "Kjo faqe është një draft për prezantim. Të dhënat ende të pakonfirmuara mund të ndryshohen në çdo kohë."
@@ -231,8 +232,19 @@
     "hajj": "Haxhi",
     "newYear": "Viti i Ri Islam (1 Muharrem)",
     "ashura": "Ashura",
-    "mawlid": "Mevludi",
     "isra": "Israja dhe Miraxhi",
     "baraah": "Nata e Beratit"
+  },
+  "islamicInfo": {
+    "newYear": "Dita e parë e muajit Muharrem – fillimi i vitit islam.",
+    "ashura": "Dita e 10-të e Muharremit. Shumë myslimanë agjërojnë vullnetarisht këtë ditë.",
+    "isra": "Përkujtimi i udhëtimit natën të Profetit Muhamed ﷺ nga Meka në Jerusalem dhe ngjitjes së tij.",
+    "baraah": "Nata në mesin e muajit Shaban – shumë e kalojnë me namaz dhe lutje.",
+    "ramadan": "Fillimi i muajit të agjërimit: agjërohet nga agimi deri në perëndim, falet dhe bëhet mirësi.",
+    "laylatAlQadr": "Nata e Kadrit në dhjetë netët e fundit të Ramazanit – në Kuran përshkruhet më e mirë se një mijë muaj.",
+    "eidFitr": "Festa në fund të Ramazanit: namazi i Bajramit, vizitat dhe sadakaja për nevojtarët.",
+    "arafah": "Dita kur haxhinjtë qëndrojnë në Arafat. Kush nuk është në haxh, shpesh agjëron këtë ditë.",
+    "eidAdha": "Kurban Bajrami në përfundim të haxhit: namazi i Bajramit dhe kurbani, mishi i të cilit ndahet.",
+    "hajj": "Pelegrinazhi në Mekë – obligim një herë në jetë për atë që ka mundësi."
   }
 }

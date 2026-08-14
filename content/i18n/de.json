@@ -37,7 +37,8 @@
     "date": "Datum",
     "time": "Uhrzeit",
     "place": "Ort",
-    "skip": "Zum Inhalt springen"
+    "skip": "Zum Inhalt springen",
+    "oclock": "Uhr"
   },
   "banner": {
     "demo": "Diese Website ist ein Entwurf zur Vorstellung. Noch nicht bestätigte Angaben lassen sich jederzeit anpassen."
@@ -231,8 +232,19 @@
     "hajj": "Hadsch",
     "newYear": "Islamisches Neujahr (1. Muharram)",
     "ashura": "Aschura",
-    "mawlid": "Mawlid an-Nabi (Geburt des Propheten)",
     "isra": "Isra und Mi'radsch",
     "baraah": "Laylat al-Bara'a (Beraat)"
+  },
+  "islamicInfo": {
+    "newYear": "Der erste Tag des Monats Muharram – Beginn des islamischen Jahres.",
+    "ashura": "Der 10. Muharram. Ein Tag, an dem viele Muslime freiwillig fasten.",
+    "isra": "Erinnerung an die Nachtreise des Propheten Muhammad ﷺ von Mekka nach Jerusalem und seine Himmelfahrt.",
+    "baraah": "Die Nacht in der Mitte des Monats Schaban – viele verbringen sie mit Gebet und Bittgebet.",
+    "ramadan": "Beginn des Fastenmonats: von Morgengrauen bis Sonnenuntergang wird gefastet, gebetet und Gutes getan.",
+    "laylatAlQadr": "Die Nacht der Bestimmung in den letzten zehn Nächten des Ramadan – im Koran als besser als tausend Monate beschrieben.",
+    "eidFitr": "Das Fest am Ende des Ramadan mit dem Festgebet, Besuchen und der Fastenspende an Bedürftige.",
+    "arafah": "Der Tag, an dem die Pilger auf der Ebene von Arafat stehen. Wer nicht pilgert, fastet an diesem Tag häufig.",
+    "eidAdha": "Das Opferfest zum Abschluss der Pilgerfahrt mit Festgebet und Opfer, dessen Fleisch geteilt wird.",
+    "hajj": "Die Pilgerfahrt nach Mekka – einmal im Leben Pflicht für jeden, der dazu in der Lage ist."
   }
 }
