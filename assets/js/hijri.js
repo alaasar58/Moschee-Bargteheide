@@ -123,51 +123,12 @@
     return list.sort((a, b) => a.date - b.date);
   }
 
-  function ramadan() {
-    return upcoming().find((entry) => entry.id === "ramadan") || null;
-  }
-
   /* ---------- Ausgabe ---------- */
 
   function renderHijriDate() {
     document.querySelectorAll("[data-hijri-date]").forEach((el) => {
       const locale = S.t("meta.locale", "de-DE").split("-")[0];
       el.textContent = formatHijri(new Date(), locale);
-    });
-  }
-
-  function renderRamadanCountdown() {
-    const hosts = document.querySelectorAll("[data-ramadan-countdown]");
-    if (!hosts.length) return;
-
-    const entry = ramadan();
-    hosts.forEach((host) => {
-      if (!entry) {
-        host.innerHTML = "";
-        return;
-      }
-
-      const running = entry.days <= 0;
-      host.innerHTML = `<div class="countdown-card">
-        <div>
-          <div class="countdown-card__label">${S.escapeHtml(
-            running ? S.t("islamic.ramadanRunning") : S.t("islamic.untilRamadan")
-          )}</div>
-          <div class="countdown-card__title">${S.escapeHtml(S.t("islamic.ramadan"))}</div>
-          <div class="countdown-card__date">${S.dateStack(
-            entry.iso,
-            entry.confirmed ? "" : S.t("islamic.approx")
-          )}</div>
-        </div>
-        ${
-          running
-            ? ""
-            : `<div class="countdown-card__value">
-                 <span class="countdown-card__number">${entry.days}</span>
-                 <span class="countdown-card__unit">${S.escapeHtml(S.t("islamic.days"))}</span>
-               </div>`
-        }
-      </div>`;
     });
   }
 
@@ -210,7 +171,6 @@
 
   function renderAll() {
     renderHijriDate();
-    renderRamadanCountdown();
     renderDayList();
   }
 

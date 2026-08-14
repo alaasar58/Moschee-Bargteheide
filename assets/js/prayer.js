@@ -11,6 +11,30 @@
   let data = null;
   let timer = null;
 
+  const hijriParts = new Intl.DateTimeFormat("en-u-ca-islamic-umalqura", {
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+    timeZone: "Europe/Berlin"
+  });
+
+  /** Hidschri-Tag und -Monat zu einem Datum (fuer die Monatsuebersicht). */
+  function hijriFor(date) {
+    const parts = hijriParts.formatToParts(date);
+    const value = (type) => parts.find((part) => part.type === type).value;
+    const locale = S.t("meta.locale", "de-DE").split("-")[0];
+    let monthName = "";
+    try {
+      monthName = new Intl.DateTimeFormat(`${locale}-u-ca-islamic-umalqura`, {
+        month: "long",
+        timeZone: "Europe/Berlin"
+      }).format(date);
+    } catch {
+      monthName = value("month");
+    }
+    return { day: Number(value("day")), monthName, year: parseInt(value("year"), 10) };
+  }
+
   /* ---------- Zeit-Hilfen (immer Ortszeit der Moschee) ---------- */
 
   function zoneNow() {
@@ -130,6 +154,8 @@
 
     const iqama = options.showIqama ? iqamaFor(now.month, now.day) : null;
     const active = currentPrayerKey();
+    const next = nextPrayer();
+    const nextKey = next && !next.tomorrow ? next.key : null;
     const cells = [];
 
     const imsak = options.showImsak ? imsakTime(times) : null;
@@ -140,14 +166,16 @@
     ORDER.forEach((key) => {
       if (!times[key]) return;
       const iqamaValue = iqama && iqama[key] ? iqamaTime(iqama[key], toMinutes(times[key])) : null;
-      cells.push(cell(key, S.t(`prayer.${key}`), times[key], key === active, iqamaValue));
+      cells.push(cell(key, S.t(`prayer.${key}`), times[key], key === active, iqamaValue, key === nextKey));
     });
 
     return `<div class="times-grid">${cells.join("")}</div>`;
   }
 
-  function cell(key, name, time, isActive, iqama) {
-    return `<div class="time-cell" data-active="${isActive ? "true" : "false"}" data-prayer="${key}">
+  function cell(key, name, time, isActive, iqama, isNext) {
+    return `<div class="time-cell" data-active="${isActive ? "true" : "false"}" data-next="${
+      isNext ? "true" : "false"
+    }" data-prayer="${key}">
       <div class="time-cell__name">${S.escapeHtml(name)}</div>
       <div class="time-cell__value">${S.escapeHtml(time)}</div>
       ${iqama ? `<div class="time-cell__iqama">${S.escapeHtml(S.t("prayer.iqama"))} ${S.escapeHtml(iqama)}</div>` : ""}
@@ -167,10 +195,17 @@
     }
     if (!value) return "";
 
-    return `<div class="jumua-box">
+    // Nur am Freitag hervorgehoben – an allen anderen Tagen eine ruhige Zeile.
+    const isFriday = new Date(Date.UTC(now.year, now.month - 1, now.day)).getUTCDay() === 5;
+
+    return `<div class="jumua-box" data-today="${isFriday ? "true" : "false"}">
       <div>
         <div class="jumua-box__label">${S.escapeHtml(S.t("prayer.jumua"))}</div>
-        ${data.jumuaAsDuhr ? `<div style="font-size:0.85rem;opacity:0.85">${S.escapeHtml(S.t("prayer.jumuaAsDuhr"))}</div>` : ""}
+        ${
+          data.jumuaAsDuhr
+            ? `<div class="jumua-box__note">${S.escapeHtml(S.t("prayer.jumuaAsDuhr"))}</div>`
+            : ""
+        }
       </div>
       <div class="jumua-box__time">${S.escapeHtml(value)}</div>
     </div>`;
@@ -270,17 +305,40 @@
       .map((key) => `<th>${S.escapeHtml(S.t(key))}</th>`)
       .join("");
 
-    const rows = Object.keys(month)
+    const days = Object.keys(month)
       .map(Number)
-      .sort((a, b) => a - b)
+      .sort((a, b) => a - b);
+
+    const monthNames = [];
+    const rows = days
       .map((day) => {
         const times = month[String(day)];
+        const date = new Date(Date.UTC(now.year, now.month - 1, day, 12));
+        const hijri = hijriFor(date);
+        if (!monthNames.includes(hijri.monthName)) monthNames.push(hijri.monthName);
+
+        const gregorian = new Intl.DateTimeFormat(S.t("meta.locale", "de-DE"), {
+          day: "numeric",
+          month: "short",
+          timeZone: "UTC"
+        }).format(date);
+
         const cells = ORDER.map((key) => `<td>${S.escapeHtml(times[key] || "–")}</td>`).join("");
-        return `<tr data-today="${day === now.day ? "true" : "false"}"><td>${day}</td>${cells}</tr>`;
+        return `<tr data-today="${day === now.day ? "true" : "false"}">
+          <td>
+            <span class="date-stack">
+              <span class="date-stack__main">${hijri.day}. ${S.escapeHtml(hijri.monthName)}</span>
+              <span class="date-stack__sub">${S.escapeHtml(gregorian)}</span>
+            </span>
+          </td>${cells}
+        </tr>`;
       })
       .join("");
 
-    return `<h2 style="margin-top:34px">${S.escapeHtml(S.t("prayer.monthTitle"))}</h2>
+    const year = hijriFor(new Date(Date.UTC(now.year, now.month - 1, 15, 12))).year;
+    const title = `${S.t("prayer.monthTitle")} · ${monthNames.join(" – ")} ${year}`;
+
+    return `<h2 style="margin-top:34px">${S.escapeHtml(title)}</h2>
       <div class="month-table-wrap"><table class="month-table"><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 

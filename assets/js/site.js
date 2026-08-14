@@ -364,7 +364,7 @@
             </div>
             <div>
               <h3 data-i18n="footer.quickLinks">${escapeHtml(t("footer.quickLinks"))}</h3>
-              <ul class="footer-list">${navItems("")}</ul>
+              <ul class="footer-list footer-list--columns">${navItems("")}</ul>
             </div>
             <div>
               <h3 data-i18n="footer.contact">${escapeHtml(t("footer.contact"))}</h3>

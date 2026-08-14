@@ -10,19 +10,19 @@
   --petrol-100: #e8f5f2;
 
   --sky-300: #a9d3e6;
-  --sky-100: #dbeef7;
+  --sky-100: #e8f4fa;
 
   --gold-600: #a8801f;
   --gold-500: #c79a2c;
-  --sand-200: #edd8ab;
-  --sand-100: #f7ecd6;
+  --sand-200: #eddfbe;
+  --sand-100: #fdf6e7;
 
-  --bg: #fdfaf4;
+  --bg: #fbfdfd;
   --surface: #ffffff;
-  --surface-2: #f6efe2;
+  --surface-2: #f1f8f7;
   --text: #2b4247;
   --text-soft: #5f7880;
-  --border: #e7ded0;
+  --border: #e2ecea;
 
   --radius: 18px;
   --radius-sm: 12px;
@@ -79,6 +79,10 @@ body[dir="rtl"] {
 img {
   max-width: 100%;
   display: block;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 a {
@@ -404,9 +408,9 @@ p {
 
 .notice-bar {
   background: var(--sand-100);
-  color: #5a4322;
+  color: #7a6224;
   font-size: 0.85rem;
-  border-bottom: 1px solid #e8dcc6;
+  border-bottom: 1px solid var(--sand-200);
 }
 @media (prefers-color-scheme: dark) {
   .notice-bar {
@@ -421,32 +425,32 @@ p {
 
 /* ---------- Startseite / Hero ---------- */
 
-/* Heller Kopfbereich im Stil der Gemeinde-Plakate: Himmel oben, Sand unten,
-   dunkle Schrift auf hellem Grund – bewusst ohne dunkle Bildabdunklung. */
+/* Heller Kopfbereich: zarter Himmel-Verlauf, dunkle Schrift, darunter das
+   Foto der Moschee als breites Band. Keine dunklen Flaechen. */
 .hero {
   position: relative;
-  background: linear-gradient(180deg, var(--sky-100) 0%, var(--sand-100) 62%, var(--bg) 100%);
-  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--sky-100) 0%, var(--bg) 78%);
   overflow: hidden;
+}
+
+/* Feines Ornament im Hintergrund – ruhig, nur angedeutet. */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(31, 128, 120, 0.16) 1px, transparent 0);
+  background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 70%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 70%);
+  pointer-events: none;
 }
 
 .hero__grid {
   position: relative;
   display: grid;
-  gap: 26px;
-  padding-block: 40px 34px;
-  align-items: center;
-}
-
-@media (min-width: 900px) {
-  .hero__grid {
-    grid-template-columns: 1.05fr 0.95fr;
-    padding-block: 56px 46px;
-  }
-  /* Solange das Foto der Moschee fehlt, nutzt der Text die volle Breite. */
-  .hero__grid:has(.hero__figure[hidden]) {
-    grid-template-columns: 1fr;
-  }
+  gap: 22px;
+  padding-block: 42px 0;
+  justify-items: start;
 }
 
 .hero__kicker {
@@ -457,7 +461,7 @@ p {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gold-600);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid var(--sand-200);
   padding: 5px 14px;
   border-radius: 999px;
@@ -467,13 +471,14 @@ p {
 .hero h1 {
   color: var(--petrol-900);
   margin-bottom: 10px;
+  max-width: 18ch;
 }
 
 .hero__text {
   color: var(--text-soft);
   font-size: 1.05rem;
   margin-bottom: 10px;
-  max-width: 46ch;
+  max-width: 52ch;
 }
 
 .hero__address {
@@ -491,22 +496,30 @@ p {
   gap: 10px;
 }
 
-/* Das Foto der Moschee steht frei auf hellem Grund – ohne Rahmen des Plakats. */
+/* Breites Bildband – das Foto der Moschee ohne Rahmen, direkt auf hellem Grund. */
 .hero__figure {
-  margin: 0;
+  margin: 26px 0 0;
+  width: 100%;
   border-radius: var(--radius);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.55);
-  box-shadow: var(--shadow);
-  aspect-ratio: 4 / 3;
+  box-shadow: 0 12px 36px rgba(24, 70, 66, 0.12);
+  background: var(--surface);
 }
 .hero__figure img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 420px;
   object-fit: cover;
+  object-position: center 60%;
 }
 .hero__figure[hidden] {
   display: none;
+}
+
+@media (min-width: 900px) {
+  .hero__grid {
+    padding-block: 58px 0;
+  }
 }
 
 /* ---------- Schaltflächen ---------- */
@@ -662,7 +675,20 @@ p {
 }
 .time-cell[data-active="true"] {
   background: var(--petrol-100);
+}
+
+/* Das naechste Gebet leuchtet in der Reihe deutlich hervor. */
+.time-cell[data-next="true"] {
+  background: linear-gradient(160deg, #ffffff, var(--petrol-100));
   border-color: var(--petrol-500);
+  box-shadow: 0 0 0 3px rgba(47, 156, 145, 0.18), 0 8px 20px rgba(31, 128, 120, 0.12);
+}
+.time-cell[data-next="true"] .time-cell__name {
+  color: var(--petrol-700);
+  font-weight: 600;
+}
+.time-cell[data-next="true"] .time-cell__value {
+  color: var(--petrol-900);
 }
 .time-cell__name {
   font-size: 0.8rem;
@@ -680,12 +706,15 @@ p {
   margin-top: 2px;
 }
 
+/* Freitagsgebet: an gewoehnlichen Tagen nur eine ruhige Zeile,
+   am Freitag selbst deutlich hervorgehoben. */
 .jumua-box {
-  margin-top: 16px;
-  background: linear-gradient(135deg, var(--petrol-500), #4bb3a6);
-  color: #fff;
-  border-radius: var(--radius);
-  padding: 16px 20px;
+  margin-top: 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -694,11 +723,31 @@ p {
 }
 .jumua-box__label {
   font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+.jumua-box__note {
+  font-size: 0.82rem;
+  color: var(--text-soft);
 }
 .jumua-box__time {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  color: var(--petrol-700);
+}
+
+.jumua-box[data-today="true"] {
+  background: linear-gradient(135deg, var(--petrol-100), var(--sand-100));
+  border-color: var(--petrol-500);
+  padding: 16px 20px;
+}
+.jumua-box[data-today="true"] .jumua-box__label {
+  color: var(--petrol-900);
+  font-size: 1.05rem;
+}
+.jumua-box[data-today="true"] .jumua-box__time {
+  font-size: 1.6rem;
 }
 
 .panel-foot {
@@ -968,8 +1017,8 @@ table.month-table {
 
 .site-footer {
   margin-top: 46px;
-  background: var(--sand-100);
-  border-top: 1px solid var(--sand-200);
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
   color: var(--text);
   padding-block: 36px 22px;
 }
@@ -989,7 +1038,22 @@ table.month-table {
 }
 @media (min-width: 760px) {
   .footer-grid {
-    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1.4fr 1fr;
+  }
+}
+
+.footer-list--columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 520px) {
+  .footer-list--columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 760px) {
+  .footer-list--columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
   }
 }
 .footer-list {
@@ -1003,7 +1067,7 @@ table.month-table {
 .footer-bottom {
   margin-top: 26px;
   padding-top: 16px;
-  border-top: 1px solid var(--sand-200);
+  border-top: 1px solid var(--border);
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -1231,6 +1295,46 @@ table.month-table {
   margin-top: 14px;
   font-size: 0.92rem;
   color: var(--petrol-700);
+}
+
+
+/* ---------- Gestalterische Feinheiten ---------- */
+
+/* Abschnittsueberschriften bekommen einen feinen goldenen Strich. */
+.section > .container > h2,
+.page-head h1 {
+  position: relative;
+}
+.section > .container > h2::after {
+  content: "";
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold-500), var(--petrol-500));
+}
+
+/* Karten reagieren dezent auf Beruehrung. */
+.entry-card,
+.card {
+  transition: box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.entry-card:hover {
+  border-color: var(--petrol-500);
+  box-shadow: var(--shadow);
+}
+
+/* Kopf der Unterseiten: heller Verlauf statt einfarbiger Flaeche. */
+.page-head {
+  background: linear-gradient(180deg, var(--sky-100), var(--bg));
+  border-bottom: 1px solid var(--border);
+}
+
+/* Der Gebetszeiten-Block hebt sich leicht ab. */
+.prayer-panel .card {
+  border-color: var(--petrol-100);
+  box-shadow: 0 10px 30px rgba(24, 70, 66, 0.08);
 }
 
 /* ---------- RTL ---------- */
