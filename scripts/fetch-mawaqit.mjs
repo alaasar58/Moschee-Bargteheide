@@ -46,7 +46,19 @@ function candidateUrls(id, settings) {
     if (url && !urls.includes(url)) urls.push(url);
   };
 
-  push(settings?.mawaqit?.url);
+  const configured = settings?.mawaqit?.url;
+  push(configured);
+
+  // Aus der hinterlegten Adresse die weiteren bekannten Formen ableiten.
+  const fromUrl = configured && /mawaqit\.net\/[a-z]{2}\/(?:m\/)?([^/?#]+)/.exec(configured);
+  if (fromUrl) {
+    const name = fromUrl[1];
+    push(`${configured.replace(/\/$/, "")}/embed`);
+    push(`https://mawaqit.net/de/m/${name}`);
+    push(`https://mawaqit.net/en/m/${name}`);
+    push(`https://mawaqit.net/de/${name}`);
+    push(`https://mawaqit.net/en/${name}`);
+  }
 
   const slug = settings?.mawaqit?.slug;
   if (slug) {
@@ -95,16 +107,70 @@ function extractBalancedObject(text, startIndex) {
   throw new Error("confData konnte nicht vollstaendig gelesen werden.");
 }
 
-function parseConfData(html) {
-  const marker = /var\s+confData\s*=\s*\{/.exec(html);
-  if (!marker) {
-    throw new Error(
-      "In der Mawaqit-Seite wurde kein 'confData' gefunden. Moeglicherweise hat sich der Aufbau der Seite geaendert."
-    );
+/** Sucht rueckwaerts den Beginn des Objekts, in dem `index` liegt. */
+function objectStartBefore(text, index) {
+  let depth = 0;
+  for (let i = index; i >= 0; i--) {
+    const ch = text[i];
+    if (ch === "}") depth++;
+    else if (ch === "{") {
+      if (depth === 0) return i;
+      depth--;
+    }
   }
-  const start = html.indexOf("{", marker.index);
-  const raw = extractBalancedObject(html, start);
-  return JSON.parse(raw);
+  return -1;
+}
+
+/**
+ * Liest die Gebetszeiten-Daten aus der Mawaqit-Seite.
+ * Mawaqit hat den Aufbau der Seite schon mehrfach geaendert, deshalb werden
+ * mehrere bekannte Stellen der Reihe nach probiert.
+ */
+function parseConfData(html) {
+  const attempts = [];
+
+  // 1. Klassisch: var confData = { ... }
+  const marker = /(?:var\s+|window\.)?confData\s*=\s*\{/.exec(html);
+  if (marker) {
+    attempts.push(html.indexOf("{", marker.index));
+  }
+
+  // 2. JSON in einem Attribut oder Script-Block: irgendwo steht "times":["05:12",...]
+  const times = /["']times["']\s*:\s*\[\s*["']\d{1,2}:\d{2}["']/.exec(html);
+  if (times) {
+    const start = objectStartBefore(html, times.index);
+    if (start >= 0) attempts.push(start);
+  }
+
+  for (const start of attempts) {
+    if (start < 0) continue;
+    try {
+      const conf = JSON.parse(extractBalancedObject(html, start));
+      if (conf && (Array.isArray(conf.times) || Array.isArray(conf.calendar))) return conf;
+    } catch {
+      /* naechsten Versuch probieren */
+    }
+  }
+
+  throw new Error(`Gebetszeiten nicht in der Seite gefunden. ${describePage(html)}`);
+}
+
+/** Kurze Beschreibung der Seite fuer das Protokoll, damit Aenderungen bei Mawaqit auffallen. */
+function describePage(html) {
+  const hints = [
+    `Laenge ${html.length}`,
+    `confData: ${html.includes("confData") ? "ja" : "nein"}`,
+    `"times": ${html.includes('"times"') || html.includes("times:") ? "ja" : "nein"}`,
+    `Uhrzeiten im Text: ${/\d{1,2}:\d{2}/.test(html) ? "ja" : "nein"}`
+  ];
+
+  const sample = /["']?times["']?\s*[:=]/.exec(html) || /\d{1,2}:\d{2}/.exec(html);
+  if (sample) {
+    const from = Math.max(0, sample.index - 120);
+    hints.push(`Auszug: ${html.slice(from, from + 260).replace(/\s+/g, " ")}`);
+  }
+
+  return hints.join(" | ");
 }
 
 const isTime = (value) => typeof value === "string" && /^\d{1,2}:\d{2}$/.test(value);
