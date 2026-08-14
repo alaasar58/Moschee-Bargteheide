@@ -60,7 +60,10 @@
     "coursesTitle": "Kurslar ve eğitim",
     "coursesText": "Cemaat; çocuklar, gençler ve yetişkinler için kurslar ve eğitim programları sunmaktadır.",
     "coursesLink": "Kurslara git",
-    "findUs": "Bize nasıl ulaşırsınız"
+    "findUs": "Bize nasıl ulaşırsınız",
+    "hijriLabel": "Hicri takvime göre bugün",
+    "islamicDaysTitle": "İslam'da özel günler",
+    "islamicDaysAll": "Tüm özel günler"
   },
   "prayer": {
     "title": "Namaz Vakitleri",
@@ -86,7 +89,8 @@
     "nextPrayerIs": "Sonraki namaz",
     "monthTitle": "Aylık liste",
     "day": "Gün",
-    "note": "Tüm saatler yerel saattir (Europe/Berlin)."
+    "note": "Tüm saatler yerel saattir (Europe/Berlin).",
+    "hijriLabel": "Hicri tarih"
   },
   "courses": {
     "title": "Kurslar",
@@ -156,7 +160,25 @@
     "step3": "Başvuruyu teslim edin – yönetim kurulu üyeliği onaylar.",
     "feeTitle": "Üyelik aidatı",
     "feeText": "Üyelik aidatının tutarı cemaat tarafından duyurulur.",
-    "cta": "Şimdi iletişime geçin"
+    "cta": "Şimdi iletişime geçin",
+    "onlineTitle": "Online üye olun",
+    "onlineText": "Üyelik başvurusunu doğrudan burada doldurup dijital olarak imzalayabilirsiniz.",
+    "formFirstName": "Ad",
+    "formLastName": "Soyad",
+    "formBirth": "Doğum tarihi",
+    "formStreet": "Sokak ve numara",
+    "formZip": "Posta kodu",
+    "formCity": "Şehir",
+    "formEmail": "E-posta",
+    "formPhone": "Telefon",
+    "signatureTitle": "İmza",
+    "signatureHint": "Alana parmağınızla veya fare ile imza atın.",
+    "signatureClear": "İmzayı sil",
+    "submit": "Başvuruyu oluştur",
+    "formIncomplete": "Lütfen zorunlu alanları doldurun ve imzalayın.",
+    "formDone": "Başvuru oluşturuldu. Lütfen kaydedin veya yazdırın ve cemaate iletin.",
+    "formPrint": "Başvuruyu kaydet veya yazdır",
+    "formNote": "Not: Başvuru yalnızca tarayıcınızda oluşturulur; hiçbir veri üçüncü kişilere aktarılmaz. Online üyeliğin son şekline yönetim kurulu karar verir."
   },
   "donate": {
     "title": "Bağış",
@@ -171,7 +193,11 @@
     "noBank": "Banka bilgileri, cemaat tarafından onaylandıktan sonra yayınlanacaktır.",
     "onSite": "Bağışlar doğrudan camide de yapılabilir.",
     "onlineCta": "Çevrimiçi bağış",
-    "thanks": "Allah desteğinizi kabul etsin."
+    "thanks": "Allah desteğinizi kabul etsin.",
+    "methodsTitle": "Bağış yolları",
+    "paypal": "PayPal",
+    "paypalNote": "PayPal bağlantısı, cemaat tarafından onaylandıktan sonra yayınlanacaktır.",
+    "transfer": "Banka havalesi"
   },
   "footer": {
     "quickLinks": "Hızlı erişim",
@@ -186,5 +212,27 @@
     "imprintTitle": "Künye (Impressum)",
     "privacyTitle": "Gizlilik",
     "placeholder": "Bu sayfadaki bilgiler Islamische Gemeinde Bargteheide e.V. tarafından tamamlanacaktır."
+  },
+  "islamic": {
+    "title": "İslam'da özel günler",
+    "intro": "Hicri yılın en önemli gün ve zamanları – sıradaki günün ne olduğu herkes tarafından görülebilsin diye.",
+    "untilRamadan": "Ramazan'a kalan",
+    "ramadanRunning": "Ramazan – Allah oruçlarınızı kabul etsin",
+    "days": "gün",
+    "inDays": "{n} gün sonra",
+    "now": "Şimdi",
+    "approx": "tahmini",
+    "note": "Tarihler hesaplanmıştır ve hilalin görülmesine göre bir gün kayabilir. Bağlayıcı olan cemaatin duyurusudur.",
+    "ramadan": "Ramazan'ın başlangıcı",
+    "laylatAlQadr": "Kadir Gecesi",
+    "eidFitr": "Ramazan Bayramı",
+    "arafah": "Arefe Günü",
+    "eidAdha": "Kurban Bayramı",
+    "hajj": "Hac",
+    "newYear": "Hicri yılbaşı (1 Muharrem)",
+    "ashura": "Aşure Günü",
+    "mawlid": "Mevlid Kandili",
+    "isra": "İsra ve Miraç",
+    "baraah": "Berat Kandili"
   }
 }

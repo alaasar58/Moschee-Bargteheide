@@ -60,7 +60,10 @@
     "coursesTitle": "Kurse & Bildung",
     "coursesText": "Die Gemeinde bietet Kurse und Bildungsangebote für Kinder, Jugendliche und Erwachsene an.",
     "coursesLink": "Zu den Kursen",
-    "findUs": "So finden Sie uns"
+    "findUs": "So finden Sie uns",
+    "hijriLabel": "Heute nach islamischem Kalender",
+    "islamicDaysTitle": "Besondere Tage im Islam",
+    "islamicDaysAll": "Alle besonderen Tage"
   },
   "prayer": {
     "title": "Gebetszeiten",
@@ -86,7 +89,8 @@
     "nextPrayerIs": "Nächstes Gebet",
     "monthTitle": "Monatsübersicht",
     "day": "Tag",
-    "note": "Alle Zeiten in Ortszeit (Europe/Berlin)."
+    "note": "Alle Zeiten in Ortszeit (Europe/Berlin).",
+    "hijriLabel": "Islamisches Datum"
   },
   "courses": {
     "title": "Kurse",
@@ -156,7 +160,25 @@
     "step3": "Antrag abgeben – der Vorstand bestätigt die Aufnahme.",
     "feeTitle": "Mitgliedsbeitrag",
     "feeText": "Die Höhe des Mitgliedsbeitrags wird von der Gemeinde bekannt gegeben.",
-    "cta": "Jetzt Kontakt aufnehmen"
+    "cta": "Jetzt Kontakt aufnehmen",
+    "onlineTitle": "Online Mitglied werden",
+    "onlineText": "Sie können den Aufnahmeantrag direkt hier ausfüllen und digital unterschreiben.",
+    "formFirstName": "Vorname",
+    "formLastName": "Nachname",
+    "formBirth": "Geburtsdatum",
+    "formStreet": "Straße und Hausnummer",
+    "formZip": "PLZ",
+    "formCity": "Ort",
+    "formEmail": "E-Mail",
+    "formPhone": "Telefon",
+    "signatureTitle": "Unterschrift",
+    "signatureHint": "Mit dem Finger oder der Maus im Feld unterschreiben.",
+    "signatureClear": "Unterschrift löschen",
+    "submit": "Antrag erstellen",
+    "formIncomplete": "Bitte alle Pflichtfelder ausfüllen und unterschreiben.",
+    "formDone": "Der Antrag wurde erstellt. Bitte speichern oder ausdrucken und der Gemeinde zukommen lassen.",
+    "formPrint": "Antrag speichern oder drucken",
+    "formNote": "Hinweis: Der Antrag wird ausschließlich in Ihrem Browser erzeugt. Es werden keine Daten an Dritte übertragen. Die endgültige Form der Online-Mitgliedschaft entscheidet der Vorstand."
   },
   "donate": {
     "title": "Spenden",
@@ -171,7 +193,11 @@
     "noBank": "Die Bankverbindung wird veröffentlicht, sobald sie von der Gemeinde bestätigt ist.",
     "onSite": "Spenden sind auch direkt in der Moschee möglich.",
     "onlineCta": "Online spenden",
-    "thanks": "Möge Allah Ihre Unterstützung annehmen."
+    "thanks": "Möge Allah Ihre Unterstützung annehmen.",
+    "methodsTitle": "So können Sie spenden",
+    "paypal": "PayPal",
+    "paypalNote": "Der PayPal-Link wird veröffentlicht, sobald er von der Gemeinde bestätigt ist.",
+    "transfer": "Überweisung"
   },
   "footer": {
     "quickLinks": "Schnellzugriff",
@@ -186,5 +212,27 @@
     "imprintTitle": "Impressum",
     "privacyTitle": "Datenschutz",
     "placeholder": "Die Angaben auf dieser Seite werden von der Islamischen Gemeinde Bargteheide e.V. ergänzt."
+  },
+  "islamic": {
+    "title": "Besondere Tage im Islam",
+    "intro": "Die wichtigsten Tage und Zeiten des islamischen Jahres – damit alle wissen, was als Nächstes ansteht.",
+    "untilRamadan": "Bis zum Ramadan",
+    "ramadanRunning": "Ramadan – möge Allah eure Fasten annehmen",
+    "days": "Tage",
+    "inDays": "in {n} Tagen",
+    "now": "Jetzt",
+    "approx": "voraussichtlich",
+    "note": "Die Termine sind berechnet und können sich durch die Mondsichtung um einen Tag verschieben. Verbindlich ist die Bekanntgabe der Gemeinde.",
+    "ramadan": "Beginn des Ramadan",
+    "laylatAlQadr": "Laylat al-Qadr (Nacht der Bestimmung)",
+    "eidFitr": "Ramadanfest (Eid al-Fitr)",
+    "arafah": "Tag von Arafat",
+    "eidAdha": "Opferfest (Eid al-Adha)",
+    "hajj": "Hadsch",
+    "newYear": "Islamisches Neujahr (1. Muharram)",
+    "ashura": "Aschura",
+    "mawlid": "Mawlid an-Nabi (Geburt des Propheten)",
+    "isra": "Isra und Mi'radsch",
+    "baraah": "Laylat al-Bara'a (Beraat)"
   }
 }

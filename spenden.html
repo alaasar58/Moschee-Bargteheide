@@ -22,16 +22,25 @@
       </section>
 
       <section class="section">
-        <div class="container prose">
+        <div class="container">
           <p data-i18n="donate.text"></p>
 
-          <h2 data-i18n="donate.bankTitle">Bankverbindung</h2>
-          <div data-bank></div>
+          <h2 data-i18n="donate.methodsTitle">So können Sie spenden</h2>
+          <div class="grid grid--2">
+            <div class="card">
+              <h3 data-i18n="donate.paypal">PayPal</h3>
+              <p data-paypal></p>
+              <a class="btn btn--primary" data-donation-link href="#" hidden data-i18n="donate.onlineCta">Online spenden</a>
+            </div>
+            <div class="card">
+              <h3 data-i18n="donate.transfer">Überweisung</h3>
+              <div data-bank></div>
+            </div>
+          </div>
 
           <p style="margin-top: 20px" data-i18n="donate.onSite"></p>
 
           <p style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap">
-            <a class="btn btn--primary" data-donation-link href="#" hidden data-i18n="donate.onlineCta">Online spenden</a>
             <a class="btn btn--outline" href="kontakt.html" data-i18n="home.ctaContact">Kontakt aufnehmen</a>
           </p>
 

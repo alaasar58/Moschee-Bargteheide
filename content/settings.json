@@ -1,34 +1,29 @@
 {
   "_hinweis": "Zentrale Einstellungen der Website. Alle Angaben koennen ohne Programmierkenntnisse hier geaendert werden. Felder, die leer sind, werden auf der Website NICHT angezeigt.",
-
   "mosqueName": {
-    "de": "Moschee Bargteheide",
-    "tr": "Bargteheide Camii",
-    "ar": "مسجد بارغتهايده",
-    "sq": "Xhamia e Bargteheide"
+    "de": "Hz. Hamza Moschee",
+    "tr": "Hz. Hamza Camii",
+    "ar": "مسجد سيدنا حمزة",
+    "sq": "Xhamia Hz. Hamza"
   },
   "associationName": "Islamische Gemeinde Bargteheide e.V.",
-
   "address": {
     "street": "Rudolf-Diesel-Straße 4",
     "zip": "22941",
     "city": "Bargteheide",
     "country": "Deutschland"
   },
-
   "_kontakt_hinweis": "Telefon und E-Mail erst eintragen, wenn sie vom Vorstand bestaetigt sind. Solange sie leer sind, erscheinen sie nicht auf der Website.",
   "contact": {
     "phone": "",
     "email": "",
     "whatsapp": ""
   },
-
   "social": {
     "instagram": "",
     "facebook": "",
     "youtube": ""
   },
-
   "_spenden_hinweis": "Bankverbindung erst eintragen, wenn sie vom Vorstand bestaetigt ist.",
   "bank": {
     "accountHolder": "",
@@ -38,20 +33,16 @@
     "purpose": "Spende"
   },
   "donationLink": "",
-
   "_mawaqit_hinweis": "Die Gebetszeiten werden ueber die Kennung (id) von Mawaqit geholt. Wenn die oeffentliche Mawaqit-Seite der Moschee bekannt ist, kann ihre Adresse unter url eingetragen werden - sie wird dann bevorzugt verwendet und auf der Website verlinkt. slug ist der Kurzname aus dieser Adresse.",
   "mawaqit": {
     "id": "27703",
     "slug": "",
     "url": "https://mawaqit.net/de/m/islamische-gemeinde-bargteheide-bargteheide-22941-germany-1"
   },
-
   "heroImage": "assets/img/moschee-aussen.jpg",
-
   "maps": {
     "embed": "https://www.google.com/maps?q=Rudolf-Diesel-Stra%C3%9Fe%204,%2022941%20Bargteheide&output=embed",
     "route": "https://www.google.com/maps/dir/?api=1&destination=Rudolf-Diesel-Stra%C3%9Fe+4,+22941+Bargteheide"
   },
-
   "demoNotice": true
 }

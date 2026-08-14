@@ -28,10 +28,23 @@
 
       <section class="section">
         <div class="container">
+          <p class="hijri-line">
+            <span data-i18n="prayer.hijriLabel">Islamisches Datum</span>
+            <span class="hijri-line__value" data-hijri-date></span>
+          </p>
           <div data-prayer="full"></div>
           <p style="margin-top: 20px; font-size: 0.88rem; color: var(--text-soft)" data-i18n="prayer.iqamaNote">
             Iqāma-Zeiten, sofern von der Moschee hinterlegt.
           </p>
+        </div>
+      </section>
+
+      <section class="section section--alt" id="besondere-tage">
+        <div class="container">
+          <h2 data-i18n="islamic.title">Besondere Tage im Islam</h2>
+          <p data-i18n="islamic.intro"></p>
+          <div data-ramadan-countdown style="margin-bottom: 22px"></div>
+          <div data-islamic-days></div>
         </div>
       </section>
     </main>
@@ -41,5 +54,6 @@
     <script src="assets/js/site.js"></script>
     <script src="assets/js/pages.js"></script>
     <script src="assets/js/prayer.js"></script>
+    <script src="assets/js/hijri.js"></script>
   </body>
 </html>

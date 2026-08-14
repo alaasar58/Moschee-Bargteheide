@@ -1,0 +1,7 @@
+{
+  "_hinweis": "Die besonderen islamischen Tage werden von der Website automatisch aus dem Umm-al-Qura-Kalender berechnet und als 'voraussichtlich' angezeigt. Sobald die Gemeinde einen Termin verbindlich bekannt gibt, kann er hier eingetragen werden: Er hat dann Vorrang und der Zusatz 'voraussichtlich' entfaellt.",
+  "_vorlage": {
+    "eidFitr": { "date": "2027-03-09", "confirmed": true }
+  },
+  "confirmed": {}
+}

@@ -18,12 +18,18 @@
       img.addEventListener(
         "error",
         () => {
-          // Wenn das Foto der Moschee noch fehlt, bleibt der ruhige Farbverlauf des Bereichs sichtbar.
-          const media = img.closest(".hero__media");
-          if (media) media.style.display = "none";
+          // Fehlt das Foto der Moschee noch, bleibt nur der helle Farbverlauf stehen.
+          const figure = img.closest(".hero__figure");
+          if (figure) figure.hidden = true;
         },
         { once: true }
       );
+    });
+  }
+
+  function renderMosqueName(settings) {
+    document.querySelectorAll("[data-mosque-name]").forEach((el) => {
+      el.textContent = S.field(settings.mosqueName);
     });
   }
 
@@ -126,6 +132,11 @@
         .join("")}</tbody></table>`;
     });
 
+    // Hinweistext zu PayPal, solange kein bestaetigter Link vorliegt.
+    document.querySelectorAll("[data-paypal]").forEach((el) => {
+      el.textContent = settings.donationLink ? "" : S.t("donate.paypalNote");
+    });
+
     document.querySelectorAll("[data-donation-link]").forEach((el) => {
       if (settings.donationLink) {
         el.hidden = false;
@@ -141,6 +152,7 @@
   function renderAll() {
     const settings = S.settings || {};
     renderHeroImage(settings);
+    renderMosqueName(settings);
     renderAddress(settings);
     renderMap(settings);
     renderContact(settings);

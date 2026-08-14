@@ -1,26 +1,33 @@
 /* Islamische Gemeinde Bargteheide e.V. – Moschee Bargteheide
    Ruhiges, modernes Design. Mobile First. */
 
+/* Farbwelt nach den Plakaten der Gemeinde:
+   Himmelblau, Sand, Gold und Petrol – hell, ruhig und freundlich. */
 :root {
-  --green-900: #0e3b31;
-  --green-800: #14503f;
-  --green-700: #1b6650;
-  --green-600: #248063;
-  --green-100: #e5f0ec;
-  --sand-500: #b08b52;
-  --sand-100: #f6efe4;
+  --petrol-900: #0f4a48;
+  --petrol-700: #14615d;
+  --petrol-500: #1f7d76;
+  --petrol-100: #e2f0ee;
 
-  --bg: #fbfaf7;
+  --sky-300: #a9d3e6;
+  --sky-100: #dbeef7;
+
+  --gold-600: #a8801f;
+  --gold-500: #c79a2c;
+  --sand-200: #edd8ab;
+  --sand-100: #f7ecd6;
+
+  --bg: #fdfaf4;
   --surface: #ffffff;
-  --surface-2: #f4f2ed;
-  --text: #1d2321;
-  --text-soft: #5b6663;
-  --border: #e3e0d8;
+  --surface-2: #f6efe2;
+  --text: #23383c;
+  --text-soft: #5f7880;
+  --border: #e7ded0;
 
-  --radius: 16px;
-  --radius-sm: 10px;
-  --shadow: 0 1px 2px rgba(16, 40, 34, 0.05), 0 8px 24px rgba(16, 40, 34, 0.06);
-  --shadow-sm: 0 1px 2px rgba(16, 40, 34, 0.06);
+  --radius: 18px;
+  --radius-sm: 12px;
+  --shadow: 0 1px 2px rgba(24, 60, 60, 0.04), 0 10px 28px rgba(24, 60, 60, 0.07);
+  --shadow-sm: 0 1px 2px rgba(24, 60, 60, 0.06);
 
   --max: 1120px;
   --header-h: 66px;
@@ -30,14 +37,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #101513;
-    --surface: #171e1b;
-    --surface-2: #1e2724;
-    --text: #eef2f0;
-    --text-soft: #a7b3af;
-    --border: #2a3531;
-    --green-100: #1c2f29;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.3);
+    --bg: #14201f;
+    --surface: #1b2828;
+    --surface-2: #22302f;
+    --text: #eef4f3;
+    --text-soft: #a9bcbd;
+    --border: #2f403f;
+    --petrol-100: #1e3a38;
+    --sand-100: #2a2519;
+    --sky-100: #1d2f36;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.3);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
   }
 }
@@ -73,7 +82,7 @@ img {
 }
 
 a {
-  color: var(--green-700);
+  color: var(--petrol-700);
   text-decoration: none;
 }
 
@@ -139,7 +148,7 @@ p {
   top: 8px;
   inset-inline-start: 12px;
   z-index: 200;
-  background: var(--green-800);
+  background: var(--petrol-700);
   color: #fff;
   padding: 10px 16px;
   border-radius: var(--radius-sm);
@@ -150,7 +159,7 @@ p {
 }
 
 :focus-visible {
-  outline: 3px solid var(--green-600);
+  outline: 3px solid var(--petrol-500);
   outline-offset: 2px;
 }
 
@@ -197,7 +206,7 @@ p {
   width: 34px;
   height: 34px;
   flex: 0 0 34px;
-  color: var(--green-700);
+  color: var(--petrol-700);
 }
 
 .brand__text {
@@ -244,13 +253,13 @@ p {
   white-space: nowrap;
 }
 .nav__link:hover {
-  background: var(--green-100);
+  background: var(--petrol-100);
   text-decoration: none;
 }
 .nav__link[aria-current="page"] {
-  color: var(--green-700);
+  color: var(--petrol-700);
   font-weight: 600;
-  background: var(--green-100);
+  background: var(--petrol-100);
 }
 
 .header-actions {
@@ -274,7 +283,7 @@ p {
   min-height: 40px;
 }
 .icon-btn:hover {
-  border-color: var(--green-600);
+  border-color: var(--petrol-500);
 }
 
 /* Sprachauswahl */
@@ -320,11 +329,11 @@ p {
   text-align: start;
 }
 .lang__option:hover {
-  background: var(--green-100);
+  background: var(--petrol-100);
 }
 .lang__option[aria-current="true"] {
   font-weight: 700;
-  color: var(--green-700);
+  color: var(--petrol-700);
 }
 .lang__flag {
   font-size: 1.15rem;
@@ -356,8 +365,8 @@ p {
 }
 .mobile-nav__list a:hover,
 .mobile-nav__list a[aria-current="page"] {
-  background: var(--green-100);
-  color: var(--green-700);
+  background: var(--petrol-100);
+  color: var(--petrol-700);
   text-decoration: none;
 }
 
@@ -412,71 +421,92 @@ p {
 
 /* ---------- Startseite / Hero ---------- */
 
+/* Heller Kopfbereich im Stil der Gemeinde-Plakate: Himmel oben, Sand unten,
+   dunkle Schrift auf hellem Grund – bewusst ohne dunkle Bildabdunklung. */
 .hero {
   position: relative;
-  color: #fff;
-  background: var(--green-900);
+  background: linear-gradient(180deg, var(--sky-100) 0%, var(--sand-100) 62%, var(--bg) 100%);
+  border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
 
-.hero__media {
-  position: absolute;
-  inset: 0;
-}
-.hero__media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.hero__media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(9, 32, 26, 0.55) 0%, rgba(9, 32, 26, 0.82) 100%);
+.hero__grid {
+  position: relative;
+  display: grid;
+  gap: 26px;
+  padding-block: 40px 34px;
+  align-items: center;
 }
 
-.hero__inner {
-  position: relative;
-  padding-block: 64px 52px;
-  max-width: 720px;
+@media (min-width: 900px) {
+  .hero__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    padding-block: 56px 46px;
+  }
+  /* Solange das Foto der Moschee fehlt, nutzt der Text die volle Breite. */
+  .hero__grid:has(.hero__figure[hidden]) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .hero__kicker {
-  display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  padding: 4px 12px;
+  color: var(--gold-600);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--sand-200);
+  padding: 5px 14px;
   border-radius: 999px;
   margin-bottom: 14px;
 }
 
 .hero h1 {
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-.hero__text {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.05rem;
+  color: var(--petrol-900);
   margin-bottom: 10px;
 }
 
+.hero__text {
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  max-width: 46ch;
+}
+
 .hero__address {
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text);
   font-size: 0.95rem;
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* Das Foto der Moschee steht frei auf hellem Grund – ohne Rahmen des Plakats. */
+.hero__figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: var(--shadow);
+  aspect-ratio: 4 / 3;
+}
+.hero__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__figure[hidden] {
+  display: none;
 }
 
 /* ---------- Schaltflächen ---------- */
@@ -500,20 +530,21 @@ p {
 }
 
 .btn--primary {
-  background: var(--green-700);
+  background: var(--petrol-700);
   color: #fff;
 }
 .btn--primary:hover {
-  background: var(--green-800);
+  background: var(--petrol-700);
 }
 
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.5);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.75);
+  border-color: var(--sand-200);
+  color: var(--petrol-900);
 }
 .btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.16);
+  background: #fff;
+  border-color: var(--gold-500);
 }
 
 .btn--outline {
@@ -522,14 +553,13 @@ p {
   color: var(--text);
 }
 .btn--outline:hover {
-  border-color: var(--green-600);
-  color: var(--green-700);
+  border-color: var(--petrol-500);
+  color: var(--petrol-700);
 }
 
 /* ---------- Gebetszeiten ---------- */
 
 .prayer-panel {
-  margin-top: -34px;
   position: relative;
   z-index: 2;
 }
@@ -562,7 +592,7 @@ p {
 .next-prayer__name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--green-700);
+  color: var(--petrol-700);
 }
 
 .next-prayer__time {
@@ -631,8 +661,8 @@ p {
   border: 1px solid transparent;
 }
 .time-cell[data-active="true"] {
-  background: var(--green-100);
-  border-color: var(--green-600);
+  background: var(--petrol-100);
+  border-color: var(--petrol-500);
 }
 .time-cell__name {
   font-size: 0.8rem;
@@ -652,7 +682,7 @@ p {
 
 .jumua-box {
   margin-top: 16px;
-  background: linear-gradient(135deg, var(--green-800), var(--green-600));
+  background: linear-gradient(135deg, var(--petrol-700), var(--petrol-500));
   color: #fff;
   border-radius: var(--radius);
   padding: 16px 20px;
@@ -713,7 +743,7 @@ table.month-table {
   top: 0;
 }
 .month-table tr[data-today="true"] td {
-  background: var(--green-100);
+  background: var(--petrol-100);
   font-weight: 600;
 }
 
@@ -850,8 +880,8 @@ table.month-table {
 }
 
 .info-box {
-  background: var(--green-100);
-  border: 1px solid color-mix(in srgb, var(--green-600) 30%, transparent);
+  background: var(--petrol-100);
+  border: 1px solid color-mix(in srgb, var(--petrol-500) 30%, transparent);
   border-radius: var(--radius);
   padding: 16px 18px;
   color: var(--text);
@@ -906,7 +936,7 @@ table.month-table {
   flex: 0 0 30px;
   height: 30px;
   border-radius: 50%;
-  background: var(--green-700);
+  background: var(--petrol-700);
   color: #fff;
   display: grid;
   place-items: center;
@@ -938,7 +968,7 @@ table.month-table {
 
 .site-footer {
   margin-top: 46px;
-  background: var(--green-900);
+  background: var(--petrol-900);
   color: rgba(255, 255, 255, 0.86);
   padding-block: 36px 22px;
 }
@@ -984,11 +1014,228 @@ table.month-table {
   color: #fff;
 }
 
+
+/* ---------- Islamischer Kalender ---------- */
+
+/* Hidschri-Datum neben dem heutigen Tag */
+.hijri-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+.hijri-line__value {
+  font-weight: 600;
+  color: var(--petrol-700);
+  background: var(--petrol-100);
+  border-radius: 999px;
+  padding: 3px 12px;
+}
+
+/* Countdown bis Ramadan */
+.countdown-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: linear-gradient(120deg, var(--sky-100), var(--sand-100));
+  border: 1px solid var(--sand-200);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+}
+.countdown-card__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+.countdown-card__title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--petrol-900);
+  line-height: 1.25;
+}
+.countdown-card__date {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+.countdown-card__value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+.countdown-card__number {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--petrol-700);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.countdown-card__unit {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  .countdown-card {
+    background: linear-gradient(120deg, var(--surface-2), var(--surface));
+  }
+  .countdown-card__title {
+    color: var(--text);
+  }
+}
+
+/* Liste der besonderen Tage */
+.day-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+.day-list__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+}
+.day-list__main {
+  display: flex;
+  flex-direction: column;
+}
+.day-list__name {
+  font-weight: 600;
+  color: var(--petrol-900);
+}
+.day-list__date {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+}
+.day-list__badge {
+  font-size: 0.82rem;
+  color: var(--petrol-700);
+  background: var(--petrol-100);
+  border-radius: 999px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+.day-list__badge--now {
+  background: var(--gold-500);
+  color: #fff;
+}
+.day-list__note {
+  margin-top: 12px;
+  font-size: 0.83rem;
+  color: var(--text-soft);
+}
+
+@media (prefers-color-scheme: dark) {
+  .day-list__name {
+    color: var(--text);
+  }
+}
+
+/* ---------- Online-Beitritt mit Unterschrift ---------- */
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+@media (min-width: 700px) {
+  .form-grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.field > span {
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
+.field input,
+.field textarea {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 13px;
+  min-height: 46px;
+}
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--petrol-500);
+  outline: none;
+}
+
+.signature {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  padding: 10px;
+}
+.signature canvas {
+  width: 100%;
+  height: 170px;
+  touch-action: none;
+  border-radius: 8px;
+  background: #fff;
+  cursor: crosshair;
+}
+.signature__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.form-status {
+  margin-top: 14px;
+  font-size: 0.92rem;
+  color: var(--petrol-700);
+}
+
 /* ---------- RTL ---------- */
 
 body[dir="rtl"] .hero__inner,
 body[dir="rtl"] .prose {
   text-align: start;
+}
+
+/* Beim Drucken nur den fertigen Aufnahmeantrag ausgeben. */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .application-doc,
+  .application-doc * {
+    visibility: visible;
+  }
+  .application-doc {
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+  }
+  .no-print {
+    display: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -7,35 +7,49 @@
     "time": "",
     "image": "",
     "demo": true,
-    "title": { "de": "", "tr": "", "ar": "", "sq": "" },
-    "location": { "de": "", "tr": "", "ar": "", "sq": "" },
-    "description": { "de": "", "tr": "", "ar": "", "sq": "" }
+    "title": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
+    "location": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
+    "description": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    }
   },
   "items": [
     {
-      "id": "beispiel-veranstaltung",
-      "date": "2026-09-19",
+      "id": "opferfest-festgebet-2026",
+      "date": "2026-05-27",
       "endDate": "",
-      "time": "18:00",
+      "time": "05:40",
       "image": "",
-      "demo": true,
       "title": {
-        "de": "Beispielveranstaltung: Gemeinsames Abendessen",
-        "tr": "Örnek etkinlik: Ortak akşam yemeği",
-        "ar": "فعالية تجريبية: عشاء جماعي",
-        "sq": "Aktivitet shembull: Darkë e përbashkët"
+        "de": "Opferfest – Festgebet",
+        "tr": "Kurban Bayramı – Bayram namazı",
+        "ar": "عيد الأضحى – صلاة العيد",
+        "sq": "Kurban Bajrami – Namazi i Bajramit"
       },
       "location": {
-        "de": "Moschee Bargteheide, Rudolf-Diesel-Straße 4",
-        "tr": "Bargteheide Camii, Rudolf-Diesel-Straße 4",
-        "ar": "مسجد بارغتهايده، Rudolf-Diesel-Straße 4",
-        "sq": "Xhamia e Bargteheide, Rudolf-Diesel-Straße 4"
+        "de": "Rudolf-Diesel-Straße 4, Bargteheide",
+        "tr": "Rudolf-Diesel-Straße 4, Bargteheide",
+        "ar": "Rudolf-Diesel-Straße 4, Bargteheide",
+        "sq": "Rudolf-Diesel-Straße 4, Bargteheide"
       },
       "description": {
-        "de": "Dies ist ein Beispieltermin, damit sichtbar wird, wie Veranstaltungen dargestellt werden. Die Gemeinde ersetzt ihn durch echte Termine.",
-        "tr": "Bu, etkinliklerin nasıl göründüğünü göstermek için hazırlanmış örnek bir tarihtir. Cemaat bunu gerçek tarihlerle değiştirir.",
-        "ar": "هذا موعد تجريبي لإظهار طريقة عرض الفعاليات، وتقوم الجمعية باستبداله بمواعيد حقيقية.",
-        "sq": "Ky është një datë shembull për të treguar si paraqiten aktivitetet. Bashkësia e zëvendëson me data të vërteta."
+        "de": "Wir laden alle Muslime herzlich zum gemeinsamen Gebet anlässlich des Opferfests ein. Alle sind herzlich willkommen – möge Allah unser Opfer annehmen.",
+        "tr": "Kurban Bayramı münasebetiyle tüm Müslümanları birlikte namaza davet ediyoruz. Herkes içtenlikle davetlidir – Allah kurbanımızı kabul etsin.",
+        "ar": "ندعو جميع المسلمين إلى صلاة العيد بمناسبة عيد الأضحى. الجميع مرحّب بهم – تقبّل الله منا ومنكم.",
+        "sq": "I ftojmë të gjithë myslimanët në namazin e përbashkët me rastin e Kurban Bajramit. Të gjithë janë të mirëpritur – Allahu e pranoftë kurbanin tonë."
       }
     }
   ]

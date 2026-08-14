@@ -1,15 +1,87 @@
 {
-  "_hinweis": "Kurse der Islamischen Gemeinde Bargteheide e.V. Es werden bewusst KEINE erfundenen Kurse gepflegt. Sobald die offizielle Kursuebersicht der Gemeinde vorliegt, werden die Kurse hier eingetragen. Solange die Liste 'items' leer ist, zeigt die Website einen freundlichen Hinweis an.",
+  "_hinweis": "Kurse der Islamischen Gemeinde Bargteheide e.V. Die Angaben stammen vom Aushang der Gemeinde. Weitere Kurse koennen nach demselben Muster ergaenzt werden.",
   "_vorlage": {
     "id": "eindeutige-kennung",
-    "title": { "de": "", "tr": "", "ar": "", "sq": "" },
-    "description": { "de": "", "tr": "", "ar": "", "sq": "" },
-    "ageGroup": { "de": "", "tr": "", "ar": "", "sq": "" },
-    "days": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "title": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
+    "description": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
+    "ageGroup": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
+    "days": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
     "time": "",
-    "location": { "de": "", "tr": "", "ar": "", "sq": "" },
-    "registration": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "location": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
+    "registration": {
+      "de": "",
+      "tr": "",
+      "ar": "",
+      "sq": ""
+    },
     "registrationLink": ""
   },
-  "items": []
+  "items": [
+    {
+      "id": "maedchentreff",
+      "title": {
+        "de": "Mädchentreff",
+        "tr": "Kızlar Buluşması",
+        "ar": "لقاء الفتيات",
+        "sq": "Takimi i vajzave"
+      },
+      "description": {
+        "de": "Unsere Angebote für Dich: sozialpädagogische Begleitung, gemeinsames Beten, Austausch zu verschiedenen Themen, Kreatives und Spaßiges – und worauf du noch so Lust hast. Komm auch du!",
+        "tr": "Sana sunduklarımız: sosyal pedagojik rehberlik, birlikte namaz, farklı konularda sohbet, yaratıcı ve eğlenceli etkinlikler – ve canının istediği başka şeyler. Sen de gel!",
+        "ar": "ما نقدّمه لكِ: مرافقة تربوية اجتماعية، صلاة جماعية، حوار حول مواضيع متنوعة، أنشطة إبداعية وممتعة – وكل ما ترغبين به. تعالي أنتِ أيضًا!",
+        "sq": "Ofertat tona për ty: përkrahje socio-pedagogjike, namaz i përbashkët, bisedë për tema të ndryshme, aktivitete kreative dhe argëtuese – dhe çfarë të kesh qejf. Eja edhe ti!"
+      },
+      "ageGroup": {
+        "de": "Für alle Mädchen und jungen Frauen zwischen 12 und 22 Jahren",
+        "tr": "12–22 yaş arası tüm kızlar ve genç kadınlar için",
+        "ar": "لجميع الفتيات والشابات بين 12 و22 سنة",
+        "sq": "Për të gjitha vajzat dhe gratë e reja 12–22 vjeç"
+      },
+      "days": {
+        "de": "Jeder 1. und 3. Mittwoch im Monat",
+        "tr": "Her ayın 1. ve 3. çarşambası",
+        "ar": "كل أربعاء أول وثالث من الشهر",
+        "sq": "Çdo e mërkurë e parë dhe e tretë e muajit"
+      },
+      "time": "17:00 – 20:00",
+      "location": {
+        "de": "Moschee Bargteheide, Rudolf-Diesel-Straße 4, 22941 Bargteheide",
+        "tr": "Bargteheide Camii, Rudolf-Diesel-Straße 4, 22941 Bargteheide",
+        "ar": "مسجد بارغتهايده، Rudolf-Diesel-Straße 4, 22941 Bargteheide",
+        "sq": "Xhamia e Bargteheide, Rudolf-Diesel-Straße 4, 22941 Bargteheide"
+      },
+      "registration": {
+        "de": "Kontakt: 0176 / 49353482",
+        "tr": "İletişim: 0176 / 49353482",
+        "ar": "للتواصل: 0176 / 49353482",
+        "sq": "Kontakti: 0176 / 49353482"
+      },
+      "registrationLink": "tel:+4917649353482"
+    }
+  ]
 }

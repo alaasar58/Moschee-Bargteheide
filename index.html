@@ -18,29 +18,48 @@
 
     <main id="main">
       <section class="hero">
-        <div class="hero__media">
-          <img data-hero-image src="assets/img/moschee-aussen.jpg" alt="" />
-        </div>
-        <div class="container hero__inner">
-          <span class="hero__kicker" data-i18n="site.subtitle">Moschee Bargteheide</span>
-          <h1 data-i18n="home.heroTitle">Islamische Gemeinde Bargteheide e.V.</h1>
-          <p class="hero__text" data-i18n="home.heroSubtitle">
-            Moschee Bargteheide – ein Ort für Gebet, Bildung und Gemeinschaft.
-          </p>
-          <p class="hero__address">
-            <span aria-hidden="true">📍</span>
-            <span data-address>Rudolf-Diesel-Straße 4, 22941 Bargteheide</span>
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="gebetszeiten.html" data-i18n="home.ctaPrayer">Alle Gebetszeiten</a>
-            <a class="btn btn--ghost" href="kontakt.html" data-i18n="home.ctaContact">Kontakt aufnehmen</a>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <span class="hero__kicker" data-i18n="site.subtitle">Moschee Bargteheide</span>
+            <h1 data-i18n="home.heroTitle">Islamische Gemeinde Bargteheide e.V.</h1>
+            <p class="hero__text" data-i18n="home.heroSubtitle">
+              Moschee Bargteheide – ein Ort für Gebet, Bildung und Gemeinschaft.
+            </p>
+            <p class="hero__address">
+              <span aria-hidden="true">📍</span>
+              <span data-address>Rudolf-Diesel-Straße 4, 22941 Bargteheide</span>
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="gebetszeiten.html" data-i18n="home.ctaPrayer">Alle Gebetszeiten</a>
+              <a class="btn btn--ghost" href="kontakt.html" data-i18n="home.ctaContact">Kontakt aufnehmen</a>
+            </div>
           </div>
+          <figure class="hero__figure">
+            <img data-hero-image src="assets/img/moschee-aussen.jpg" alt="" />
+          </figure>
         </div>
       </section>
 
       <section class="section section--tight">
         <div class="container prayer-panel">
+          <p class="hijri-line">
+            <span data-i18n="home.hijriLabel">Heute nach islamischem Kalender</span>
+            <span class="hijri-line__value" data-hijri-date></span>
+          </p>
           <div data-prayer="compact"></div>
+        </div>
+      </section>
+
+      <section class="section section--tight">
+        <div class="container">
+          <div data-ramadan-countdown></div>
+          <h2 style="margin-top: 34px" data-i18n="home.islamicDaysTitle">Besondere Tage im Islam</h2>
+          <div data-islamic-days data-limit="4"></div>
+          <p style="margin-top: 16px">
+            <a class="btn btn--outline" href="gebetszeiten.html#besondere-tage" data-i18n="home.islamicDaysAll">
+              Alle besonderen Tage
+            </a>
+          </p>
         </div>
       </section>
 
@@ -92,6 +111,7 @@
     <script src="assets/js/site.js"></script>
     <script src="assets/js/pages.js"></script>
     <script src="assets/js/prayer.js"></script>
+    <script src="assets/js/hijri.js"></script>
     <script src="assets/js/content.js"></script>
   </body>
 </html>

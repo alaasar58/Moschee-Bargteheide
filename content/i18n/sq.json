@@ -60,7 +60,10 @@
     "coursesTitle": "Kurset dhe arsimi",
     "coursesText": "Bashkësia ofron kurse dhe programe edukative për fëmijë, të rinj dhe të rritur.",
     "coursesLink": "Te kurset",
-    "findUs": "Si na gjeni"
+    "findUs": "Si na gjeni",
+    "hijriLabel": "Sot sipas kalendarit islam",
+    "islamicDaysTitle": "Ditë të veçanta në Islam",
+    "islamicDaysAll": "Të gjitha ditët e veçanta"
   },
   "prayer": {
     "title": "Kohët e namazit",
@@ -86,7 +89,8 @@
     "nextPrayerIs": "Namazi i radhës",
     "monthTitle": "Pasqyra mujore",
     "day": "Dita",
-    "note": "Të gjitha kohët janë sipas orës lokale (Europe/Berlin)."
+    "note": "Të gjitha kohët janë sipas orës lokale (Europe/Berlin).",
+    "hijriLabel": "Data hixhri"
   },
   "courses": {
     "title": "Kurset",
@@ -156,7 +160,25 @@
     "step3": "Dorëzoni kërkesën – kryesia konfirmon anëtarësimin.",
     "feeTitle": "Kuota e anëtarësisë",
     "feeText": "Lartësia e kuotës së anëtarësisë shpallet nga bashkësia.",
-    "cta": "Kontaktoni tani"
+    "cta": "Kontaktoni tani",
+    "onlineTitle": "Bëhu anëtar online",
+    "onlineText": "Kërkesën për anëtarësim mund ta plotësoni këtu dhe ta nënshkruani në mënyrë digjitale.",
+    "formFirstName": "Emri",
+    "formLastName": "Mbiemri",
+    "formBirth": "Datëlindja",
+    "formStreet": "Rruga dhe numri",
+    "formZip": "Kodi postar",
+    "formCity": "Qyteti",
+    "formEmail": "E-mail",
+    "formPhone": "Telefoni",
+    "signatureTitle": "Nënshkrimi",
+    "signatureHint": "Nënshkruani në fushë me gisht ose me maus.",
+    "signatureClear": "Fshi nënshkrimin",
+    "submit": "Krijo kërkesën",
+    "formIncomplete": "Ju lutemi plotësoni fushat e detyrueshme dhe nënshkruani.",
+    "formDone": "Kërkesa u krijua. Ju lutemi ruajeni ose printojeni dhe dërgojeni te bashkësia.",
+    "formPrint": "Ruaj ose printo kërkesën",
+    "formNote": "Shënim: Kërkesa krijohet vetëm në shfletuesin tuaj; asnjë e dhënë nuk dërgohet te palë të treta. Formën përfundimtare të anëtarësimit online e vendos kryesia."
   },
   "donate": {
     "title": "Dhurime",
@@ -171,7 +193,11 @@
     "noBank": "Të dhënat bankare publikohen sapo të konfirmohen nga bashkësia.",
     "onSite": "Dhurimet mund të bëhen edhe drejtpërdrejt në xhami.",
     "onlineCta": "Dhuro online",
-    "thanks": "Allahu e pranoftë mbështetjen tuaj."
+    "thanks": "Allahu e pranoftë mbështetjen tuaj.",
+    "methodsTitle": "Si mund të dhuroni",
+    "paypal": "PayPal",
+    "paypalNote": "Lidhja e PayPal publikohet sapo të konfirmohet nga bashkësia.",
+    "transfer": "Transfertë bankare"
   },
   "footer": {
     "quickLinks": "Qasje e shpejtë",
@@ -186,5 +212,27 @@
     "imprintTitle": "Impressum",
     "privacyTitle": "Mbrojtja e të dhënave",
     "placeholder": "Të dhënat e kësaj faqeje plotësohen nga Islamische Gemeinde Bargteheide e.V."
+  },
+  "islamic": {
+    "title": "Ditë të veçanta në Islam",
+    "intro": "Ditët dhe kohët më të rëndësishme të vitit islam – që të gjithë ta dinë çfarë vjen më pas.",
+    "untilRamadan": "Deri në Ramazan",
+    "ramadanRunning": "Ramazan – Allahu ua pranoftë agjërimin",
+    "days": "ditë",
+    "inDays": "pas {n} ditësh",
+    "now": "Tani",
+    "approx": "parashikuar",
+    "note": "Datat janë të llogaritura dhe mund të zhvendosen një ditë sipas shikimit të hënës. E vlefshme është shpallja e bashkësisë.",
+    "ramadan": "Fillimi i Ramazanit",
+    "laylatAlQadr": "Nata e Kadrit",
+    "eidFitr": "Fitër Bajrami",
+    "arafah": "Dita e Arafatit",
+    "eidAdha": "Kurban Bajrami",
+    "hajj": "Haxhi",
+    "newYear": "Viti i Ri Islam (1 Muharrem)",
+    "ashura": "Ashura",
+    "mawlid": "Mevludi",
+    "isra": "Israja dhe Miraxhi",
+    "baraah": "Nata e Beratit"
   }
 }
