@@ -1,0 +1,86 @@
+{
+  "_hinweis": "Neuigkeiten der Gemeinde. Neue Meldung: einen Block in 'items' oben einfuegen. Feld 'demo': true zeigt ein sichtbares 'Beispiel'-Etikett und muss bei echten Meldungen entfernt werden. Fehlende Uebersetzungen fallen automatisch auf Deutsch zurueck.",
+  "_vorlage": {
+    "id": "eindeutige-kennung",
+    "date": "2026-01-31",
+    "image": "",
+    "demo": true,
+    "title": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "excerpt": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "body": { "de": "", "tr": "", "ar": "", "sq": "" }
+  },
+  "items": [
+    {
+      "id": "beispiel-freitagsgebet",
+      "date": "2026-08-07",
+      "image": "",
+      "demo": true,
+      "title": {
+        "de": "Beispielmeldung: Hinweis zum Freitagsgebet",
+        "tr": "Örnek duyuru: Cuma namazı hakkında bilgi",
+        "ar": "خبر تجريبي: تنويه بخصوص صلاة الجمعة",
+        "sq": "Njoftim shembull: Informacion për namazin e xhumasë"
+      },
+      "excerpt": {
+        "de": "Dies ist eine Beispielmeldung, damit die Gemeinde sehen kann, wie Neuigkeiten auf der Website dargestellt werden.",
+        "tr": "Bu, haberlerin web sitesinde nasıl göründüğünü göstermek için hazırlanmış örnek bir duyurudur.",
+        "ar": "هذا خبر تجريبي لعرض الشكل الذي تظهر به الأخبار على الموقع.",
+        "sq": "Ky është një njoftim shembull për të treguar se si paraqiten lajmet në faqe."
+      },
+      "body": {
+        "de": "Dieser Text ist ein Platzhalter. Die Gemeinde kann ihn jederzeit durch eine echte Meldung ersetzen – zum Beispiel Hinweise zum Freitagsgebet, zu Kursen oder zu besonderen Terminen.",
+        "tr": "Bu metin bir yer tutucudur. Cemaat bunu istediği zaman gerçek bir duyuruyla değiştirebilir – örneğin cuma namazı, kurslar veya özel tarihler hakkında bilgilerle.",
+        "ar": "هذا النص مؤقت، ويمكن للجمعية استبداله في أي وقت بخبر حقيقي، مثل تنويه عن صلاة الجمعة أو الدورات أو المواعيد الخاصة.",
+        "sq": "Ky tekst është vetëm një zëvendësues. Bashkësia mund ta ndryshojë në çdo kohë me një njoftim të vërtetë – për shembull për namazin e xhumasë, kurset ose datat e veçanta."
+      }
+    },
+    {
+      "id": "beispiel-kursanmeldung",
+      "date": "2026-07-20",
+      "image": "",
+      "demo": true,
+      "title": {
+        "de": "Beispielmeldung: Anmeldung für Kurse",
+        "tr": "Örnek duyuru: Kurslara kayıt",
+        "ar": "خبر تجريبي: التسجيل في الدورات",
+        "sq": "Njoftim shembull: Regjistrimi në kurse"
+      },
+      "excerpt": {
+        "de": "Platzhalter für eine Meldung über Kursanmeldungen. Der Inhalt wird durch die Gemeinde ergänzt.",
+        "tr": "Kurs kayıtlarıyla ilgili bir duyuru için yer tutucu. İçerik cemaat tarafından eklenecektir.",
+        "ar": "نص مؤقت لخبر عن التسجيل في الدورات، وسيتم استكمال المحتوى من قبل الجمعية.",
+        "sq": "Zëvendësues për një njoftim mbi regjistrimet në kurse. Përmbajtja plotësohet nga bashkësia."
+      },
+      "body": {
+        "de": "Platzhalter für eine Meldung über Kursanmeldungen. Der Inhalt wird durch die Gemeinde ergänzt.",
+        "tr": "Kurs kayıtlarıyla ilgili bir duyuru için yer tutucu. İçerik cemaat tarafından eklenecektir.",
+        "ar": "نص مؤقت لخبر عن التسجيل في الدورات، وسيتم استكمال المحتوى من قبل الجمعية.",
+        "sq": "Zëvendësues për një njoftim mbi regjistrimet në kurse. Përmbajtja plotësohet nga bashkësia."
+      }
+    },
+    {
+      "id": "beispiel-gemeinde",
+      "date": "2026-06-15",
+      "image": "",
+      "demo": true,
+      "title": {
+        "de": "Beispielmeldung: Aus der Gemeinde",
+        "tr": "Örnek duyuru: Cemaatten haberler",
+        "ar": "خبر تجريبي: من أخبار الجمعية",
+        "sq": "Njoftim shembull: Nga bashkësia"
+      },
+      "excerpt": {
+        "de": "Hier erscheinen künftig echte Neuigkeiten aus der Islamischen Gemeinde Bargteheide e.V.",
+        "tr": "Burada ileride Islamische Gemeinde Bargteheide e.V. hakkında gerçek haberler yer alacaktır.",
+        "ar": "ستظهر هنا لاحقًا أخبار حقيقية من الجمعية الإسلامية في بارغتهايده.",
+        "sq": "Këtu do të shfaqen më vonë lajme të vërteta nga Islamische Gemeinde Bargteheide e.V."
+      },
+      "body": {
+        "de": "Hier erscheinen künftig echte Neuigkeiten aus der Islamischen Gemeinde Bargteheide e.V.",
+        "tr": "Burada ileride Islamische Gemeinde Bargteheide e.V. hakkında gerçek haberler yer alacaktır.",
+        "ar": "ستظهر هنا لاحقًا أخبار حقيقية من الجمعية الإسلامية في بارغتهايده.",
+        "sq": "Këtu do të shfaqen më vonë lajme të vërteta nga Islamische Gemeinde Bargteheide e.V."
+      }
+    }
+  ]
+}

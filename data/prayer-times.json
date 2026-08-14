@@ -1,0 +1,17 @@
+{
+  "source": "mawaqit",
+  "mosqueId": "27703",
+  "mosqueName": "Islamische Gemeinde Bargteheide",
+  "url": "https://mawaqit.net/de/27703",
+  "timezone": "Europe/Berlin",
+  "updatedAt": null,
+  "pending": true,
+  "_hinweis": "Platzhalter. Diese Datei wird ausschliesslich automatisch durch scripts/fetch-mawaqit.mjs bzw. den GitHub-Workflow 'Gebetszeiten aktualisieren' befuellt. Es werden bewusst keine Zeiten von Hand eingetragen.",
+  "imsakOffsetMinutes": null,
+  "jumua": [],
+  "jumuaAsDuhr": false,
+  "iqamaToday": null,
+  "iqamaCalendar": null,
+  "calendar": null,
+  "today": null
+}

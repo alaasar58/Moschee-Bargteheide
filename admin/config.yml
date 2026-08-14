@@ -1,0 +1,231 @@
+# Decap CMS – Redaktionsoberflaeche der Gemeinde.
+# Damit koennen Neuigkeiten, Kurse, Veranstaltungen, Bilder und Grundeinstellungen
+# ueber eine Weboberflaeche gepflegt werden, ohne den Code zu aendern.
+# Einrichtung (einmalig) ist in der README.md beschrieben.
+
+backend:
+  name: github
+  repo: alaasar58/Moschee-Bargteheide
+  branch: claude/bargteheide-mosque-website-wragx8
+
+# Aenderungen werden als Entwurf gespeichert und koennen vor der Veroeffentlichung geprueft werden.
+publish_mode: editorial_workflow
+
+media_folder: "assets/img"
+public_folder: "assets/img"
+
+locale: "de"
+
+collections:
+  - name: "neuigkeiten"
+    label: "Neuigkeiten"
+    files:
+      - name: "news"
+        label: "Neuigkeiten"
+        file: "content/news.json"
+        extension: json
+        format: json
+        fields:
+          - { label: "Hinweis", name: "_hinweis", widget: hidden, required: false }
+          - { label: "Vorlage", name: "_vorlage", widget: hidden, required: false }
+          - label: "Meldungen"
+            name: "items"
+            widget: list
+            summary: "{{fields.date}} – {{fields.title.de}}"
+            fields:
+              - { label: "Kennung (eindeutig, ohne Leerzeichen)", name: "id", widget: string }
+              - { label: "Datum", name: "date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Bild", name: "image", widget: image, required: false }
+              - { label: "Als Beispiel kennzeichnen", name: "demo", widget: boolean, default: false, required: false }
+              - label: "Titel"
+                name: "title"
+                widget: object
+                fields:
+                  - { label: "Deutsch", name: "de", widget: string }
+                  - { label: "Türkçe", name: "tr", widget: string, required: false }
+                  - { label: "العربية", name: "ar", widget: string, required: false }
+                  - { label: "Shqip", name: "sq", widget: string, required: false }
+              - label: "Kurzbeschreibung"
+                name: "excerpt"
+                widget: object
+                fields:
+                  - { label: "Deutsch", name: "de", widget: text }
+                  - { label: "Türkçe", name: "tr", widget: text, required: false }
+                  - { label: "العربية", name: "ar", widget: text, required: false }
+                  - { label: "Shqip", name: "sq", widget: text, required: false }
+              - label: "Text"
+                name: "body"
+                widget: object
+                fields:
+                  - { label: "Deutsch", name: "de", widget: text }
+                  - { label: "Türkçe", name: "tr", widget: text, required: false }
+                  - { label: "العربية", name: "ar", widget: text, required: false }
+                  - { label: "Shqip", name: "sq", widget: text, required: false }
+
+  - name: "kurse"
+    label: "Kurse"
+    files:
+      - name: "courses"
+        label: "Kurse"
+        file: "content/courses.json"
+        extension: json
+        format: json
+        fields:
+          - { label: "Hinweis", name: "_hinweis", widget: hidden, required: false }
+          - { label: "Vorlage", name: "_vorlage", widget: hidden, required: false }
+          - label: "Kurse"
+            name: "items"
+            widget: list
+            summary: "{{fields.title.de}}"
+            fields:
+              - { label: "Kennung (eindeutig, ohne Leerzeichen)", name: "id", widget: string }
+              - label: "Kursname"
+                name: "title"
+                widget: object
+                fields:
+                  - { label: "Deutsch", name: "de", widget: string }
+                  - { label: "Türkçe", name: "tr", widget: string, required: false }
+                  - { label: "العربية", name: "ar", widget: string, required: false }
+                  - { label: "Shqip", name: "sq", widget: string, required: false }
+              - label: "Kurzbeschreibung"
+                name: "description"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Deutsch", name: "de", widget: text, required: false }
+                  - { label: "Türkçe", name: "tr", widget: text, required: false }
+                  - { label: "العربية", name: "ar", widget: text, required: false }
+                  - { label: "Shqip", name: "sq", widget: text, required: false }
+              - label: "Altersgruppe"
+                name: "ageGroup"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Deutsch", name: "de", widget: string, required: false }
+                  - { label: "Türkçe", name: "tr", widget: string, required: false }
+                  - { label: "العربية", name: "ar", widget: string, required: false }
+                  - { label: "Shqip", name: "sq", widget: string, required: false }
+              - label: "Tage"
+                name: "days"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Deutsch", name: "de", widget: string, required: false }
+                  - { label: "Türkçe", name: "tr", widget: string, required: false }
+                  - { label: "العربية", name: "ar", widget: string, required: false }
+                  - { label: "Shqip", name: "sq", widget: string, required: false }
+              - { label: "Uhrzeit", name: "time", widget: string, required: false }
+              - label: "Ort"
+                name: "location"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Deutsch", name: "de", widget: string, required: false }
+                  - { label: "Türkçe", name: "tr", widget: string, required: false }
+                  - { label: "العربية", name: "ar", widget: string, required: false }
+                  - { label: "Shqip", name: "sq", widget: string, required: false }
+              - label: "Anmeldung"
+                name: "registration"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Deutsch", name: "de", widget: text, required: false }
+                  - { label: "Türkçe", name: "tr", widget: text, required: false }
+                  - { label: "العربية", name: "ar", widget: text, required: false }
+                  - { label: "Shqip", name: "sq", widget: text, required: false }
+              - { label: "Link zur Anmeldung", name: "registrationLink", widget: string, required: false }
+              - { label: "Bild", name: "image", widget: image, required: false }
+
+  - name: "veranstaltungen"
+    label: "Veranstaltungen"
+    files:
+      - name: "events"
+        label: "Veranstaltungen"
+        file: "content/events.json"
+        extension: json
+        format: json
+        fields:
+          - { label: "Hinweis", name: "_hinweis", widget: hidden, required: false }
+          - { label: "Vorlage", name: "_vorlage", widget: hidden, required: false }
+          - label: "Veranstaltungen"
+            name: "items"
+            widget: list
+            summary: "{{fields.date}} – {{fields.title.de}}"
+            fields:
+              - { label: "Kennung (eindeutig, ohne Leerzeichen)", name: "id", widget: string }
+              - { label: "Datum", name: "date", widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Enddatum (optional)", name: "endDate", widget: string, required: false }
+              - { label: "Uhrzeit", name: "time", widget: string, required: false }
+              - { label: "Bild", name: "image", widget: image, required: false }
+              - { label: "Als Beispiel kennzeichnen", name: "demo", widget: boolean, default: false, required: false }
+              - label: "Titel"
+                name: "title"
+                widget: object
+                fields:
+                  - { label: "Deutsch", name: "de", widget: string }
+                  - { label: "Türkçe", name: "tr", widget: string, required: false }
+                  - { label: "العربية", name: "ar", widget: string, required: false }
+                  - { label: "Shqip", name: "sq", widget: string, required: false }
+              - label: "Ort"
+                name: "location"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Deutsch", name: "de", widget: string, required: false }
+                  - { label: "Türkçe", name: "tr", widget: string, required: false }
+                  - { label: "العربية", name: "ar", widget: string, required: false }
+                  - { label: "Shqip", name: "sq", widget: string, required: false }
+              - label: "Beschreibung"
+                name: "description"
+                widget: object
+                required: false
+                fields:
+                  - { label: "Deutsch", name: "de", widget: text, required: false }
+                  - { label: "Türkçe", name: "tr", widget: text, required: false }
+                  - { label: "العربية", name: "ar", widget: text, required: false }
+                  - { label: "Shqip", name: "sq", widget: text, required: false }
+
+  - name: "einstellungen"
+    label: "Einstellungen"
+    files:
+      - name: "settings"
+        label: "Grunddaten der Gemeinde"
+        file: "content/settings.json"
+        extension: json
+        format: json
+        fields:
+          - { label: "Hinweis", name: "_hinweis", widget: hidden, required: false }
+          - { label: "Hinweis Kontakt", name: "_kontakt_hinweis", widget: hidden, required: false }
+          - { label: "Hinweis Spenden", name: "_spenden_hinweis", widget: hidden, required: false }
+          - { label: "Moscheename", name: "mosqueName", widget: hidden, required: false }
+          - { label: "Soziale Netzwerke", name: "social", widget: hidden, required: false }
+          - { label: "Mawaqit", name: "mawaqit", widget: hidden, required: false }
+          - { label: "Karte", name: "maps", widget: hidden, required: false }
+          - { label: "Vereinsname", name: "associationName", widget: string }
+          - label: "Adresse"
+            name: "address"
+            widget: object
+            fields:
+              - { label: "Straße und Hausnummer", name: "street", widget: string }
+              - { label: "PLZ", name: "zip", widget: string }
+              - { label: "Ort", name: "city", widget: string }
+              - { label: "Land", name: "country", widget: string, required: false }
+          - label: "Kontakt"
+            name: "contact"
+            widget: object
+            fields:
+              - { label: "Telefon (leer lassen, solange nicht bestätigt)", name: "phone", widget: string, required: false }
+              - { label: "E-Mail (leer lassen, solange nicht bestätigt)", name: "email", widget: string, required: false }
+              - { label: "WhatsApp", name: "whatsapp", widget: string, required: false }
+          - label: "Bankverbindung"
+            name: "bank"
+            widget: object
+            fields:
+              - { label: "Kontoinhaber", name: "accountHolder", widget: string, required: false }
+              - { label: "IBAN", name: "iban", widget: string, required: false }
+              - { label: "BIC", name: "bic", widget: string, required: false }
+              - { label: "Bank", name: "bank", widget: string, required: false }
+              - { label: "Verwendungszweck", name: "purpose", widget: string, required: false }
+          - { label: "Link zum Online-Spenden", name: "donationLink", widget: string, required: false }
+          - { label: "Hauptbild der Startseite", name: "heroImage", widget: image, required: false }
+          - { label: "Hinweisband „Entwurf“ anzeigen", name: "demoNotice", widget: boolean, default: true }

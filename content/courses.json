@@ -1,0 +1,15 @@
+{
+  "_hinweis": "Kurse der Islamischen Gemeinde Bargteheide e.V. Es werden bewusst KEINE erfundenen Kurse gepflegt. Sobald die offizielle Kursuebersicht der Gemeinde vorliegt, werden die Kurse hier eingetragen. Solange die Liste 'items' leer ist, zeigt die Website einen freundlichen Hinweis an.",
+  "_vorlage": {
+    "id": "eindeutige-kennung",
+    "title": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "description": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "ageGroup": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "days": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "time": "",
+    "location": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "registration": { "de": "", "tr": "", "ar": "", "sq": "" },
+    "registrationLink": ""
+  },
+  "items": []
+}
