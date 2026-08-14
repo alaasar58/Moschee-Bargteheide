@@ -1,0 +1,70 @@
+name: Website auf GitHub Pages veroeffentlichen
+
+# Veroeffentlicht die Website automatisch bei jedem Push.
+# Voraussetzung (einmalig): Settings -> Pages -> Source = "GitHub Actions".
+
+on:
+  push:
+    branches:
+      - "claude/bargteheide-mosque-website-wragx8"
+      - "main"
+  # Taeglich neu veroeffentlichen, damit die Gebetszeiten aus Mawaqit aktuell bleiben.
+  # (Ein Commit des Gebetszeiten-Workflows loest aus Sicherheitsgruenden selbst
+  #  keinen weiteren Workflow aus, deshalb hier ein eigener Zeitplan.)
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Laufende Veroeffentlichungen nicht abbrechen, aber immer nur eine gleichzeitig.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Beim Veroeffentlichen die aktuellen Gebetszeiten von Mawaqit holen.
+      # Schlaegt der Abruf fehl, wird die zuletzt gespeicherte Datei verwendet
+      # und die Veroeffentlichung laeuft trotzdem weiter.
+      - name: Gebetszeiten von Mawaqit aktualisieren
+        continue-on-error: true
+        run: node scripts/fetch-mawaqit.mjs
+
+      - name: Website zusammenstellen
+        run: |
+          mkdir -p _site
+          tar --exclude=./.git \
+              --exclude=./.github \
+              --exclude=./scripts \
+              --exclude=./node_modules \
+              --exclude=./_site \
+              -cf - . | tar -xf - -C _site
+          # Verhindert, dass GitHub Pages die Dateien durch Jekyll verarbeitet.
+          touch _site/.nojekyll
+          ls -la _site
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

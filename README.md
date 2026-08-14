@@ -138,10 +138,34 @@ python3 -m http.server 8080
 Ein einfacher Doppelklick auf `index.html` genügt nicht, weil die Inhalte über
 `fetch` aus JSON-Dateien geladen werden.
 
-## 7. Veröffentlichen
+## 7. Veröffentlichen (GitHub Pages)
 
-Die Website ist statisch und läuft auf jedem Webspace – z. B. GitHub Pages, Netlify oder
-klassisches Hosting. Einfach alle Dateien in das Web-Verzeichnis legen.
+Die Veröffentlichung läuft vollautomatisch über GitHub Actions:
+`.github/workflows/deploy-pages.yml`
+
+* **Bei jedem Push** auf den Hauptbranch wird die Website neu veröffentlicht.
+* Vor dem Veröffentlichen holt der Workflow die **aktuellen Gebetszeiten von Mawaqit**.
+  Schlägt der Abruf fehl, wird die zuletzt gespeicherte Datei verwendet und die
+  Veröffentlichung läuft trotzdem durch.
+* Zusätzlich läuft der Workflow **täglich um 02:30 UTC**, damit die veröffentlichten
+  Gebetszeiten auch ohne Änderung am Code aktuell bleiben.
+* Manuell starten: **Actions → „Website auf GitHub Pages veröffentlichen“ → Run workflow**.
+
+**Einmalige Einstellung in GitHub:**
+**Settings → Pages → Build and deployment → Source: „GitHub Actions“**
+(nicht „Deploy from a branch“). Ohne diese Einstellung schlägt der Deploy-Schritt fehl.
+
+Die Seite ist danach erreichbar unter
+`https://<benutzername>.github.io/Moschee-Bargteheide/`.
+Alle Verweise im Code sind relativ, die Website funktioniert deshalb sowohl in einem
+Unterverzeichnis als auch unter einer eigenen Domain.
+
+Der Workflow verändert keine Website-Dateien: Er kopiert den Projektstand nach `_site`
+(ohne `.github` und `scripts`), legt eine leere `.nojekyll`-Datei an und lädt das Ergebnis
+zu GitHub Pages hoch.
+
+Alternativ läuft die Website als statische Seite auf jedem Webspace – einfach alle Dateien
+in das Web-Verzeichnis legen.
 
 ---
 
