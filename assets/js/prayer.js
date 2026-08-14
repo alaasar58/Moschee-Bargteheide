@@ -196,19 +196,29 @@
     </div>`;
   }
 
+  /** Adresse der Moschee bei Mawaqit – nur verlinken, wenn sie bekannt ist. */
+  function mawaqitUrl() {
+    const fromSettings = S.settings && S.settings.mawaqit && S.settings.mawaqit.url;
+    return (data && data.url) || fromSettings || "";
+  }
+
   function unavailableBox() {
-    const url = (data && data.url) || "https://mawaqit.net/de/27703";
+    const url = mawaqitUrl();
     return `<div class="empty-state">
       <div class="empty-state__icon" aria-hidden="true">🕌</div>
       <p>${S.escapeHtml(S.t("prayer.unavailable"))}</p>
-      <a class="btn btn--outline" href="${S.escapeHtml(url)}" target="_blank" rel="noopener">${S.escapeHtml(
-        S.t("prayer.sourceLink")
-      )}</a>
+      ${
+        url
+          ? `<a class="btn btn--outline" href="${S.escapeHtml(url)}" target="_blank" rel="noopener">${S.escapeHtml(
+              S.t("prayer.sourceLink")
+            )}</a>`
+          : ""
+      }
     </div>`;
   }
 
   function sourceFoot() {
-    const url = (data && data.url) || "https://mawaqit.net/de/27703";
+    const url = mawaqitUrl();
     const updated = data && data.updatedAt ? new Date(data.updatedAt) : null;
     let updatedText = "";
     if (updated && !Number.isNaN(updated.getTime())) {
@@ -218,7 +228,11 @@
       <span>${S.escapeHtml(S.t("prayer.note"))}</span>
       <span>
         ${updatedText ? `${S.escapeHtml(updatedText)} · ` : ""}
-        <a href="${S.escapeHtml(url)}" target="_blank" rel="noopener">${S.escapeHtml(S.t("prayer.source"))}</a>
+        ${
+          url
+            ? `<a href="${S.escapeHtml(url)}" target="_blank" rel="noopener">${S.escapeHtml(S.t("prayer.source"))}</a>`
+            : S.escapeHtml(S.t("prayer.source"))
+        }
       </span>
     </div>`;
   }

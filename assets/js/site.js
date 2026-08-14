@@ -307,7 +307,8 @@
 
     const address = state.settings.address || {};
     const contact = state.settings.contact || {};
-    const mawaqitUrl = (state.settings.mawaqit && state.settings.mawaqit.url) || "https://mawaqit.net/de/27703";
+    // Nur verlinken, wenn die Mawaqit-Adresse der Moschee bekannt ist.
+    const mawaqitUrl = (state.settings.mawaqit && state.settings.mawaqit.url) || "";
 
     const contactLines = [
       `${escapeHtml(address.street || "")}`,
@@ -337,8 +338,12 @@
               <h3 data-i18n="footer.contact">${escapeHtml(t("footer.contact"))}</h3>
               <ul class="footer-list">${contactLines.map((line) => `<li>${line}</li>`).join("")}</ul>
               <p style="font-size:0.83rem;margin-top:12px">
-                <a href="${escapeHtml(mawaqitUrl)}" target="_blank" rel="noopener"
-                   data-i18n="footer.prayerSource">${escapeHtml(t("footer.prayerSource"))}</a>
+                ${
+                  mawaqitUrl
+                    ? `<a href="${escapeHtml(mawaqitUrl)}" target="_blank" rel="noopener"
+                         data-i18n="footer.prayerSource">${escapeHtml(t("footer.prayerSource"))}</a>`
+                    : `<span data-i18n="footer.prayerSource">${escapeHtml(t("footer.prayerSource"))}</span>`
+                }
               </p>
             </div>
           </div>

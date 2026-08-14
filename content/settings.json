@@ -39,9 +39,11 @@
   },
   "donationLink": "",
 
+  "_mawaqit_hinweis": "Die Gebetszeiten werden ueber die Kennung (id) von Mawaqit geholt. Wenn die oeffentliche Mawaqit-Seite der Moschee bekannt ist, kann ihre Adresse unter url eingetragen werden - sie wird dann bevorzugt verwendet und auf der Website verlinkt. slug ist der Kurzname aus dieser Adresse.",
   "mawaqit": {
     "id": "27703",
-    "url": "https://mawaqit.net/de/27703"
+    "slug": "",
+    "url": ""
   },
 
   "heroImage": "assets/img/moschee-aussen.jpg",

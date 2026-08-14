@@ -33,7 +33,12 @@ rechts nach links.
 
 ## 2. Gebetszeiten (Mawaqit)
 
-* Quelle: **Islamische Gemeinde Bargteheide, Mawaqit-ID `27703`** – <https://mawaqit.net/de/27703>
+* Quelle: **Islamische Gemeinde Bargteheide, Mawaqit-ID `27703`**.
+  Das Skript probiert die bekannten Adressformen von Mawaqit nacheinander durch.
+  Ist die öffentliche Mawaqit-Seite der Moschee bekannt, kann ihre Adresse in
+  `content/settings.json` unter `mawaqit.url` eingetragen werden – sie wird dann
+  bevorzugt verwendet und auf der Website verlinkt. Solange dort nichts steht,
+  zeigt die Website den Hinweis „Gebetszeiten über Mawaqit“ ohne Link.
 * Es stehen **keine Gebetszeiten im Code**. Das Skript `scripts/fetch-mawaqit.mjs` liest den
   Jahreskalender aus Mawaqit und schreibt ihn nach `data/prayer-times.json`.
 * Der GitHub-Workflow `.github/workflows/update-prayer-times.yml` läuft **täglich um 02:15 UTC**

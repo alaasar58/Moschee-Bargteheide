@@ -20,16 +20,48 @@ const SETTINGS_FILE = resolve(ROOT, "content/settings.json");
 
 const PRAYER_KEYS = ["fajr", "dhuhr", "asr", "maghrib", "isha"];
 
-async function readMawaqitId() {
+async function readSettings() {
+  try {
+    return JSON.parse(await readFile(SETTINGS_FILE, "utf8"));
+  } catch {
+    return {};
+  }
+}
+
+async function readMawaqitId(settings) {
   if (process.argv[2]) return process.argv[2].trim();
   if (process.env.MAWAQIT_ID) return process.env.MAWAQIT_ID.trim();
-  try {
-    const settings = JSON.parse(await readFile(SETTINGS_FILE, "utf8"));
-    if (settings?.mawaqit?.id) return String(settings.mawaqit.id);
-  } catch {
-    /* Einstellungen nicht lesbar -> Standardwert unten */
-  }
+  if (settings?.mawaqit?.id) return String(settings.mawaqit.id);
   return "27703";
+}
+
+/**
+ * Mawaqit kennt mehrere Adressformen (Kennung, Kurzname, Sprache).
+ * Es werden alle bekannten Formen der Reihe nach probiert, bis eine Seite
+ * mit Gebetszeiten antwortet.
+ */
+function candidateUrls(id, settings) {
+  const urls = [];
+  const push = (url) => {
+    if (url && !urls.includes(url)) urls.push(url);
+  };
+
+  push(settings?.mawaqit?.url);
+
+  const slug = settings?.mawaqit?.slug;
+  if (slug) {
+    push(`https://mawaqit.net/de/${encodeURIComponent(slug)}`);
+    push(`https://mawaqit.net/en/${encodeURIComponent(slug)}`);
+  }
+
+  const key = encodeURIComponent(id);
+  push(`https://mawaqit.net/de/id/${key}`);
+  push(`https://mawaqit.net/en/id/${key}`);
+  push(`https://mawaqit.net/de/m/${key}`);
+  push(`https://mawaqit.net/de/${key}`);
+  push(`https://mawaqit.net/en/${key}`);
+
+  return urls;
 }
 
 /** Schneidet ab `startIndex` ein balanciertes JSON-Objekt aus dem Text heraus. */
@@ -155,12 +187,28 @@ async function fetchHtml(url) {
   return response.text();
 }
 
-async function main() {
-  const id = await readMawaqitId();
-  const url = `https://mawaqit.net/de/${encodeURIComponent(id)}`;
+/** Probiert alle bekannten Adressformen und liefert die erste, die Gebetszeiten enthaelt. */
+async function loadConf(id, settings) {
+  const problems = [];
 
-  const html = await fetchHtml(url);
-  const conf = parseConfData(html);
+  for (const url of candidateUrls(id, settings)) {
+    try {
+      const conf = parseConfData(await fetchHtml(url));
+      console.log(`Gebetszeiten gelesen von: ${url}`);
+      return { conf, url };
+    } catch (error) {
+      problems.push(`${url} -> ${error.message}`);
+    }
+  }
+
+  throw new Error(`Keine Adresse hat funktioniert:\n  ${problems.join("\n  ")}`);
+}
+
+async function main() {
+  const settings = await readSettings();
+  const id = await readMawaqitId(settings);
+
+  const { conf, url } = await loadConf(id, settings);
 
   const today = normalizeDay(
     Array.isArray(conf.times) && conf.times.length >= 5
