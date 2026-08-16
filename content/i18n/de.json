@@ -271,5 +271,11 @@
     "linkCta": "Zur Ramadan-Seite",
     "notYet": "Der Ramadan beginnt voraussichtlich am {date}. Die Imsakiya erscheint hier, sobald die Gebetszeiten für diesen Zeitraum vorliegen.",
     "unavailable": "Für den Ramadan liegen noch keine Gebetszeiten vor. Sobald Mawaqit sie veröffentlicht, erscheint die Imsakiya hier automatisch."
+  },
+  "overview": {
+    "title": "Die Website im Überblick",
+    "intro": "Was die Website kann, was sie kostet und was noch zu entscheiden ist.",
+    "print": "Als PDF speichern oder drucken",
+    "status": "Stand"
   }
 }

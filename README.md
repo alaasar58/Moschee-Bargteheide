@@ -24,6 +24,7 @@ Programmierkenntnisse für die Pflege nötig. Inhalte liegen als JSON-Dateien im
 | Spenden | `spenden.html` | Spendeninformationen und Bankverbindung |
 | Ramadan | `ramadan.html` | Imsakiya für den ganzen Monat sowie Countdown bis Iftar bzw. Sahur |
 | Impressum / Datenschutz | `impressum.html`, `datenschutz.html` | Rechtliche Seiten – von der Gemeinde zu vervollständigen |
+| Überblick (intern) | `uebersicht.html` | Unterlage für die Vorstellung beim Vorstand: Funktionen, offene Punkte, Kosten, Datenschutz, nächste Schritte. Nicht im Menü verlinkt; Text in `content/overview.json` |
 
 Alle Seiten, das Menü, die Fußzeile und die Beschriftungen der Gebetszeiten sind in allen
 vier Sprachen übersetzt. Die Sprache wird oben rechts über die Schaltfläche gewechselt und

@@ -1244,6 +1244,69 @@ table.month-table {
   color: var(--text-soft);
 }
 
+/* ---------- Unterlage fuer die Vorstellung ---------- */
+
+.overview-intro {
+  font-size: 1.05rem;
+  max-width: 70ch;
+}
+.overview-meta {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin-bottom: 22px;
+}
+
+.overview-grid {
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 900px) {
+  .overview-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Der erste Block ist der laengste und bekommt die volle Breite. */
+  .overview-grid > .overview-block:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.overview-block__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--heading);
+}
+.overview-block__icon {
+  font-size: 1.3rem;
+}
+.overview-block__text {
+  color: var(--text-soft);
+  margin-bottom: 12px;
+}
+
+.overview-list {
+  margin: 0;
+  padding-inline-start: 1.1em;
+  display: grid;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+.overview-list li {
+  padding-inline-start: 2px;
+}
+
+@media print {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+  .overview-block {
+    break-inside: avoid;
+    box-shadow: none;
+  }
+}
+
 /* ---------- Online-Beitritt mit Unterschrift ---------- */
 
 .form-grid {

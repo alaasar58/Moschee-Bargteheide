@@ -271,5 +271,11 @@
     "linkCta": "Te faqja e Ramazanit",
     "notYet": "Ramazani pritet të fillojë më {date}. Imsakija shfaqet këtu sapo të jenë në dispozicion kohët e namazit për atë periudhë.",
     "unavailable": "Për Ramazanin ende nuk ka kohë namazi. Sapo Mawaqit t'i publikojë, imsakija shfaqet automatikisht këtu."
+  },
+  "overview": {
+    "title": "Faqja në një vështrim",
+    "intro": "Çfarë ofron faqja, sa kushton dhe çfarë duhet vendosur.",
+    "print": "Ruaj si PDF ose printo",
+    "status": "Gjendja"
   }
 }

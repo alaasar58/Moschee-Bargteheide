@@ -1,0 +1,336 @@
+{
+  "_hinweis": "Unterlage fuer die Vorstellung beim Vorstand (Seite uebersicht.html). Alle Texte koennen hier frei geaendert werden; die Seite uebernimmt sie automatisch.",
+  "updated": "2026-08-15",
+  "intro": {
+    "de": "Diese Seite fasst zusammen, was die neue Website der Islamischen Gemeinde Bargteheide e.V. leistet, was sie kostet, wie sie mit Daten umgeht und welche Angaben der Vorstand noch bestätigen muss.",
+    "tr": "Bu sayfa, Islamische Gemeinde Bargteheide e.V. için hazırlanan yeni web sitesinin neler sunduğunu, maliyetini, verilerle nasıl davrandığını ve yönetim kurulunun hangi bilgileri onaylaması gerektiğini özetler.",
+    "ar": "تلخّص هذه الصفحة ما يقدّمه الموقع الجديد للجمعية الإسلامية في بارغتهايده، وتكلفته، وطريقة تعامله مع البيانات، والمعلومات التي تحتاج اعتماد مجلس الإدارة.",
+    "sq": "Kjo faqe përmbledh çfarë ofron faqja e re e Islamische Gemeinde Bargteheide e.V., sa kushton, si i trajton të dhënat dhe cilat të dhëna duhet t'i konfirmojë kryesia."
+  },
+  "blocks": [
+    {
+      "id": "funktionen",
+      "icon": "🕌",
+      "title": {
+        "de": "Was die Website heute kann",
+        "tr": "Web sitesi bugün neler yapıyor",
+        "ar": "ما الذي يقدّمه الموقع اليوم",
+        "sq": "Çfarë ofron faqja sot"
+      },
+      "text": {
+        "de": "Alle folgenden Punkte sind fertig und einsatzbereit.",
+        "tr": "Aşağıdaki maddelerin tümü hazır ve kullanıma uygundur.",
+        "ar": "جميع النقاط التالية جاهزة وتعمل فعليًا.",
+        "sq": "Të gjitha pikat e mëposhtme janë të gatshme dhe funksionale."
+      },
+      "points": [
+        {
+          "de": "Vier Sprachen: Deutsch, Türkisch, Arabisch und Albanisch – jede Seite vollständig übersetzt, Arabisch mit Leserichtung von rechts nach links.",
+          "tr": "Dört dil: Almanca, Türkçe, Arapça ve Arnavutça – her sayfa tam çevrilmiş, Arapça sağdan sola.",
+          "ar": "أربع لغات: الألمانية والتركية والعربية والألبانية — كل الصفحات مترجمة بالكامل، والعربية من اليمين إلى اليسار.",
+          "sq": "Katër gjuhë: gjermanisht, turqisht, arabisht dhe shqip – çdo faqe e përkthyer plotësisht, arabishtja nga e djathta në të majtë."
+        },
+        {
+          "de": "Gebetszeiten kommen automatisch aus Mawaqit (Kennung 27703) und werden täglich aktualisiert. Ändert die Moschee dort etwas, steht es am nächsten Tag auf der Website – ohne dass jemand etwas tun muss.",
+          "tr": "Namaz vakitleri Mawaqit'ten (kimlik 27703) otomatik gelir ve her gün güncellenir. Cami orada bir değişiklik yaparsa, ertesi gün sitede görünür – kimsenin bir şey yapmasına gerek yoktur.",
+          "ar": "أوقات الصلاة تُؤخذ تلقائيًا من Mawaqit (المعرّف 27703) وتُحدَّث يوميًا. إذا غيّر المسجد شيئًا هناك، يظهر على الموقع في اليوم التالي دون أي تدخل.",
+          "sq": "Kohët e namazit merren automatikisht nga Mawaqit (ID 27703) dhe përditësohen çdo ditë. Nëse xhamia ndryshon diçka atje, shfaqet të nesërmen në faqe – pa ndërhyrje."
+        },
+        {
+          "de": "Das nächste Gebet ist mit Countdown hervorgehoben; dazu Imsak, Iqāma-Zeiten und eine Monatsübersicht mit Hidschri-Datum.",
+          "tr": "Sonraki namaz geri sayımla vurgulanır; ayrıca imsak, kamet saatleri ve hicri tarihli aylık liste.",
+          "ar": "الصلاة القادمة مُبرزة مع عدّاد تنازلي، إضافة إلى الإمساك وأوقات الإقامة وجدول شهري بالتاريخ الهجري.",
+          "sq": "Namazi i radhës theksohet me numërim mbrapsht; gjithashtu imsaku, kohët e ikametit dhe pasqyra mujore me datë hixhri."
+        },
+        {
+          "de": "Das Freitagsgebet wird nur freitags hervorgehoben, an anderen Tagen steht es ruhig daneben.",
+          "tr": "Cuma namazı yalnızca cuma günü vurgulanır, diğer günlerde sade şekilde görünür.",
+          "ar": "صلاة الجمعة تُبرز يوم الجمعة فقط، وفي باقي الأيام تظهر بشكل هادئ.",
+          "sq": "Namazi i xhumasë theksohet vetëm të premten, ditët e tjera qëndron i qetë."
+        },
+        {
+          "de": "Islamischer Kalender: Hidschri-Datum überall als Hauptangabe, dazu die besonderen Tage des Jahres – Ramadan, Laylat al-Qadr, die beiden Feste, Arafat, Hadsch, Aschura, Isra und Mi'radsch – jeweils mit kurzer Erklärung, damit auch Kinder und Gäste verstehen, worum es geht.",
+          "tr": "İslami takvim: hicri tarih her yerde ana bilgi olarak, ayrıca yılın özel günleri – Ramazan, Kadir Gecesi, iki bayram, Arefe, Hac, Aşure, İsra ve Miraç – her biri kısa açıklamayla, çocuklar ve misafirler de anlasın diye.",
+          "ar": "التقويم الإسلامي: التاريخ الهجري هو الأساس في كل مكان، مع مناسبات السنة — رمضان وليلة القدر والعيدان وعرفة والحج وعاشوراء والإسراء والمعراج — ولكل منها شرح قصير ليفهمها الأطفال والزوار.",
+          "sq": "Kalendari islam: data hixhri kudo si e dhëna kryesore, si dhe ditët e veçanta të vitit – Ramazani, Nata e Kadrit, dy Bajramet, Arafati, Haxhi, Ashura, Israja dhe Miraxhi – secila me shpjegim të shkurtër."
+        },
+        {
+          "de": "Ramadan-Seite mit Imsakiya für den ganzen Monat zum Ausdrucken und einem Countdown bis zum Iftar beziehungsweise bis zum Ende des Sahur.",
+          "tr": "Ramazan sayfası: tüm ay için yazdırılabilir imsakiye ve iftara ya da sahurun bitişine geri sayım.",
+          "ar": "صفحة رمضان فيها إمساكية الشهر كامله قابلة للطباعة، وعدّاد للإفطار ولانتهاء السحور.",
+          "sq": "Faqja e Ramazanit me imsakije për tërë muajin për printim dhe numërim deri në iftar ose deri në fund të syfyrit."
+        },
+        {
+          "de": "Kurse als übersichtliche Karten mit Altersgruppe, Tagen, Uhrzeit, Ort und Anmeldung. Der Mädchentreff ist bereits nach dem Aushang der Gemeinde eingetragen.",
+          "tr": "Kurslar; yaş grubu, günler, saat, yer ve kayıt bilgisiyle düzenli kartlar hâlinde. Kızlar Buluşması cemaatin duyurusuna göre şimdiden eklendi.",
+          "ar": "الدورات على شكل بطاقات واضحة تتضمن الفئة العمرية والأيام والوقت والمكان والتسجيل. ولقاء الفتيات مُدرج فعلًا حسب إعلان الجمعية.",
+          "sq": "Kurset si karta të qarta me grupmoshën, ditët, orën, vendin dhe regjistrimin. Takimi i vajzave është shtuar sipas njoftimit të bashkësisë."
+        },
+        {
+          "de": "Neuigkeiten und Veranstaltungen mit Bild, Datum und Text; jeder Termin lässt sich mit einem Klick in den eigenen Handy-Kalender übernehmen.",
+          "tr": "Haberler ve etkinlikler resim, tarih ve metinle; her tarih tek tıkla kendi telefon takvimine eklenebilir.",
+          "ar": "الأخبار والفعاليات بالصورة والتاريخ والنص، ويمكن إضافة أي موعد إلى تقويم الهاتف بضغطة واحدة.",
+          "sq": "Lajme dhe aktivitete me foto, datë dhe tekst; çdo datë mund të shtohet me një klikim në kalendarin e telefonit."
+        },
+        {
+          "de": "Spendenseite mit getrennten Bereichen für PayPal und Überweisung.",
+          "tr": "PayPal ve banka havalesi için ayrı bölümlerle bağış sayfası.",
+          "ar": "صفحة تبرعات فيها قسمان منفصلان: PayPal والتحويل البنكي.",
+          "sq": "Faqe dhurimesh me pjesë të veçanta për PayPal dhe transfertë bankare."
+        },
+        {
+          "de": "Mitgliedsantrag am Bildschirm: ausfüllen, mit dem Finger unterschreiben, fertigen Antrag speichern oder ausdrucken.",
+          "tr": "Ekranda üyelik başvurusu: doldur, parmakla imzala, hazır başvuruyu kaydet veya yazdır.",
+          "ar": "طلب العضوية على الشاشة: تعبئة وتوقيع بالإصبع ثم حفظ الطلب أو طباعته.",
+          "sq": "Kërkesa e anëtarësimit në ekran: plotëso, nënshkruaj me gisht, ruaj ose printo kërkesën."
+        },
+        {
+          "de": "Kontaktseite mit Karte und Schaltfläche „Route starten“ – ein Fingertipp und die Navigation zur Moschee beginnt.",
+          "tr": "Harita ve „Yol tarifi al“ düğmesiyle iletişim sayfası – tek dokunuşla camiye navigasyon başlar.",
+          "ar": "صفحة تواصل فيها خريطة وزر «ابدأ الطريق» — لمسة واحدة ويبدأ التوجيه إلى المسجد.",
+          "sq": "Faqja e kontaktit me hartë dhe butonin „Nis rrugën“ – një prekje dhe nis navigimi drejt xhamisë."
+        },
+        {
+          "de": "Heller und dunkler Modus zur freien Wahl; die Website öffnet immer hell.",
+          "tr": "Açık ve koyu mod serbest seçimle; site her zaman açık modda açılır.",
+          "ar": "وضع فاتح وداكن باختيار الزائر، والموقع يفتح دائمًا بالوضع الفاتح.",
+          "sq": "Modaliteti i ndritshëm dhe i errët sipas dëshirës; faqja hapet gjithmonë e ndritshme."
+        },
+        {
+          "de": "Die Website lässt sich wie eine App zum Startbildschirm des Handys hinzufügen. Die Gebetszeiten sind dann sogar ohne Internet verfügbar.",
+          "tr": "Site, telefonun ana ekranına uygulama gibi eklenebilir. Namaz vakitleri o zaman internet olmadan da görüntülenir.",
+          "ar": "يمكن إضافة الموقع إلى شاشة الهاتف كتطبيق، وعندها تعمل أوقات الصلاة حتى بدون إنترنت.",
+          "sq": "Faqja mund të shtohet si aplikacion në ekranin kryesor të telefonit. Kohët e namazit funksionojnë edhe pa internet."
+        },
+        {
+          "de": "Alles funktioniert auf Handy, Tablet und Computer gleich gut.",
+          "tr": "Her şey telefonda, tablette ve bilgisayarda aynı derecede iyi çalışır.",
+          "ar": "كل شيء يعمل بنفس الجودة على الجوال والتابلت والكمبيوتر.",
+          "sq": "Gjithçka funksionon njësoj mirë në telefon, tablet dhe kompjuter."
+        }
+      ]
+    },
+    {
+      "id": "offen",
+      "icon": "✅",
+      "title": {
+        "de": "Was der Vorstand noch bestätigen muss",
+        "tr": "Yönetim kurulunun onaylaması gerekenler",
+        "ar": "ما الذي يحتاج اعتماد مجلس الإدارة",
+        "sq": "Çfarë duhet të konfirmojë kryesia"
+      },
+      "text": {
+        "de": "Diese Angaben stehen bewusst noch nicht auf der Website. Nichts Unbestätigtes wird veröffentlicht – jede Angabe erscheint erst, wenn die Gemeinde sie freigibt.",
+        "tr": "Bu bilgiler bilinçli olarak henüz sitede yer almıyor. Onaylanmamış hiçbir bilgi yayınlanmaz – her bilgi ancak cemaat onayladıktan sonra görünür.",
+        "ar": "هذه المعلومات غير منشورة على الموقع عن قصد. لا يُنشر أي شيء غير مؤكد — وكل معلومة تظهر فقط بعد اعتمادها من الجمعية.",
+        "sq": "Këto të dhëna qëllimisht ende nuk janë në faqe. Asgjë e pakonfirmuar nuk publikohet – çdo e dhënë shfaqet vetëm pasi ta miratojë bashkësia."
+      },
+      "points": [
+        {
+          "de": "Telefonnummer und E-Mail-Adresse der Gemeinde.",
+          "tr": "Cemaatin telefon numarası ve e-posta adresi.",
+          "ar": "رقم هاتف الجمعية وبريدها الإلكتروني.",
+          "sq": "Numri i telefonit dhe e-mail-i i bashkësisë."
+        },
+        {
+          "de": "Bankverbindung für Spenden und, falls gewünscht, ein PayPal-Link.",
+          "tr": "Bağışlar için banka bilgileri ve istenirse bir PayPal bağlantısı.",
+          "ar": "بيانات الحساب البنكي للتبرعات، ورابط PayPal إن رغبتم.",
+          "sq": "Të dhënat bankare për dhurime dhe, nëse dëshirohet, një lidhje PayPal."
+        },
+        {
+          "de": "Höhe des Mitgliedsbeitrags und der Ablauf der Aufnahme.",
+          "tr": "Üyelik aidatının tutarı ve kabul süreci.",
+          "ar": "قيمة اشتراك العضوية وإجراءات القبول.",
+          "sq": "Lartësia e kuotës së anëtarësisë dhe procedura e pranimit."
+        },
+        {
+          "de": "Angaben für Impressum und Datenschutzerklärung: Vorstand, Vereinsregister, verantwortliche Person.",
+          "tr": "Künye ve gizlilik metni için bilgiler: yönetim kurulu, dernek sicili, sorumlu kişi.",
+          "ar": "بيانات صفحتَي Impressum والخصوصية: مجلس الإدارة، سجل الجمعيات، الشخص المسؤول.",
+          "sq": "Të dhënat për Impressum dhe mbrojtjen e të dhënave: kryesia, regjistri i shoqatës, personi përgjegjës."
+        },
+        {
+          "de": "Freigabe der Texte auf der Seite „Über uns“ – sie sind ein Entwurf und dürfen frei geändert werden.",
+          "tr": "„Hakkımızda“ sayfasındaki metinlerin onayı – bunlar taslaktır ve serbestçe değiştirilebilir.",
+          "ar": "اعتماد نصوص صفحة «عن المسجد» — وهي مسودة يمكن تعديلها بحرية.",
+          "sq": "Miratimi i teksteve në faqen „Rreth nesh“ – ato janë draft dhe mund të ndryshohen lirisht."
+        },
+        {
+          "de": "Weitere Kurse und Angebote, die auf die Kursseite sollen.",
+          "tr": "Kurslar sayfasına eklenecek diğer kurslar ve etkinlikler.",
+          "ar": "بقية الدورات والبرامج التي تريدون إدراجها في صفحة الدورات.",
+          "sq": "Kurset dhe ofertat e tjera që duhen shtuar në faqen e kurseve."
+        },
+        {
+          "de": "Entscheidung, ob die Google-Karte bleibt oder durch einen reinen Link ersetzt wird.",
+          "tr": "Google haritasının kalması mı yoksa sadece bir bağlantıyla değiştirilmesi mi konusunda karar.",
+          "ar": "قرار بشأن خريطة Google: تبقى أم تُستبدل برابط فقط.",
+          "sq": "Vendimi nëse harta e Google mbetet apo zëvendësohet me një lidhje."
+        }
+      ]
+    },
+    {
+      "id": "kosten",
+      "icon": "💶",
+      "title": {
+        "de": "Kosten und Betrieb",
+        "tr": "Maliyet ve işletme",
+        "ar": "التكلفة والتشغيل",
+        "sq": "Kostot dhe mirëmbajtja"
+      },
+      "text": {
+        "de": "Die Website ist so gebaut, dass sie im laufenden Betrieb praktisch nichts kostet.",
+        "tr": "Site, işletme sırasında neredeyse hiç masraf çıkarmayacak şekilde kurulmuştur.",
+        "ar": "بُني الموقع بحيث لا يكلّف عمليًا شيئًا في التشغيل.",
+        "sq": "Faqja është ndërtuar që në përdorim të përditshëm praktikisht të mos ketë kosto."
+      },
+      "points": [
+        {
+          "de": "Hosting bei GitHub Pages: derzeit kostenfrei, mit sicherer Verbindung (https).",
+          "tr": "GitHub Pages'te barındırma: şu anda ücretsiz ve güvenli bağlantıyla (https).",
+          "ar": "الاستضافة على GitHub Pages: مجانية حاليًا ومع اتصال آمن (https).",
+          "sq": "Hostimi te GitHub Pages: aktualisht falas, me lidhje të sigurt (https)."
+        },
+        {
+          "de": "Jede Änderung wird automatisch veröffentlicht; niemand muss Dateien hochladen.",
+          "tr": "Her değişiklik otomatik yayınlanır; kimsenin dosya yüklemesi gerekmez.",
+          "ar": "كل تعديل يُنشر تلقائيًا، ولا يحتاج أحد إلى رفع ملفات يدويًا.",
+          "sq": "Çdo ndryshim publikohet automatikisht; askush nuk duhet të ngarkojë skedarë."
+        },
+        {
+          "de": "Eine eigene Adresse wie moschee-bargteheide.de kostet üblicherweise etwa 10 bis 20 Euro im Jahr und kann jederzeit ergänzt werden.",
+          "tr": "moschee-bargteheide.de gibi kendi adresiniz genelde yılda yaklaşık 10–20 Euro tutar ve istendiği zaman eklenebilir.",
+          "ar": "الحصول على عنوان خاص مثل moschee-bargteheide.de يكلّف عادة نحو 10 إلى 20 يورو سنويًا ويمكن إضافته في أي وقت.",
+          "sq": "Një adresë e vetja si moschee-bargteheide.de kushton zakonisht rreth 10–20 euro në vit dhe mund të shtohet kurdo."
+        },
+        {
+          "de": "Inhalte pflegt die Gemeinde selbst: Neuigkeiten, Kurse, Veranstaltungen, Bilder und Grunddaten – ohne Programmierkenntnisse.",
+          "tr": "İçerikleri cemaat kendisi yönetir: haberler, kurslar, etkinlikler, resimler ve temel bilgiler – programlama bilgisi olmadan.",
+          "ar": "الجمعية تدير المحتوى بنفسها: الأخبار والدورات والفعاليات والصور والبيانات الأساسية — بدون أي معرفة برمجية.",
+          "sq": "Përmbajtjen e mirëmban vetë bashkësia: lajme, kurse, aktivitete, foto dhe të dhëna bazë – pa njohuri programimi."
+        },
+        {
+          "de": "Die Gebetszeiten aktualisieren sich von selbst und verursachen keinen Aufwand.",
+          "tr": "Namaz vakitleri kendiliğinden güncellenir ve hiçbir iş yükü oluşturmaz.",
+          "ar": "أوقات الصلاة تتحدث ذاتيًا ولا تتطلب أي جهد.",
+          "sq": "Kohët e namazit përditësohen vetë dhe nuk krijojnë punë shtesë."
+        }
+      ]
+    },
+    {
+      "id": "datenschutz",
+      "icon": "🔒",
+      "title": {
+        "de": "Datenschutz",
+        "tr": "Veri koruma",
+        "ar": "حماية البيانات",
+        "sq": "Mbrojtja e të dhënave"
+      },
+      "text": {
+        "de": "Die Website ist bewusst sparsam gebaut: Sie sammelt nichts, was sie nicht braucht.",
+        "tr": "Site bilinçli olarak sade kurulmuştur: ihtiyaç duymadığı hiçbir veriyi toplamaz.",
+        "ar": "بُني الموقع عن قصد ليكون خفيفًا: لا يجمع أي بيانات لا يحتاجها.",
+        "sq": "Faqja është ndërtuar qëllimisht e kursyer: nuk mbledh asgjë që nuk i nevojitet."
+      },
+      "points": [
+        {
+          "de": "Keine Werbung, keine Besucherauswertung, keine Cookies zur Nachverfolgung.",
+          "tr": "Reklam yok, ziyaretçi analizi yok, takip çerezi yok.",
+          "ar": "لا إعلانات ولا تتبّع للزوار ولا ملفات تعريف ارتباط للتتبع.",
+          "sq": "Pa reklama, pa analiza vizitorësh, pa cookie gjurmimi."
+        },
+        {
+          "de": "Sprache und Farbmodus werden nur im Gerät der Besucherin oder des Besuchers gespeichert.",
+          "tr": "Dil ve renk modu yalnızca ziyaretçinin cihazında saklanır.",
+          "ar": "اللغة ووضع الألوان يُحفظان في جهاز الزائر فقط.",
+          "sq": "Gjuha dhe modaliteti i ngjyrave ruhen vetëm në pajisjen e vizitorit."
+        },
+        {
+          "de": "Der Mitgliedsantrag entsteht vollständig im Gerät. Es werden keine Daten an uns oder an Dritte übertragen.",
+          "tr": "Üyelik başvurusu tamamen cihazda oluşur. Bize ya da üçüncü kişilere hiçbir veri aktarılmaz.",
+          "ar": "طلب العضوية يُنشأ بالكامل داخل الجهاز، ولا تُرسل أي بيانات إلينا ولا إلى أي طرف ثالث.",
+          "sq": "Kërkesa e anëtarësimit krijohet plotësisht në pajisje. Asnjë e dhënë nuk dërgohet te ne ose te palë të treta."
+        },
+        {
+          "de": "Die Gebetszeiten liegen als Datei auf dem eigenen Server. Beim Ansehen entsteht keine Verbindung zu Mawaqit.",
+          "tr": "Namaz vakitleri kendi sunucumuzda dosya olarak durur. Görüntülerken Mawaqit'e bağlantı kurulmaz.",
+          "ar": "أوقات الصلاة محفوظة كملف على خادمنا، ولا يحدث أي اتصال بـ Mawaqit عند تصفح الموقع.",
+          "sq": "Kohët e namazit ruhen si skedar në serverin tonë. Gjatë shikimit nuk krijohet lidhje me Mawaqit."
+        },
+        {
+          "de": "Einzige Ausnahme ist die eingebundene Google-Karte. Sie kann entfernt oder so umgebaut werden, dass sie erst nach ausdrücklicher Zustimmung lädt.",
+          "tr": "Tek istisna gömülü Google haritasıdır. Kaldırılabilir veya yalnızca açık onaydan sonra yüklenecek şekilde değiştirilebilir.",
+          "ar": "الاستثناء الوحيد هو خريطة Google المدمجة، ويمكن إزالتها أو جعلها لا تُحمّل إلا بعد موافقة صريحة.",
+          "sq": "Përjashtim i vetëm është harta e Google. Ajo mund të hiqet ose të ngarkohet vetëm pas pëlqimit të shprehur."
+        },
+        {
+          "de": "Impressum und Datenschutzerklärung sind als Entwurf vorbereitet und werden mit den Angaben der Gemeinde vervollständigt.",
+          "tr": "Künye ve gizlilik metni taslak olarak hazırlanmıştır ve cemaatin bilgileriyle tamamlanacaktır.",
+          "ar": "صفحتا Impressum والخصوصية جاهزتان كمسودة وتُستكملان ببيانات الجمعية.",
+          "sq": "Impressum dhe deklarata e privatësisë janë përgatitur si draft dhe plotësohen me të dhënat e bashkësisë."
+        }
+      ]
+    },
+    {
+      "id": "naechste-schritte",
+      "icon": "🧭",
+      "title": {
+        "de": "Mögliche nächste Schritte",
+        "tr": "Olası sonraki adımlar",
+        "ar": "الخطوات القادمة الممكنة",
+        "sq": "Hapat e mundshëm të ardhshëm"
+      },
+      "text": {
+        "de": "Diese Punkte sind noch nicht gebaut. Der Vorstand kann auswählen, was zuerst kommt.",
+        "tr": "Bu maddeler henüz yapılmadı. Yönetim kurulu önce hangisinin geleceğini seçebilir.",
+        "ar": "هذه النقاط لم تُنفَّذ بعد، ويستطيع مجلس الإدارة اختيار ما يبدأ به.",
+        "sq": "Këto pika ende nuk janë realizuar. Kryesia mund të zgjedhë çfarë vjen e para."
+      },
+      "points": [
+        {
+          "de": "Mitgliedsantrag direkt online absenden. Dafür ist eine Entscheidung nötig: entweder per E-Mail ohne fremde Anbieter oder über einen Formulardienst, der einen Vertrag zur Auftragsverarbeitung verlangt.",
+          "tr": "Üyelik başvurusunun doğrudan çevrimiçi gönderilmesi. Bunun için bir karar gerekir: ya yabancı sağlayıcı olmadan e-posta ile ya da veri işleme sözleşmesi gerektiren bir form hizmetiyle.",
+          "ar": "إرسال طلب العضوية مباشرة عبر الإنترنت. ويحتاج ذلك قرارًا: إما عبر البريد الإلكتروني دون أي طرف خارجي، أو عبر خدمة نماذج تتطلب عقد معالجة بيانات.",
+          "sq": "Dërgimi i kërkesës së anëtarësimit drejtpërdrejt online. Kjo kërkon një vendim: ose me e-mail pa ofrues të huaj, ose përmes një shërbimi formularësh që kërkon kontratë përpunimi të dhënash."
+        },
+        {
+          "de": "Hinweisleiste für dringende Ankündigungen und ein Bereich für Janāza-Meldungen.",
+          "tr": "Acil duyurular için bir bilgi şeridi ve cenaze namazı duyuruları için bir bölüm.",
+          "ar": "شريط للإعلانات العاجلة وقسم لإعلانات صلاة الجنازة.",
+          "sq": "Një shirit për njoftime urgjente dhe një pjesë për njoftimet e xhenazes."
+        },
+        {
+          "de": "Anfrageformulare für Moscheeführungen von Schulen, Eheschließung und Trauerbegleitung.",
+          "tr": "Okullar için cami gezileri, nikâh ve taziye desteği talep formları.",
+          "ar": "نماذج طلبات لزيارات المدارس للمسجد، وعقد القران، ومرافقة العزاء.",
+          "sq": "Formularë kërkesash për vizita shkollash në xhami, kurorëzim dhe përcjellje në zi."
+        },
+        {
+          "de": "Archiv der Freitagspredigten als Text oder Tonaufnahme.",
+          "tr": "Cuma hutbelerinin metin veya ses kaydı olarak arşivi.",
+          "ar": "أرشيف لخطب الجمعة نصًّا أو تسجيلًا صوتيًا.",
+          "sq": "Arkiv i hutbeve të xhumasë si tekst ose regjistrim zanor."
+        },
+        {
+          "de": "Bildergalerie der Moschee und der Veranstaltungen.",
+          "tr": "Cami ve etkinliklerin fotoğraf galerisi.",
+          "ar": "معرض صور للمسجد والفعاليات.",
+          "sq": "Galeri fotografike e xhamisë dhe e aktiviteteve."
+        },
+        {
+          "de": "Spenden mit Verwendungszweck – etwa Zakat, Sadaqa oder ein bestimmtes Projekt – samt Fortschrittsanzeige.",
+          "tr": "Zekât, sadaka veya belirli bir proje gibi amaç seçimiyle bağış ve ilerleme göstergesi.",
+          "ar": "التبرع بغرض محدد — زكاة أو صدقة أو مشروع بعينه — مع شريط لمتابعة التقدّم.",
+          "sq": "Dhurime me qëllim të caktuar – zeqat, sadaka ose një projekt i caktuar – me tregues progresi."
+        },
+        {
+          "de": "Anbindung eines WhatsApp-Kanals oder eines E-Mail-Verteilers für Hinweise.",
+          "tr": "Duyurular için bir WhatsApp kanalı veya e-posta listesi bağlantısı.",
+          "ar": "ربط قناة واتساب أو قائمة بريدية للتنبيهات.",
+          "sq": "Lidhja e një kanali WhatsApp ose e një liste e-mail për njoftime."
+        }
+      ]
+    }
+  ]
+}
