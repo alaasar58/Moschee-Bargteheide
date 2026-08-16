@@ -425,16 +425,18 @@
     });
   }
 
-  /** Wer die Website erstellt hat – Angaben aus content/settings.json. */
+  /** Wer die Website erstellt hat, samt Hinweis fuer andere Moscheen. */
   function creditLine() {
     const credit = state.settings.credit || {};
     if (!credit.name) return "";
 
-    const name = credit.url
-      ? `<a href="${escapeHtml(credit.url)}">${escapeHtml(credit.name)}</a>`
-      : escapeHtml(credit.name);
-
-    return `<span><span data-i18n="footer.credit">${escapeHtml(t("footer.credit"))}</span>: ${name}</span>`;
+    return `<span class="footer-credit">
+      <span data-i18n="footer.credit">${escapeHtml(t("footer.credit"))}</span>: ${escapeHtml(credit.name)}
+      <span class="footer-credit__invite">
+        <span data-i18n="footer.creditInvite">${escapeHtml(t("footer.creditInvite"))}</span>
+        <a href="website-fuer-moscheen.html" data-i18n="footer.creditCta">${escapeHtml(t("footer.creditCta"))}</a>
+      </span>
+    </span>`;
   }
 
   function renderFooter() {

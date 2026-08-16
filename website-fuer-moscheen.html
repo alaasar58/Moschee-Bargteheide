@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kostenlose Website für Ihre Moschee</title>
+    <meta
+      name="description"
+      content="Kostenlose Website für Moscheen und islamische Vereine: Gebetszeiten aus Mawaqit, vier Sprachen, Kurse, Neuigkeiten und Spenden. Erstellung ehrenamtlich als Sadaqa."
+    />
+    <meta name="theme-color" content="#e8f4fa" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      // Gespeicherten Farbmodus setzen, bevor die Seite gezeichnet wird.
+      try {
+        var t = localStorage.getItem("mb-theme");
+        document.documentElement.setAttribute("data-theme", t === "dark" || t === "auto" ? t : "light");
+      } catch (e) {}
+    </script>
+  </head>
+  <body data-page-title-key="service.title">
+    <a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
+    <div data-site-header></div>
+
+    <main id="main">
+      <section class="page-head">
+        <div class="container">
+          <h1 data-i18n="service.title">Kostenlose Website für Ihre Moschee</h1>
+          <p data-i18n="service.subtitle">
+            Kennen Sie eine Moschee, die eine Website braucht? Melden Sie sich gerne.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div data-service></div>
+        </div>
+      </section>
+    </main>
+
+    <div data-site-footer></div>
+
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pages.js"></script>
+    <script src="assets/js/service.js"></script>
+  </body>
+</html>

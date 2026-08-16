@@ -209,7 +209,9 @@
     "privacy": "Datenschutz",
     "rights": "Alle Rechte vorbehalten.",
     "prayerSource": "Gebetszeiten über Mawaqit",
-    "credit": "Gestaltung und Umsetzung"
+    "credit": "Gestaltung und Umsetzung",
+    "creditInvite": "Kennen Sie eine Moschee, die eine Website braucht?",
+    "creditCta": "Kostenlos anfragen"
   },
   "legal": {
     "imprintTitle": "Impressum",
@@ -277,5 +279,13 @@
     "intro": "Was die Website kann, was sie kostet und was noch zu entscheiden ist.",
     "print": "Als PDF speichern oder drucken",
     "status": "Stand"
+  },
+  "service": {
+    "title": "Kostenlose Website für Ihre Moschee",
+    "subtitle": "Kennen Sie eine Moschee, die eine Website braucht? Melden Sie sich gerne.",
+    "contactTitle": "Kontakt",
+    "contactText": "Schreiben Sie mir kurz – ich melde mich zurück.",
+    "email": "E-Mail schreiben",
+    "website": "Meine Website"
   }
 }

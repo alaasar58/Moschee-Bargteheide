@@ -4,7 +4,7 @@
    aufgefrischt. Die Gebetszeiten werden zuerst aus dem Netz geholt; ohne
    Verbindung kommen sie aus dem Speicher – so sind sie auch offline verfuegbar. */
 
-const VERSION = "v1";
+const VERSION = "v2";
 const SHELL_CACHE = `moschee-shell-${VERSION}`;
 const DATA_CACHE = `moschee-data-${VERSION}`;
 
@@ -20,6 +20,8 @@ const SHELL = [
   "kontakt.html",
   "mitglied-werden.html",
   "spenden.html",
+  "uebersicht.html",
+  "website-fuer-moscheen.html",
   "assets/css/style.css",
   "assets/js/site.js",
   "assets/js/pages.js",
@@ -27,12 +29,16 @@ const SHELL = [
   "assets/js/hijri.js",
   "assets/js/ramadan.js",
   "assets/js/content.js",
+  "assets/js/overview.js",
+  "assets/js/service.js",
   "assets/img/favicon.svg",
   "content/settings.json",
   "content/islamic-days.json",
   "content/news.json",
   "content/events.json",
   "content/courses.json",
+  "content/overview.json",
+  "content/service.json",
   "content/i18n/de.json",
   "content/i18n/tr.json",
   "content/i18n/ar.json",

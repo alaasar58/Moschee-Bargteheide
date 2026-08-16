@@ -49,5 +49,11 @@
   "credit": {
     "name": "Mohammed Alaa Sarhan",
     "url": "mailto:Alaasarhan@web.de"
+  },
+  "_service_hinweis": "Kontaktwege fuer die Seite website-fuer-moscheen.html (privates Angebot des Erstellers). Leere Felder erzeugen keine Schaltflaeche - die Webadresse kann spaeter hier eingetragen werden.",
+  "service": {
+    "email": "Alaasarhan@web.de",
+    "website": "",
+    "whatsapp": ""
   }
 }

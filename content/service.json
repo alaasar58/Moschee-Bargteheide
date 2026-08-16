@@ -1,0 +1,167 @@
+{
+  "_hinweis": "Seite 'Kostenlose Website fuer Moscheen' (website-fuer-moscheen.html). Privates Angebot des Erstellers, nicht der Gemeinde. Texte hier frei aenderbar; E-Mail und Webadresse stehen in content/settings.json unter 'service'.",
+  "intro": {
+    "de": "Diese Website habe ich ehrenamtlich für die Islamische Gemeinde Bargteheide e.V. erstellt. Wenn Ihre Moschee oder Ihr Verein auch eine Website braucht: Ich mache das gerne – die Erstellung ist kostenlos, als Sadaqa.",
+    "tr": "Bu web sitesini Islamische Gemeinde Bargteheide e.V. için gönüllü olarak hazırladım. Camininizin ya da derneğinizin de bir web sitesine ihtiyacı varsa: memnuniyetle yaparım – kurulum ücretsizdir, sadaka olarak.",
+    "ar": "أنشأتُ هذا الموقع تطوّعًا للجمعية الإسلامية في بارغتهايده. وإن كان مسجدكم أو جمعيتكم بحاجة إلى موقع، فيسعدني إنشاؤه — والإنشاء مجاني، صدقةً لله.",
+    "sq": "Këtë faqe e kam ndërtuar vullnetarisht për Islamische Gemeinde Bargteheide e.V. Nëse edhe xhamia ose shoqata juaj ka nevojë për një faqe: e bëj me kënaqësi – ndërtimi është falas, si sadaka."
+  },
+  "disclaimer": {
+    "de": "Hinweis: Dies ist ein privates Angebot von Mohammed Alaa Sarhan und geht nicht von der Islamischen Gemeinde Bargteheide e.V. aus.",
+    "tr": "Not: Bu, Mohammed Alaa Sarhan'ın kişisel bir teklifidir ve Islamische Gemeinde Bargteheide e.V. tarafından sunulmamaktadır.",
+    "ar": "تنويه: هذا عرض شخصي من محمد علاء سرحان وليس صادرًا عن الجمعية الإسلامية في بارغتهايده.",
+    "sq": "Shënim: Kjo është një ofertë private e Mohammed Alaa Sarhan dhe nuk vjen nga Islamische Gemeinde Bargteheide e.V."
+  },
+  "blocks": [
+    {
+      "id": "leistung",
+      "icon": "🕌",
+      "title": {
+        "de": "Das bekommt Ihre Moschee",
+        "tr": "Camininiz neler alır",
+        "ar": "ما الذي يحصل عليه مسجدكم",
+        "sq": "Çfarë merr xhamia juaj"
+      },
+      "text": {
+        "de": "Genau die Website, die Sie hier gerade sehen – auf Ihre Moschee zugeschnitten.",
+        "tr": "Şu anda gördüğünüz web sitesinin aynısı – caminize göre uyarlanmış.",
+        "ar": "الموقع نفسه الذي تتصفحونه الآن، مُعدًّا خصيصًا لمسجدكم.",
+        "sq": "Pikërisht faqja që po shihni tani – e përshtatur për xhaminë tuaj."
+      },
+      "points": [
+        {
+          "de": "Vier Sprachen: Deutsch, Türkisch, Arabisch, Albanisch – weitere möglich.",
+          "tr": "Dört dil: Almanca, Türkçe, Arapça, Arnavutça – başkaları da eklenebilir.",
+          "ar": "أربع لغات: الألمانية والتركية والعربية والألبانية، ويمكن إضافة غيرها.",
+          "sq": "Katër gjuhë: gjermanisht, turqisht, arabisht, shqip – të tjera janë të mundshme."
+        },
+        {
+          "de": "Gebetszeiten automatisch aus Mawaqit, täglich aktualisiert – ohne jede Arbeit für Sie.",
+          "tr": "Namaz vakitleri Mawaqit'ten otomatik, her gün güncel – sizin için hiç iş yok.",
+          "ar": "أوقات الصلاة تلقائيًا من Mawaqit وتُحدَّث يوميًا دون أي جهد منكم.",
+          "sq": "Kohët e namazit automatikisht nga Mawaqit, të përditësuara çdo ditë – pa asnjë punë për ju."
+        },
+        {
+          "de": "Islamischer Kalender mit Hidschri-Datum, besonderen Tagen und Ramadan-Seite mit Imsakiya.",
+          "tr": "Hicri tarihli İslami takvim, özel günler ve imsakiyeli Ramazan sayfası.",
+          "ar": "تقويم إسلامي بالتاريخ الهجري والمناسبات وصفحة رمضان مع الإمساكية.",
+          "sq": "Kalendar islam me datë hixhri, ditë të veçanta dhe faqe Ramazani me imsakije."
+        },
+        {
+          "de": "Seiten für Kurse, Neuigkeiten, Veranstaltungen, Spenden, Mitgliedschaft und Kontakt.",
+          "tr": "Kurslar, haberler, etkinlikler, bağış, üyelik ve iletişim sayfaları.",
+          "ar": "صفحات للدورات والأخبار والفعاليات والتبرعات والعضوية والتواصل.",
+          "sq": "Faqe për kurse, lajme, aktivitete, dhurime, anëtarësim dhe kontakt."
+        },
+        {
+          "de": "Karte mit Navigation zur Moschee und Anzeige des Freitagsgebets.",
+          "tr": "Camiye navigasyonlu harita ve cuma namazı gösterimi.",
+          "ar": "خريطة مع توجيه إلى المسجد وعرض واضح لصلاة الجمعة.",
+          "sq": "Hartë me navigim drejt xhamisë dhe shfaqje të namazit të xhumasë."
+        },
+        {
+          "de": "Als App auf dem Handy speicherbar; die Gebetszeiten funktionieren dann auch ohne Internet.",
+          "tr": "Telefona uygulama olarak eklenebilir; namaz vakitleri internetsiz de çalışır.",
+          "ar": "يمكن حفظه كتطبيق على الهاتف، وتعمل أوقات الصلاة حتى بدون إنترنت.",
+          "sq": "Mund të ruhet si aplikacion në telefon; kohët e namazit funksionojnë edhe pa internet."
+        },
+        {
+          "de": "Schnell, ohne Werbung, ohne Besucherauswertung und mit Rücksicht auf den Datenschutz.",
+          "tr": "Hızlı, reklamsız, ziyaretçi analizi olmadan ve veri korumasına saygılı.",
+          "ar": "سريع بلا إعلانات ولا تتبّع للزوار ومع مراعاة حماية البيانات.",
+          "sq": "I shpejtë, pa reklama, pa analiza vizitorësh dhe me respekt për të dhënat."
+        },
+        {
+          "de": "Inhalte pflegen Sie selbst – ohne Programmierkenntnisse.",
+          "tr": "İçerikleri kendiniz yönetirsiniz – programlama bilgisi gerekmez.",
+          "ar": "تديرون المحتوى بأنفسكم دون أي معرفة برمجية.",
+          "sq": "Përmbajtjen e mirëmbani vetë – pa njohuri programimi."
+        }
+      ]
+    },
+    {
+      "id": "kosten",
+      "icon": "💚",
+      "title": {
+        "de": "Was kostet das?",
+        "tr": "Bunun maliyeti nedir?",
+        "ar": "ما التكلفة؟",
+        "sq": "Sa kushton?"
+      },
+      "text": {
+        "de": "Die Erstellung ist kostenlos – ich mache sie als Sadaqa. Es können nur diese Punkte anfallen:",
+        "tr": "Kurulum ücretsizdir – bunu sadaka olarak yapıyorum. Yalnızca şu kalemler söz konusu olabilir:",
+        "ar": "الإنشاء مجاني تمامًا وأقوم به صدقةً. وقد تُوجد هذه البنود فقط:",
+        "sq": "Ndërtimi është falas – e bëj si sadaka. Mund të lindin vetëm këto zëra:"
+      },
+      "points": [
+        {
+          "de": "Erstellung der Website: kostenlos.",
+          "tr": "Web sitesinin kurulumu: ücretsiz.",
+          "ar": "إنشاء الموقع: مجانًا.",
+          "sq": "Ndërtimi i faqes: falas."
+        },
+        {
+          "de": "Hosting: kostenlos möglich, mit sicherer Verbindung.",
+          "tr": "Barındırma: güvenli bağlantıyla ücretsiz mümkündür.",
+          "ar": "الاستضافة: ممكنة مجانًا ومع اتصال آمن.",
+          "sq": "Hostimi: i mundur falas, me lidhje të sigurt."
+        },
+        {
+          "de": "Eigene Internetadresse (z. B. moschee-musterstadt.de): etwa 10 bis 20 Euro im Jahr. Das zahlen Sie direkt beim Anbieter, nicht an mich. Ohne eigene Adresse geht es auch.",
+          "tr": "Kendi internet adresiniz (ör. moschee-musterstadt.de): yılda yaklaşık 10–20 Euro. Bunu doğrudan sağlayıcıya ödersiniz, bana değil. Kendi adres olmadan da olur.",
+          "ar": "عنوان إنترنت خاص (مثل moschee-musterstadt.de): نحو 10 إلى 20 يورو سنويًا تُدفع مباشرة لمزوّد النطاق لا لي. ويمكن الاستغناء عنه.",
+          "sq": "Adresë e vetja (p.sh. moschee-musterstadt.de): rreth 10–20 euro në vit. E paguani drejtpërdrejt te ofruesi, jo tek unë. Edhe pa adresë të vetën funksionon."
+        },
+        {
+          "de": "Laufende Betreuung – nur wenn Sie möchten: Kursanmeldungen verwalten, neue Kurse und Meldungen eintragen, regelmäßige Aktualisierungen. Dafür genügt ein symbolischer Betrag nach Absprache.",
+          "tr": "Sürekli destek – yalnızca isterseniz: kurs kayıtlarının yönetimi, yeni kurs ve duyuruların eklenmesi, düzenli güncellemeler. Bunun için anlaşmaya göre sembolik bir tutar yeterlidir.",
+          "ar": "متابعة مستمرة، وهي اختيارية تمامًا: إدارة طلبات التسجيل في الدورات، وإدراج الدورات والأخبار الجديدة، والتحديثات الدورية — بمبلغ رمزي بالاتفاق.",
+          "sq": "Mbështetje e vazhdueshme – vetëm nëse dëshironi: menaxhimi i regjistrimeve në kurse, shtimi i kurseve dhe lajmeve të reja, përditësime të rregullta. Për këtë mjafton një shumë simbolike sipas marrëveshjes."
+        },
+        {
+          "de": "Sie können alles auch selbst pflegen. Dann entstehen außer der Internetadresse keine Kosten.",
+          "tr": "Her şeyi kendiniz de yönetebilirsiniz. O zaman internet adresi dışında masraf olmaz.",
+          "ar": "وتستطيعون إدارة كل شيء بأنفسكم، وعندها لا توجد أي تكلفة سوى عنوان الإنترنت.",
+          "sq": "Gjithçka mund ta mirëmbani edhe vetë. Atëherë përveç adresës nuk ka kosto."
+        }
+      ]
+    },
+    {
+      "id": "ablauf",
+      "icon": "🧭",
+      "title": {
+        "de": "So läuft es ab",
+        "tr": "Süreç nasıl işler",
+        "ar": "كيف تسير الأمور",
+        "sq": "Si zhvillohet"
+      },
+      "text": {
+        "de": "Drei einfache Schritte.",
+        "tr": "Üç basit adım.",
+        "ar": "ثلاث خطوات بسيطة.",
+        "sq": "Tre hapa të thjeshtë."
+      },
+      "points": [
+        {
+          "de": "Sie melden sich – kurz per E-Mail genügt.",
+          "tr": "Bize ulaşırsınız – kısa bir e-posta yeterlidir.",
+          "ar": "تتواصلون معي — رسالة قصيرة بالبريد تكفي.",
+          "sq": "Na kontaktoni – mjafton një e-mail i shkurtër."
+        },
+        {
+          "de": "Sie schicken mir Name und Anschrift der Moschee, Logo und Fotos, die Mawaqit-Kennung und Ihre Texte.",
+          "tr": "Caminin adı ve adresi, logo ve fotoğraflar, Mawaqit kimliği ve metinlerinizi gönderirsiniz.",
+          "ar": "ترسلون اسم المسجد وعنوانه والشعار والصور ومعرّف Mawaqit ونصوصكم.",
+          "sq": "Më dërgoni emrin dhe adresën e xhamisë, logon dhe fotot, ID-në e Mawaqit dhe tekstet tuaja."
+        },
+        {
+          "de": "Sie bekommen die fertige Website zum Ansehen und sagen, was noch geändert werden soll.",
+          "tr": "Hazır web sitesini incelemek üzere alırsınız ve nelerin değişmesi gerektiğini söylersiniz.",
+          "ar": "تستلمون الموقع جاهزًا للمعاينة وتخبرونني بما تريدون تعديله.",
+          "sq": "Merrni faqen e gatshme për ta parë dhe thoni çfarë duhet ndryshuar."
+        }
+      ]
+    }
+  ]
+}

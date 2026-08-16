@@ -209,7 +209,9 @@
     "privacy": "Gizlilik",
     "rights": "Tüm hakları saklıdır.",
     "prayerSource": "Namaz vakitleri Mawaqit üzerinden",
-    "credit": "Tasarım ve uygulama"
+    "credit": "Tasarım ve uygulama",
+    "creditInvite": "Web sitesine ihtiyacı olan bir cami tanıyor musunuz?",
+    "creditCta": "Ücretsiz sorun"
   },
   "legal": {
     "imprintTitle": "Künye (Impressum)",
@@ -277,5 +279,13 @@
     "intro": "Site neler yapıyor, maliyeti nedir ve neye karar verilmesi gerekiyor.",
     "print": "PDF olarak kaydet veya yazdır",
     "status": "Durum"
+  },
+  "service": {
+    "title": "Camininiz için ücretsiz web sitesi",
+    "subtitle": "Web sitesine ihtiyacı olan bir cami tanıyor musunuz? Bize ulaşın.",
+    "contactTitle": "İletişim",
+    "contactText": "Kısa bir mesaj yazın – size geri dönüş yaparım.",
+    "email": "E-posta gönder",
+    "website": "Web sitem"
   }
 }

@@ -209,7 +209,9 @@
     "privacy": "Mbrojtja e të dhënave",
     "rights": "Të gjitha të drejtat e rezervuara.",
     "prayerSource": "Kohët e namazit përmes Mawaqit",
-    "credit": "Dizajni dhe realizimi"
+    "credit": "Dizajni dhe realizimi",
+    "creditInvite": "Njihni një xhami që ka nevojë për faqe interneti?",
+    "creditCta": "Kërkoje falas"
   },
   "legal": {
     "imprintTitle": "Impressum",
@@ -277,5 +279,13 @@
     "intro": "Çfarë ofron faqja, sa kushton dhe çfarë duhet vendosur.",
     "print": "Ruaj si PDF ose printo",
     "status": "Gjendja"
+  },
+  "service": {
+    "title": "Faqe interneti falas për xhaminë tuaj",
+    "subtitle": "Njihni një xhami që ka nevojë për faqe interneti? Na kontaktoni.",
+    "contactTitle": "Kontakt",
+    "contactText": "Më shkruani shkurt – ju kthej përgjigje.",
+    "email": "Dërgo e-mail",
+    "website": "Faqja ime"
   }
 }

@@ -1244,6 +1244,43 @@ table.month-table {
   color: var(--text-soft);
 }
 
+/* Hinweis in der Fusszeile: Wer die Website erstellt hat und das Angebot fuer
+   andere Moscheen – die Einladung ist schon vor dem Klick lesbar. */
+.footer-credit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+}
+.footer-credit__invite {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: var(--text-soft);
+}
+.footer-credit__invite a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ---------- Angebotsseite fuer andere Moscheen ---------- */
+
+.service-contact {
+  margin-top: 18px;
+}
+.service-contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.service-note {
+  margin-top: 18px;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  max-width: 70ch;
+}
+
 /* ---------- Unterlage fuer die Vorstellung ---------- */
 
 .overview-intro {
