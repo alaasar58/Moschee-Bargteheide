@@ -12,7 +12,7 @@
   --sky-300: #a9d3e6;
   --sky-100: #e8f4fa;
 
-  --gold-600: #a8801f;
+  --gold-600: #8a6913;
   --gold-500: #c79a2c;
   --sand-200: #eddfbe;
   --sand-100: #fdf6e7;
@@ -21,7 +21,7 @@
   --surface: #ffffff;
   --surface-2: #f1f8f7;
   --text: #2b4247;
-  --text-soft: #5f7880;
+  --text-soft: #566e76;
   --border: #e2ecea;
 
   --radius: 18px;
@@ -54,54 +54,68 @@
    oder bei der Einstellung "Automatisch" zusammen mit dem Geraet.
    Ohne Wahl bleibt die Website hell. */
 :root[data-theme="dark"] {
-  --bg: #14201f;
-  --surface: #1b2828;
-  --surface-2: #22302f;
-  --text: #eef4f3;
-  --text-soft: #a9bcbd;
-  --border: #2f403f;
-  --petrol-100: #1e3a38;
-  --sand-100: #2a2519;
-  --sky-100: #1d2f36;
-  --accent: #7fd6cb;
-  --heading: #eef4f3;
-  --notice-bg: #2a2418;
-  --notice-text: #e5d5b4;
-  --notice-border: #3a3222;
-  --next-from: #24403d;
-  --next-ring: rgba(127, 214, 203, 0.16);
-  --imsak-bg: #253138;
-  --imsak-text: #ecd6a6;
-  --iftar-bg: #1e3a38;
-  --iftar-text: #9ee3d9;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.3);
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  /* Alle Flaechen stammen aus derselben Farbfamilie (Petrol-Grau) und sind
+     eine Stufe heller als zuvor. Waerme kommt nur noch ueber die Schriftfarbe
+     - so stossen Braun, Blau und Gruen nicht mehr aufeinander. */
+  --bg: #1a2527;
+  --surface: #212e2f;
+  --surface-2: #283638;
+  --text: #eaf2f1;
+  --text-soft: #b0c1c1;
+  --border: #38494b;
+  --petrol-100: #244341;
+  --sand-100: #2d3a39;
+  --sky-100: #24373a;
+  --accent: #86ddd0;
+  --heading: #eaf2f1;
+  /* Gold traegt hier nur die Schrift; dunkles Gold waere auf dunklem Grund
+     nicht mehr lesbar. */
+  --gold-600: #e3c079;
+  --gold-500: #d8b163;
+  --notice-bg: #2b3838;
+  --notice-text: #eed9a6;
+  --notice-border: #3d4e4d;
+  --next-from: #2c4a47;
+  --next-ring: rgba(134, 221, 208, 0.18);
+  --imsak-bg: #2d3937;
+  --imsak-text: #efdba8;
+  --iftar-bg: #234441;
+  --iftar-text: #9ce6da;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.26);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
   :root[data-theme="auto"] {
-    --bg: #14201f;
-    --surface: #1b2828;
-    --surface-2: #22302f;
-    --text: #eef4f3;
-    --text-soft: #a9bcbd;
-    --border: #2f403f;
-    --petrol-100: #1e3a38;
-    --sand-100: #2a2519;
-    --sky-100: #1d2f36;
-    --accent: #7fd6cb;
-    --heading: #eef4f3;
-    --notice-bg: #2a2418;
-    --notice-text: #e5d5b4;
-    --notice-border: #3a3222;
-    --next-from: #24403d;
-    --next-ring: rgba(127, 214, 203, 0.16);
-    --imsak-bg: #253138;
-    --imsak-text: #ecd6a6;
-    --iftar-bg: #1e3a38;
-    --iftar-text: #9ee3d9;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.3);
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    /* Alle Flaechen stammen aus derselben Farbfamilie (Petrol-Grau) und sind
+       eine Stufe heller als zuvor. Waerme kommt nur noch ueber die Schriftfarbe
+       - so stossen Braun, Blau und Gruen nicht mehr aufeinander. */
+    --bg: #1a2527;
+    --surface: #212e2f;
+    --surface-2: #283638;
+    --text: #eaf2f1;
+    --text-soft: #b0c1c1;
+    --border: #38494b;
+    --petrol-100: #244341;
+    --sand-100: #2d3a39;
+    --sky-100: #24373a;
+    --accent: #86ddd0;
+    --heading: #eaf2f1;
+    /* Gold traegt hier nur die Schrift; dunkles Gold waere auf dunklem Grund
+       nicht mehr lesbar. */
+    --gold-600: #e3c079;
+    --gold-500: #d8b163;
+    --notice-bg: #2b3838;
+    --notice-text: #eed9a6;
+    --notice-border: #3d4e4d;
+    --next-from: #2c4a47;
+    --next-ring: rgba(134, 221, 208, 0.18);
+    --imsak-bg: #2d3937;
+    --imsak-text: #efdba8;
+    --iftar-bg: #234441;
+    --iftar-text: #9ce6da;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.26);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
 
