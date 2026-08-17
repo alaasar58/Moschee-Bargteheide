@@ -1382,6 +1382,20 @@ table.month-table--compact {
   .overview-grid > .overview-block:first-child {
     grid-column: 1 / -1;
   }
+  /* Eine lange Liste steht besser ueber die ganze Breite in zwei Spalten
+     als schmal in einer sehr hohen Karte. */
+  .overview-grid > .overview-block[data-block="unterlagen"] {
+    grid-column: 1 / -1;
+  }
+  .overview-block[data-block="unterlagen"] .overview-list {
+    display: block;
+    columns: 2;
+    column-gap: 30px;
+  }
+  .overview-block[data-block="unterlagen"] .overview-list li {
+    break-inside: avoid;
+    margin-bottom: 8px;
+  }
 }
 
 .overview-block__title {

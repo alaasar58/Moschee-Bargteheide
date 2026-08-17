@@ -1,5 +1,5 @@
 {
-  "_hinweis": "Seite 'Kostenlose Website fuer Moscheen' (website-fuer-moscheen.html). Privates Angebot des Erstellers, nicht der Gemeinde. Texte hier frei aenderbar; E-Mail und Webadresse stehen in content/settings.json unter 'service'.",
+  "_hinweis": "Seite 'Kostenlose Website fuer Moscheen' (website-fuer-moscheen.html). Privates Angebot, nicht von der Gemeinde. Die Seite steht bewusst nicht im Menue und ist nur ueber die Zeile in der Fusszeile erreichbar. Texte hier frei aenderbar; Name, E-Mail und Webadresse stehen in content/settings.json unter 'credit' und 'service'.",
   "intro": {
     "de": "Diese Website habe ich ehrenamtlich für die Islamische Gemeinde Bargteheide e.V. erstellt. Wenn Ihre Moschee oder Ihr Verein auch eine Website braucht: Ich mache das gerne – die Erstellung ist kostenlos, als Sadaqa.",
     "tr": "Bu web sitesini Islamische Gemeinde Bargteheide e.V. için gönüllü olarak hazırladım. Camininizin ya da derneğinizin de bir web sitesine ihtiyacı varsa: memnuniyetle yaparım – kurulum ücretsizdir, sadaka olarak.",
@@ -7,10 +7,10 @@
     "sq": "Këtë faqe e kam ndërtuar vullnetarisht për Islamische Gemeinde Bargteheide e.V. Nëse edhe xhamia ose shoqata juaj ka nevojë për një faqe: e bëj me kënaqësi – ndërtimi është falas, si sadaka."
   },
   "disclaimer": {
-    "de": "Hinweis: Dies ist ein privates Angebot von Mohammed Alaa Sarhan und geht nicht von der Islamischen Gemeinde Bargteheide e.V. aus.",
-    "tr": "Not: Bu, Mohammed Alaa Sarhan'ın kişisel bir teklifidir ve Islamische Gemeinde Bargteheide e.V. tarafından sunulmamaktadır.",
-    "ar": "تنويه: هذا عرض شخصي من محمد علاء سرحان وليس صادرًا عن الجمعية الإسلامية في بارغتهايده.",
-    "sq": "Shënim: Kjo është një ofertë private e Mohammed Alaa Sarhan dhe nuk vjen nga Islamische Gemeinde Bargteheide e.V."
+    "de": "Hinweis: Dies ist ein privates Angebot von Lynn Kawqge und geht nicht von der Islamischen Gemeinde Bargteheide e.V. aus.",
+    "tr": "Not: Bu, Lynn Kawqge'nin kişisel bir teklifidir ve Islamische Gemeinde Bargteheide e.V. tarafından sunulmamaktadır.",
+    "ar": "تنويه: هذا عرض خاص من Lynn Kawqge وليس صادرًا عن الجمعية الإسلامية في بارغتهايده.",
+    "sq": "Shënim: Kjo është një ofertë private e Lynn Kawqge dhe nuk vjen nga Islamische Gemeinde Bargteheide e.V."
   },
   "blocks": [
     {
@@ -108,10 +108,10 @@
           "sq": "Hostimi: i mundur falas, me lidhje të sigurt."
         },
         {
-          "de": "Eigene Internetadresse (z. B. moschee-musterstadt.de): etwa 10 bis 20 Euro im Jahr. Das zahlen Sie direkt beim Anbieter, nicht an mich. Ohne eigene Adresse geht es auch.",
-          "tr": "Kendi internet adresiniz (ör. moschee-musterstadt.de): yılda yaklaşık 10–20 Euro. Bunu doğrudan sağlayıcıya ödersiniz, bana değil. Kendi adres olmadan da olur.",
-          "ar": "عنوان إنترنت خاص (مثل moschee-musterstadt.de): نحو 10 إلى 20 يورو سنويًا تُدفع مباشرة لمزوّد النطاق لا لي. ويمكن الاستغناء عنه.",
-          "sq": "Adresë e vetja (p.sh. moschee-musterstadt.de): rreth 10–20 euro në vit. E paguani drejtpërdrejt te ofruesi, jo tek unë. Edhe pa adresë të vetën funksionon."
+          "de": "Eigene Internetadresse (z. B. moschee-musterstadt.de): empfohlen. Sie wirkt seriös, ist leicht zu merken und bleibt Ihnen erhalten, auch wenn die Website später umzieht. Etwa 10 bis 20 Euro im Jahr, direkt beim Anbieter bezahlt, nicht an mich. Die Einrichtung übernehme ich.",
+          "tr": "Kendi internet adresiniz (ör. moschee-musterstadt.de): tavsiye edilir. Ciddi bir izlenim bırakır, akılda kalır ve site ileride taşınsa bile sizde kalır. Yılda yaklaşık 10–20 Euro, doğrudan sağlayıcıya ödenir, bana değil. Kurulumunu ben üstlenirim.",
+          "ar": "عنوان إنترنت خاص (مثل moschee-musterstadt.de): موصى به. فهو يترك انطباعًا موثوقًا، ويسهل تذكّره، ويبقى لكم حتى لو انتقل الموقع لاحقًا. التكلفة نحو 10 إلى 20 يورو سنويًا تُدفع لمزوّد النطاق مباشرة لا لي، وأتولّى أنا إعداده.",
+          "sq": "Adresa juaj e internetit (p.sh. moschee-musterstadt.de): e rekomanduar. Lë përshtypje serioze, mbahet mend lehtë dhe ju mbetet edhe nëse faqja zhvendoset më vonë. Rreth 10–20 euro në vit, paguhen drejtpërdrejt te ofruesi, jo tek unë. Rregullimin e bëj unë."
         },
         {
           "de": "Laufende Betreuung – nur wenn Sie möchten: Kursanmeldungen verwalten, neue Kurse und Meldungen eintragen, regelmäßige Aktualisierungen. Dafür genügt ein symbolischer Betrag nach Absprache.",
@@ -137,29 +137,143 @@
         "sq": "Si zhvillohet"
       },
       "text": {
-        "de": "Drei einfache Schritte.",
-        "tr": "Üç basit adım.",
-        "ar": "ثلاث خطوات بسيطة.",
-        "sq": "Tre hapa të thjeshtë."
+        "de": "Von der ersten Nachricht bis zur fertigen Website. Sie können auch einfach nur reden, ohne sich zu etwas zu verpflichten.",
+        "tr": "İlk mesajdan hazır web sitesine kadar. Hiçbir yükümlülük olmadan sadece konuşmak da mümkündür.",
+        "ar": "من أول رسالة حتى الموقع الجاهز. ويمكنكم أيضًا أن نتحدّث فقط دون أي التزام.",
+        "sq": "Nga mesazhi i parë deri te faqja e gatshme. Mund edhe thjesht të bisedojmë, pa asnjë detyrim."
       },
       "points": [
         {
-          "de": "Sie melden sich – kurz per E-Mail genügt.",
-          "tr": "Bize ulaşırsınız – kısa bir e-posta yeterlidir.",
-          "ar": "تتواصلون معي — رسالة قصيرة بالبريد تكفي.",
-          "sq": "Na kontaktoni – mjafton një e-mail i shkurtër."
+          "de": "Sie schreiben mir kurz – eine E-Mail genügt. Wenn Sie erst einmal Fragen haben: einfach fragen. Wir klären alles in Ruhe, bevor Sie sich entscheiden.",
+          "tr": "Bana kısaca yazarsınız – bir e-posta yeterlidir. Önce sorularınız varsa: çekinmeden sorun. Karar vermeden önce her şeyi rahatça konuşuruz.",
+          "ar": "تكتبون لي رسالة قصيرة، ويكفي بريد إلكتروني. وإن كانت لديكم أسئلة أولًا فاسألوا؛ نوضّح كل شيء بهدوء قبل أن تقرّروا.",
+          "sq": "Më shkruani shkurt – mjafton një e-mail. Nëse fillimisht keni pyetje: pyesni lirisht. Sqarojmë gjithçka me qetësi para se të vendosni."
         },
         {
-          "de": "Sie schicken mir Name und Anschrift der Moschee, Logo und Fotos, die Mawaqit-Kennung und Ihre Texte.",
-          "tr": "Caminin adı ve adresi, logo ve fotoğraflar, Mawaqit kimliği ve metinlerinizi gönderirsiniz.",
-          "ar": "ترسلون اسم المسجد وعنوانه والشعار والصور ومعرّف Mawaqit ونصوصكم.",
-          "sq": "Më dërgoni emrin dhe adresën e xhamisë, logon dhe fotot, ID-në e Mawaqit dhe tekstet tuaja."
+          "de": "Wir besprechen, welche Seiten Ihre Moschee braucht: Gebetszeiten, Kurse, Neuigkeiten, Veranstaltungen, Spenden, Mitgliedschaft, Kontakt. Nichts davon ist Pflicht.",
+          "tr": "Camininizin hangi sayfalara ihtiyacı olduğunu konuşuruz: namaz vakitleri, kurslar, haberler, etkinlikler, bağış, üyelik, iletişim. Hiçbiri zorunlu değildir.",
+          "ar": "نتحدّث معًا عن الصفحات التي يحتاجها مسجدكم: أوقات الصلاة، والدورات، والأخبار، والفعاليات، والتبرعات، والعضوية، والتواصل. ولا شيء منها إلزامي.",
+          "sq": "Bisedojmë se cilat faqe i duhen xhamisë suaj: kohët e namazit, kurset, lajmet, aktivitetet, dhurimet, anëtarësimi, kontakti. Asnjëra nuk është e detyrueshme."
         },
         {
-          "de": "Sie bekommen die fertige Website zum Ansehen und sagen, was noch geändert werden soll.",
-          "tr": "Hazır web sitesini incelemek üzere alırsınız ve nelerin değişmesi gerektiğini söylersiniz.",
-          "ar": "تستلمون الموقع جاهزًا للمعاينة وتخبرونني بما تريدون تعديله.",
-          "sq": "Merrni faqen e gatshme për ta parë dhe thoni çfarë duhet ndryshuar."
+          "de": "Sie schicken mir die Angaben aus der Liste unten. Was noch fehlt, reichen Sie später nach – wir fangen mit dem an, was schon da ist.",
+          "tr": "Aşağıdaki listedeki bilgileri gönderirsiniz. Eksik kalanları sonra iletirsiniz – elimizde olanla başlarız.",
+          "ar": "ترسلون البيانات المذكورة في القائمة أدناه، وما ينقص يمكن إرساله لاحقًا؛ نبدأ بما هو متوفّر.",
+          "sq": "Më dërgoni të dhënat nga lista më poshtë. Çka mungon, e plotësoni më vonë – nisim me atë që keni."
+        },
+        {
+          "de": "Innerhalb weniger Tage bekommen Sie einen ersten Entwurf zum Ansehen – am Handy und am Rechner.",
+          "tr": "Birkaç gün içinde ilk taslağı görmek üzere alırsınız – telefonda ve bilgisayarda.",
+          "ar": "خلال أيام قليلة تستلمون نسخة أولى للمعاينة على الهاتف وعلى الحاسوب.",
+          "sq": "Brenda pak ditësh merrni një draft të parë për ta parë – në telefon dhe në kompjuter."
+        },
+        {
+          "de": "Sie sagen, was geändert werden soll. Änderungen gehören dazu und kosten nichts.",
+          "tr": "Nelerin değişmesini istediğinizi söylersiniz. Değişiklikler işin bir parçasıdır ve ücretsizdir.",
+          "ar": "تخبرونني بما تريدون تغييره؛ فالتعديلات جزء من العمل ولا تكلّف شيئًا.",
+          "sq": "Ju thoni çfarë duhet ndryshuar. Ndryshimet janë pjesë e punës dhe nuk kushtojnë asgjë."
+        },
+        {
+          "de": "Wenn der Vorstand einverstanden ist, geht die Website online. Die eigene Internetadresse richte ich auf Wunsch für Sie ein.",
+          "tr": "Yönetim onayladığında site yayına girer. İsterseniz kendi internet adresinizi sizin için ayarlarım.",
+          "ar": "وحين يوافق مجلس الإدارة يُنشر الموقع، وأتولّى عند الرغبة إعداد عنوان الإنترنت الخاص بكم.",
+          "sq": "Kur kryesia është dakord, faqja del online. Adresën tuaj të internetit e rregulloj me dëshirë unë."
+        },
+        {
+          "de": "Danach zeige ich Ihnen, wie Sie Neuigkeiten, Kurse und Termine selbst eintragen – oder ich übernehme die Pflege für Sie.",
+          "tr": "Sonrasında haberleri, kursları ve tarihleri kendiniz nasıl gireceğinizi gösteririm – ya da bakımı ben üstlenirim.",
+          "ar": "ثم أُريكم كيف تُدخلون الأخبار والدورات والمواعيد بأنفسكم، أو أتولّى أنا المتابعة نيابةً عنكم.",
+          "sq": "Më pas ju tregoj si t'i shtoni vetë lajmet, kurset dhe datat – ose kujdesin e marr përsipër unë."
+        }
+      ]
+    },
+    {
+      "id": "unterlagen",
+      "icon": "📋",
+      "title": {
+        "de": "Das brauche ich von Ihnen",
+        "tr": "Sizden neye ihtiyacım var",
+        "ar": "ما الذي أحتاجه منكم",
+        "sq": "Çfarë më duhet nga ju"
+      },
+      "text": {
+        "de": "Alles auf einen Blick. Nichts davon muss sofort vollständig sein – fehlende Angaben tragen wir später nach.",
+        "tr": "Hepsi bir arada. Hiçbirinin hemen eksiksiz olması gerekmiyor – eksikleri sonra tamamlarız.",
+        "ar": "كل ما يلزم في مكان واحد. ولا يلزم أن يكتمل كل شيء فورًا؛ نُكمل الناقص لاحقًا.",
+        "sq": "Gjithçka me një shikim. Asgjë nuk duhet të jetë e plotë menjëherë – të dhënat që mungojnë i plotësojmë më vonë."
+      },
+      "points": [
+        {
+          "de": "Name der Moschee und des Vereins in der offiziellen Schreibweise.",
+          "tr": "Caminin ve derneğin resmî yazımıyla adı.",
+          "ar": "اسم المسجد واسم الجمعية بصيغتهما الرسمية.",
+          "sq": "Emri i xhamisë dhe i shoqatës, sipas shkrimit zyrtar."
+        },
+        {
+          "de": "Anschrift: Straße, Postleitzahl und Ort.",
+          "tr": "Adres: sokak, posta kodu ve şehir.",
+          "ar": "العنوان: الشارع والرمز البريدي والمدينة.",
+          "sq": "Adresa: rruga, kodi postar dhe qyteti."
+        },
+        {
+          "de": "Ihre Mawaqit-Kennung oder die Adresse Ihrer Mawaqit-Seite – daraus kommen die Gebetszeiten automatisch.",
+          "tr": "Mawaqit kimliğiniz veya Mawaqit sayfanızın adresi – namaz vakitleri oradan otomatik gelir.",
+          "ar": "معرّف Mawaqit الخاص بكم أو رابط صفحتكم عليه؛ منه تأتي أوقات الصلاة تلقائيًا.",
+          "sq": "ID-ja juaj e Mawaqit ose adresa e faqes suaj në Mawaqit – prej andej vijnë automatikisht kohët e namazit."
+        },
+        {
+          "de": "Telefonnummer und E-Mail-Adresse, die öffentlich stehen dürfen.",
+          "tr": "Herkese açık gösterilebilecek telefon numarası ve e-posta adresi.",
+          "ar": "رقم هاتف وبريد إلكتروني يمكن نشرهما للعموم.",
+          "sq": "Numri i telefonit dhe e-maili që mund të shfaqen publikisht."
+        },
+        {
+          "de": "Logo und einige Fotos der Moschee, von außen und von innen.",
+          "tr": "Logo ve caminin dıştan ve içten birkaç fotoğrafı.",
+          "ar": "الشعار وبعض صور المسجد من الخارج ومن الداخل.",
+          "sq": "Logoja dhe disa foto të xhamisë, nga jashtë dhe nga brenda."
+        },
+        {
+          "de": "Ein kurzer Text über die Moschee und den Verein: seit wann es sie gibt, was angeboten wird, wofür Sie stehen.",
+          "tr": "Cami ve dernek hakkında kısa bir metin: ne zamandan beri var, neler sunuluyor, neyi temsil ediyorsunuz.",
+          "ar": "نص قصير عن المسجد والجمعية: متى تأسّسا، وما الذي يُقدَّم، وما الذي تمثّلونه.",
+          "sq": "Një tekst i shkurtër për xhaminë dhe shoqatën: që kur ekzistojnë, çfarë ofrohet, çfarë përfaqësoni."
+        },
+        {
+          "de": "Ihr Kursangebot: Name des Kurses, für wen, Wochentag, Uhrzeit, Ort, Ansprechpartner und Gebühr.",
+          "tr": "Kurs programınız: kursun adı, kime yönelik, gün, saat, yer, ilgili kişi ve ücret.",
+          "ar": "برنامج الدورات: اسم الدورة، ولمن هي، واليوم، والوقت، والمكان، والمسؤول، والرسوم.",
+          "sq": "Oferta e kurseve: emri i kursit, për kë, dita, ora, vendi, personi kontaktues dhe tarifa."
+        },
+        {
+          "de": "Angaben für Spenden: Kontoinhaber, IBAN und BIC – und, falls vorhanden, ein PayPal-Link.",
+          "tr": "Bağış bilgileri: hesap sahibi, IBAN ve BIC – varsa bir PayPal bağlantısı.",
+          "ar": "بيانات التبرّع: صاحب الحساب ورقم IBAN ورمز BIC، ورابط PayPal إن وُجد.",
+          "sq": "Të dhënat për dhurime: mbajtësi i llogarisë, IBAN dhe BIC – dhe, nëse ka, një lidhje PayPal."
+        },
+        {
+          "de": "Mitgliedschaft: Höhe des Beitrags und wer die Anträge entgegennimmt.",
+          "tr": "Üyelik: aidat tutarı ve başvuruları kimin aldığı.",
+          "ar": "العضوية: قيمة الاشتراك ومَن يستلم الطلبات.",
+          "sq": "Anëtarësimi: shuma e kuotës dhe kush i pranon kërkesat."
+        },
+        {
+          "de": "Angaben für Impressum und Datenschutz: Vertretungsberechtigte, Registergericht und Vereinsregisternummer.",
+          "tr": "Künye ve veri koruması için bilgiler: temsile yetkili kişiler, sicil mahkemesi ve dernek sicil numarası.",
+          "ar": "بيانات صفحة البيانات القانونية (Impressum) وحماية البيانات: الممثّلون القانونيون، ومحكمة السجل، ورقم قيد الجمعية.",
+          "sq": "Të dhëna për impresumin dhe mbrojtjen e të dhënave: përfaqësuesit ligjorë, gjykata e regjistrit dhe numri i regjistrit të shoqatës."
+        },
+        {
+          "de": "Welche Sprachen die Website haben soll.",
+          "tr": "Web sitesinin hangi dillerde olacağı.",
+          "ar": "اللغات التي تريدون أن يظهر بها الموقع.",
+          "sq": "Në cilat gjuhë do të jetë faqja."
+        },
+        {
+          "de": "Wer im Verein die Website später pflegen soll – diese Person bekommt von mir eine kurze Einweisung.",
+          "tr": "Dernekte web sitesini ileride kimin yöneteceği – bu kişiye kısa bir eğitim veririm.",
+          "ar": "مَن سيتولّى تحديث الموقع لاحقًا داخل الجمعية — أقدّم لهذا الشخص شرحًا قصيرًا.",
+          "sq": "Kush në shoqatë do ta mirëmbajë faqen më vonë – këtij personi i jap një udhëzim të shkurtër."
         }
       ]
     }

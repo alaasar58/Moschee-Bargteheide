@@ -4,7 +4,7 @@
    aufgefrischt. Die Gebetszeiten werden zuerst aus dem Netz geholt; ohne
    Verbindung kommen sie aus dem Speicher – so sind sie auch offline verfuegbar. */
 
-const VERSION = "v3";
+const VERSION = "v4";
 const SHELL_CACHE = `moschee-shell-${VERSION}`;
 const DATA_CACHE = `moschee-data-${VERSION}`;
 

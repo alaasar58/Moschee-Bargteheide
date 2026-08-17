@@ -13,7 +13,7 @@
   function block(entry) {
     const points = Array.isArray(entry.points) ? entry.points : [];
 
-    return `<section class="card overview-block">
+    return `<section class="card overview-block" data-block="${S.escapeHtml(entry.id || "")}">
       <h2 class="overview-block__title">
         <span class="overview-block__icon" aria-hidden="true">${S.escapeHtml(entry.icon || "•")}</span>
         ${S.escapeHtml(S.field(entry.title))}
