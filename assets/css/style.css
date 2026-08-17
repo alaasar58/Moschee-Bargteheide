@@ -35,6 +35,15 @@
   --notice-text: #7a6224;
   --notice-border: #eddfbe;
 
+  /* Gebetszeiten: helle Flaeche des naechsten Gebets und die beiden
+     hervorgehobenen Spalten der Imsakiya. */
+  --next-from: #ffffff;
+  --next-ring: rgba(47, 156, 145, 0.18);
+  --imsak-bg: #fdf6e7;
+  --imsak-text: #7a6224;
+  --iftar-bg: #e6f4f1;
+  --iftar-text: #17706a;
+
   --max: 1120px;
   --header-h: 66px;
 
@@ -59,6 +68,12 @@
   --notice-bg: #2a2418;
   --notice-text: #e5d5b4;
   --notice-border: #3a3222;
+  --next-from: #24403d;
+  --next-ring: rgba(127, 214, 203, 0.16);
+  --imsak-bg: #253138;
+  --imsak-text: #ecd6a6;
+  --iftar-bg: #1e3a38;
+  --iftar-text: #9ee3d9;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.3);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
@@ -79,6 +94,12 @@
     --notice-bg: #2a2418;
     --notice-text: #e5d5b4;
     --notice-border: #3a3222;
+    --next-from: #24403d;
+    --next-ring: rgba(127, 214, 203, 0.16);
+    --imsak-bg: #253138;
+    --imsak-text: #ecd6a6;
+    --iftar-bg: #1e3a38;
+    --iftar-text: #9ee3d9;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 28px rgba(0, 0, 0, 0.3);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
   }
@@ -729,9 +750,9 @@ p {
 
 /* Das naechste Gebet leuchtet in der Reihe deutlich hervor. */
 .time-cell[data-next="true"] {
-  background: linear-gradient(160deg, #ffffff, var(--petrol-100));
+  background: linear-gradient(160deg, var(--next-from), var(--petrol-100));
   border-color: var(--petrol-500);
-  box-shadow: 0 0 0 3px rgba(47, 156, 145, 0.18), 0 8px 20px rgba(31, 128, 120, 0.12);
+  box-shadow: 0 0 0 3px var(--next-ring), 0 8px 20px rgba(31, 128, 120, 0.12);
 }
 .time-cell[data-next="true"] .time-cell__name {
   color: var(--accent);
@@ -840,10 +861,66 @@ table.month-table {
   color: var(--text-soft);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .month-table tr[data-today="true"] td {
   background: var(--petrol-100);
   font-weight: 600;
+}
+
+/* Kompakte Fassung: Die Tabelle bleibt ein ruhiger Kasten und fuellt nicht
+   die ganze Seite. Gescrollt wird innerhalb des Kastens, der heutige Tag
+   steht beim Aufrufen bereits im Blick. */
+.month-table-wrap--scroll {
+  max-height: min(58vh, 470px);
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+table.month-table--compact {
+  min-width: 540px;
+}
+.month-table--compact th,
+.month-table--compact td {
+  padding: 6px 9px;
+  font-size: 0.86rem;
+}
+.month-table--compact .date-stack__main {
+  font-size: 0.88rem;
+}
+.month-table--compact .date-stack__sub {
+  font-size: 0.72rem;
+}
+@media (min-width: 700px) {
+  table.month-table--compact {
+    min-width: 640px;
+  }
+}
+
+/* Imsak und Iftar sind die beiden Zeiten, auf die es im Ramadan ankommt. */
+.month-table td[data-col="imsak"],
+.month-table th[data-col="imsak"] {
+  background: var(--imsak-bg);
+  color: var(--imsak-text);
+  font-weight: 600;
+}
+.month-table td[data-col="iftar"],
+.month-table th[data-col="iftar"] {
+  background: var(--iftar-bg);
+  color: var(--iftar-text);
+  font-weight: 600;
+}
+.month-table tr[data-today="true"] td[data-col="imsak"],
+.month-table tr[data-today="true"] td[data-col="iftar"] {
+  box-shadow: inset 0 0 0 2px var(--petrol-500);
+}
+
+.table-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 14px;
 }
 
 /* ---------- Karten-Raster ---------- */
@@ -1457,9 +1534,62 @@ body[dir="rtl"] .prose {
 }
 
 /* Beim Drucken nur den fertigen Aufnahmeantrag ausgeben. */
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
 @media print {
   body * {
     visibility: hidden;
+  }
+
+  /* Beim Drucken einer Tabelle steht nur der Druckbereich im Seitenkoerper –
+     so bleibt es bei genau einer Seite ohne leere Folgeseiten. */
+  html.is-printing body > *:not(.print-portal) {
+    display: none !important;
+  }
+  html.is-printing .print-portal .print-doc {
+    position: static;
+  }
+
+  /* Der Kasten mit der Bildlaufleiste wird beim Drucken vollstaendig
+     ausgegeben, dafuer enger gesetzt – so passt die Imsakiya auf eine Seite. */
+  .print-doc .month-table-wrap {
+    max-height: none;
+    overflow: visible;
+    border: 0;
+  }
+  .print-doc table.month-table {
+    min-width: 0;
+    width: 100%;
+  }
+  .print-doc .month-table th,
+  .print-doc .month-table td {
+    padding: 1pt 3pt;
+    font-size: 8pt;
+    line-height: 1.2;
+  }
+  .print-doc .date-stack {
+    line-height: 1.15;
+  }
+  .print-doc .date-stack__sub {
+    font-size: 6.5pt;
+  }
+  .print-doc thead th {
+    position: static;
+  }
+  .print-doc h2 {
+    font-size: 14pt;
+    margin-bottom: 6pt;
+  }
+  .month-table td[data-col="imsak"],
+  .month-table td[data-col="iftar"],
+  .month-table th[data-col="imsak"],
+  .month-table th[data-col="iftar"],
+  .month-table tr[data-today="true"] td {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
   .application-doc,
   .application-doc *,

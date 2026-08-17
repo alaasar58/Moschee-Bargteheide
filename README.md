@@ -70,8 +70,11 @@ Iqāma-Zeiten (falls hinterlegt) und die Zeit(en) des Freitagsgebets.
 Website **immer hell** – der Dunkelmodus des Handys wirkt nur bei „Automatisch“.
 Zum Vorführen kann der Modus auch angehängt werden: `?theme=dark`.
 
-**Ramadan.** `ramadan.html` zeigt die Imsakiya des ganzen Monats (Imsak, Fajr, Iftar) und
-lässt sich ausdrucken. Auf der Startseite erscheint ab 30 Tagen vor Ramadan ein Hinweis,
+**Ramadan.** `ramadan.html` zeigt die Imsakiya des ganzen Monats mit **allen** Gebetszeiten;
+Imsak und Iftar sind farbig hervorgehoben. Die Tabelle lässt sich ausdrucken oder über
+„Als PDF speichern (A4)“ als Datei sichern – in beiden Fällen **genau eine A4-Seite**
+(`assets/js/pdf.js` baut das PDF ohne fremde Bibliothek, arabische Schrift inbegriffen).
+Auf der Startseite erscheint ab 30 Tagen vor Ramadan ein Hinweis,
 im Ramadan selbst ein Countdown bis zum Iftar bzw. bis zum Ende des Sahur. Alle Zeiten
 stammen aus denselben Mawaqit-Daten wie die Gebetszeiten.
 

@@ -301,7 +301,8 @@
     const month = data.calendar[String(now.month)];
     if (!month) return "";
 
-    const head = ["prayer.day", "prayer.fajr", "prayer.shuruq", "prayer.dhuhr", "prayer.asr", "prayer.maghrib", "prayer.isha"]
+    // In der Tabelle die kurzen Namen – so bleibt sie schmal und uebersichtlich.
+    const head = ["prayer.day", "prayer.fajr", "prayer.shuruqShort", "prayer.dhuhr", "prayer.asr", "prayer.maghrib", "prayer.isha"]
       .map((key) => `<th>${S.escapeHtml(S.t(key))}</th>`)
       .join("");
 
@@ -339,7 +340,20 @@
     const title = `${S.t("prayer.monthTitle")} · ${monthNames.join(" – ")} ${year}`;
 
     return `<h2 style="margin-top:34px">${S.escapeHtml(title)}</h2>
-      <div class="month-table-wrap"><table class="month-table"><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
+      <div class="month-table-wrap month-table-wrap--scroll" data-month-scroll>
+        <table class="month-table month-table--compact"><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table>
+      </div>`;
+  }
+
+  /** Den heutigen Tag im Kasten sichtbar machen, ohne die Seite zu bewegen. */
+  function scrollToToday(container) {
+    const box = container.querySelector("[data-month-scroll]");
+    if (!box) return;
+    const row = box.querySelector('tr[data-today="true"]');
+    if (!row) return;
+    const head = box.querySelector("thead");
+    const headHeight = head ? head.getBoundingClientRect().height : 0;
+    box.scrollTop = Math.max(0, row.offsetTop - headHeight);
   }
 
   /* ---------- Ausgabe ---------- */
@@ -375,6 +389,7 @@
     }
 
     container.innerHTML = parts.join("");
+    if (full) scrollToToday(container);
     startTimer(container);
   }
 

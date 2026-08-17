@@ -224,54 +224,128 @@
 
   /* ---------- Imsakiya ---------- */
 
+  /* Spalten der Imsakiya: der ganze Tag auf einen Blick.
+     Imsak und Iftar sind farbig hervorgehoben. */
+  const COLUMNS = [
+    { key: "imsak", label: "prayer.imsak", tone: "imsak" },
+    { key: "fajr", label: "ramadan.fajr" },
+    { key: "shuruq", label: "prayer.shuruqShort" },
+    { key: "dhuhr", label: "prayer.dhuhr" },
+    { key: "asr", label: "prayer.asr" },
+    { key: "maghrib", label: "ramadan.iftarShort", tone: "iftar" },
+    { key: "isha", label: "prayer.isha" }
+  ];
+
+  function valueFor(times, key) {
+    if (key === "imsak") return imsakOf(times) || "–";
+    return times[key] || "–";
+  }
+
+  /** Daten der Imsakiya einmal aufbereiten – fuer Tabelle, Druck und PDF. */
+  function imsakiyaModel() {
+    const start = ramadanStart();
+    if (!start) return null;
+
+    const now = zoneNow();
+    const entries = [];
+
+    ramadanDays(start).forEach((date) => {
+      const times = dayTimes(date);
+      if (!times) return;
+
+      entries.push({
+        day: hijriParts(date).day,
+        gregorian: new Intl.DateTimeFormat(S.t("meta.locale", "de-DE"), {
+          day: "numeric",
+          month: "short",
+          weekday: "short",
+          timeZone: "UTC"
+        }).format(date),
+        times,
+        isToday:
+          date.getUTCFullYear() === now.year && date.getUTCMonth() + 1 === now.month && date.getUTCDate() === now.day
+      });
+    });
+
+    return { start, year: hijriParts(start).year, entries };
+  }
+
+  function savePdf(model, title) {
+    if (!window.SitePdf) return;
+
+    const rtl = S.lang === "ar";
+    // In der Fusszeile die Reihenfolge an die Leserichtung anpassen.
+    const footer = [S.t("prayer.note"), S.t("prayer.source")];
+    if (rtl) footer.reverse();
+
+    const columns = [{ label: S.t("ramadan.day"), width: 1.6 }].concat(
+      COLUMNS.map((column) => ({ label: S.t(column.label), tone: column.tone }))
+    );
+
+    const rows = model.entries.map((entry) => ({
+      cells: [String(entry.day)].concat(COLUMNS.map((column) => valueFor(entry.times, column.key))),
+      sub: [entry.gregorian],
+      highlight: entry.isToday
+    }));
+
+    window.SitePdf.tableToPdf(
+      {
+        title,
+        subtitle: S.t("site.title"),
+        footer: footer.join(" · "),
+        rtl,
+        columns,
+        rows
+      },
+      `imsakiya-ramadan-${model.year}.pdf`
+    );
+  }
+
   function renderImsakiya() {
     const hosts = document.querySelectorAll("[data-imsakiya]");
     if (!hosts.length) return;
 
-    const start = ramadanStart();
-    if (!start) {
+    const model = imsakiyaModel();
+    if (!model) {
       hosts.forEach((host) => (host.innerHTML = ""));
       return;
     }
 
-    const days = ramadanDays(start);
-    const year = hijriParts(start).year;
-    const now = zoneNow();
-    const rows = [];
+    const head = [`<th>${S.escapeHtml(S.t("ramadan.day"))}</th>`]
+      .concat(
+        COLUMNS.map(
+          (column) =>
+            `<th${column.tone ? ` data-col="${column.tone}"` : ""}>${S.escapeHtml(S.t(column.label))}</th>`
+        )
+      )
+      .join("");
 
-    days.forEach((date) => {
-      const times = dayTimes(date);
-      if (!times) return;
+    const rows = model.entries
+      .map((entry) => {
+        const cells = COLUMNS.map(
+          (column) =>
+            `<td${column.tone ? ` data-col="${column.tone}"` : ""}>${S.escapeHtml(
+              valueFor(entry.times, column.key)
+            )}</td>`
+        ).join("");
 
-      const hijri = hijriParts(date);
-      const gregorian = new Intl.DateTimeFormat(S.t("meta.locale", "de-DE"), {
-        day: "numeric",
-        month: "short",
-        weekday: "short",
-        timeZone: "UTC"
-      }).format(date);
-      const isToday =
-        date.getUTCFullYear() === now.year && date.getUTCMonth() + 1 === now.month && date.getUTCDate() === now.day;
+        return `<tr data-today="${entry.isToday ? "true" : "false"}">
+          <td>
+            <span class="date-stack">
+              <span class="date-stack__main">${entry.day}. ${S.escapeHtml(S.t("ramadan.day"))}</span>
+              <span class="date-stack__sub">${S.escapeHtml(entry.gregorian)}</span>
+            </span>
+          </td>${cells}
+        </tr>`;
+      })
+      .join("");
 
-      rows.push(`<tr data-today="${isToday ? "true" : "false"}">
-        <td>
-          <span class="date-stack">
-            <span class="date-stack__main">${hijri.day}. ${S.escapeHtml(S.t("ramadan.day"))}</span>
-            <span class="date-stack__sub">${S.escapeHtml(gregorian)}</span>
-          </span>
-        </td>
-        <td>${S.escapeHtml(imsakOf(times) || "–")}</td>
-        <td>${S.escapeHtml(times.fajr || "–")}</td>
-        <td>${S.escapeHtml(times.maghrib || "–")}</td>
-      </tr>`);
-    });
-
-    const title = S.t("ramadan.imsakiyaTitle").replace("{year}", year);
+    const title = S.t("ramadan.imsakiyaTitle").replace("{year}", model.year);
 
     hosts.forEach((host) => {
-      if (!rows.length) {
+      if (!model.entries.length) {
         const text = data
-          ? S.t("ramadan.notYet").replace("{date}", S.formatHijri(start) || "")
+          ? S.t("ramadan.notYet").replace("{date}", S.formatHijri(model.start) || "")
           : S.t("ramadan.unavailable");
         host.innerHTML = `<div class="empty-state"><div class="empty-state__icon" aria-hidden="true">🌙</div>
           <p>${S.escapeHtml(text)}</p></div>`;
@@ -280,26 +354,41 @@
 
       host.innerHTML = `<div class="print-doc">
         <h2>${S.escapeHtml(title)}</h2>
-        <div class="month-table-wrap">
-          <table class="month-table">
-            <thead><tr>
-              <th>${S.escapeHtml(S.t("ramadan.day"))}</th>
-              <th>${S.escapeHtml(S.t("prayer.imsak"))}</th>
-              <th>${S.escapeHtml(S.t("ramadan.fajr"))}</th>
-              <th>${S.escapeHtml(S.t("ramadan.iftar"))}</th>
-            </tr></thead>
-            <tbody>${rows.join("")}</tbody>
+        <div class="month-table-wrap month-table-wrap--scroll" data-imsakiya-scroll>
+          <table class="month-table month-table--compact">
+            <thead><tr>${head}</tr></thead>
+            <tbody>${rows}</tbody>
           </table>
         </div>
       </div>
-      <p style="margin-top: 16px" class="no-print">
+      <p class="table-tools no-print">
+        <button type="button" class="btn btn--outline" data-download-imsakiya>${S.escapeHtml(
+          S.t("ramadan.download")
+        )}</button>
         <button type="button" class="btn btn--outline" data-print-imsakiya>${S.escapeHtml(
           S.t("ramadan.print")
         )}</button>
       </p>`;
 
-      const button = host.querySelector("[data-print-imsakiya]");
-      if (button) button.addEventListener("click", () => window.print());
+      const printButton = host.querySelector("[data-print-imsakiya]");
+      if (printButton) {
+        printButton.addEventListener("click", () => {
+          const doc = host.querySelector(".print-doc");
+          if (window.SitePdf) window.SitePdf.printOnly(doc);
+          else window.print();
+        });
+      }
+
+      const downloadButton = host.querySelector("[data-download-imsakiya]");
+      if (downloadButton) downloadButton.addEventListener("click", () => savePdf(model, title));
+
+      // Der heutige Tag steht beim Aufrufen bereits im Kasten sichtbar.
+      const box = host.querySelector("[data-imsakiya-scroll]");
+      const today = box && box.querySelector('tr[data-today="true"]');
+      if (box && today) {
+        const headHeight = box.querySelector("thead").getBoundingClientRect().height;
+        box.scrollTop = Math.max(0, today.offsetTop - headHeight);
+      }
     });
   }
 

@@ -4,7 +4,7 @@
    aufgefrischt. Die Gebetszeiten werden zuerst aus dem Netz geholt; ohne
    Verbindung kommen sie aus dem Speicher – so sind sie auch offline verfuegbar. */
 
-const VERSION = "v2";
+const VERSION = "v3";
 const SHELL_CACHE = `moschee-shell-${VERSION}`;
 const DATA_CACHE = `moschee-data-${VERSION}`;
 
@@ -28,6 +28,7 @@ const SHELL = [
   "assets/js/prayer.js",
   "assets/js/hijri.js",
   "assets/js/ramadan.js",
+  "assets/js/pdf.js",
   "assets/js/content.js",
   "assets/js/overview.js",
   "assets/js/service.js",
