@@ -45,15 +45,9 @@
     "route": "https://www.google.com/maps/dir/?api=1&destination=Rudolf-Diesel-Stra%C3%9Fe+4,+22941+Bargteheide"
   },
   "demoNotice": true,
-  "_credit_hinweis": "Zeile in der Fusszeile. 'name' ist der Name, der genannt wird; 'url' die Seite, auf die er verweist - hier die eigene Seite website-fuer-moscheen.html. Feld 'name' leeren, wenn die Angabe entfallen soll.",
+  "_credit_hinweis": "Zeile in der Fusszeile. 'name' ist der Name, der genannt wird; 'url' die Seite, auf die er verweist. Das Angebot fuer andere Moscheen liegt bewusst NICHT auf dieser Website, sondern beim Ersteller - so geht es von keiner einzelnen Gemeinde aus. Feld 'name' leeren, wenn die Angabe entfallen soll.",
   "credit": {
     "name": "Lynn Kawqge",
-    "url": "website-fuer-moscheen.html"
-  },
-  "_service_hinweis": "Kontaktwege fuer die Seite website-fuer-moscheen.html (privates Angebot, nicht von der Gemeinde). Leere Felder erzeugen keine Schaltflaeche. 'website' ist die eigene Seite, die als Arbeitsprobe verlinkt wird.",
-  "service": {
-    "email": "lynnkawqge.ads@gmail.com",
-    "website": "https://alaasar58.github.io/Lynn-portfolio/",
-    "whatsapp": ""
+    "url": "https://alaasar58.github.io/Lynn-portfolio/#mosques"
   }
 }

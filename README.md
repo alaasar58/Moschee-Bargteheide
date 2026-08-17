@@ -24,7 +24,7 @@ Programmierkenntnisse für die Pflege nötig. Inhalte liegen als JSON-Dateien im
 | Spenden | `spenden.html` | Spendeninformationen und Bankverbindung |
 | Ramadan | `ramadan.html` | Imsakiya für den ganzen Monat sowie Countdown bis Iftar bzw. Sahur |
 | Impressum / Datenschutz | `impressum.html`, `datenschutz.html` | Rechtliche Seiten – von der Gemeinde zu vervollständigen |
-| Kostenlose Website für Moscheen | `website-fuer-moscheen.html` | Privates Angebot: kostenlose Website für andere Moscheen, mit Ablauf und vollständiger Liste der benötigten Angaben. Steht **nicht** im Menü und ist auf `noindex` gesetzt – erreichbar nur über die Zeile in der Fußzeile. Texte in `content/service.json`, Kontaktwege in `content/settings.json` unter `service` |
+| Kostenlose Website für Moscheen | `website-fuer-moscheen.html` | Nur noch eine **Weiterleitung**. Das Angebot für andere Moscheen liegt bewusst nicht bei dieser Gemeinde, sondern beim Ersteller: `https://alaasar58.github.io/Lynn-portfolio/#mosques`. So geht es von keiner einzelnen Moschee aus, wenn weitere hinzukommen |
 | Überblick (intern) | `uebersicht.html` | Unterlage für die Vorstellung beim Vorstand: Funktionen, offene Punkte, Kosten, Datenschutz, nächste Schritte. Nicht im Menü verlinkt; Text in `content/overview.json` |
 
 Alle Seiten, das Menü, die Fußzeile und die Beschriftungen der Gebetszeiten sind in allen
@@ -155,7 +155,7 @@ erscheinen erst auf der Website, sobald sie in `content/settings.json` eingetrag
 * Angaben in Impressum und Datenschutz (Vorstand, Registereintrag, Hosting-Anbieter)
 * Der Hinweis „Gestaltung und Umsetzung“ in der Fußzeile steht in `content/settings.json`
   unter `credit`: `name` ist der genannte Name, `url` die Seite, auf die er verweist
-  (derzeit `website-fuer-moscheen.html`). Beides kann dort geändert oder entfernt werden.
+  (derzeit die Angebotsseite des Erstellers). Beides kann dort geändert oder entfernt werden.
 * **Kurse** – die Kursliste wird erst nach Vorlage der offiziellen Übersicht der Gemeinde
   eingetragen. Bis dahin zeigt die Kursseite einen Hinweis; es werden keine Kurse erfunden.
 

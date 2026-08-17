@@ -282,13 +282,5 @@
     "intro": "Site neler yapıyor, maliyeti nedir ve neye karar verilmesi gerekiyor.",
     "print": "PDF olarak kaydet veya yazdır",
     "status": "Durum"
-  },
-  "service": {
-    "title": "Camininiz için ücretsiz web sitesi",
-    "subtitle": "Web sitesine ihtiyacı olan bir cami tanıyor musunuz? Bize ulaşın.",
-    "contactTitle": "İletişim",
-    "contactText": "Bana kısaca yazın – geri dönüş yaparım. Soru sormak ücretsizdir ve hiçbir yükümlülük getirmez.",
-    "email": "E-posta gönder",
-    "website": "Çalışmalarıma göz atın"
   }
 }

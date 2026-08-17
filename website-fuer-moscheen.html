@@ -1,53 +1,64 @@
 <!doctype html>
-<html lang="de" data-theme="light">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kostenlose Website für Ihre Moschee</title>
-    <meta
-      name="description"
-      content="Kostenlose Website für Moscheen und islamische Vereine: Gebetszeiten aus Mawaqit, vier Sprachen, Kurse, Neuigkeiten und Spenden. Erstellung ehrenamtlich als Sadaqa."
-    />
-    <!-- Diese Seite steht nicht im Menue und soll nicht ueber Suchmaschinen gefunden werden;
-         sie ist nur ueber die Zeile in der Fusszeile erreichbar. -->
+    <title>Weiterleitung – Kostenlose Website für Ihre Moschee</title>
+
+    <!--
+      Diese Seite ist umgezogen.
+
+      Das Angebot, Websites für Moscheen zu erstellen, gehört nicht zu einer
+      einzelnen Gemeinde: Sobald mehrere Moscheen eine Website haben, ist keine
+      davon die zentrale. Es steht deshalb auf der Seite des Erstellers, und
+      jede Moschee verweist nur noch dorthin.
+
+      Diese Datei bleibt als Weiterleitung bestehen, damit eine früher geteilte
+      Adresse weiterhin funktioniert.
+    -->
     <meta name="robots" content="noindex, follow" />
-    <meta name="theme-color" content="#e8f4fa" />
+    <meta http-equiv="refresh" content="0; url=https://alaasar58.github.io/Lynn-portfolio/#mosques" />
+    <link rel="canonical" href="https://alaasar58.github.io/Lynn-portfolio/#mosques" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script>
-      // Gespeicherten Farbmodus setzen, bevor die Seite gezeichnet wird.
-      try {
-        var t = localStorage.getItem("mb-theme");
-        document.documentElement.setAttribute("data-theme", t === "dark" || t === "auto" ? t : "light");
-      } catch (e) {}
-    </script>
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: #fbfdfd;
+        color: #2b4247;
+        font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+        line-height: 1.6;
+        text-align: center;
+      }
+      a {
+        color: #17706a;
+      }
+      p {
+        margin: 0 0 10px;
+      }
+      .sub {
+        font-size: 0.9rem;
+        color: #5f7880;
+      }
+    </style>
   </head>
-  <body data-page-title-key="service.title">
-    <a class="skip-link" href="#main" data-i18n="common.skip">Zum Inhalt springen</a>
-    <div data-site-header></div>
-
-    <main id="main">
-      <section class="page-head">
-        <div class="container">
-          <h1 data-i18n="service.title">Kostenlose Website für Ihre Moschee</h1>
-          <p data-i18n="service.subtitle">
-            Kennen Sie eine Moschee, die eine Website braucht? Melden Sie sich gerne.
-          </p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div data-service></div>
-        </div>
-      </section>
+  <body>
+    <main>
+      <p>
+        <a href="https://alaasar58.github.io/Lynn-portfolio/#mosques">
+          Kostenlose Website für Ihre Moschee – hier weiterlesen
+        </a>
+      </p>
+      <p class="sub" lang="en">If you are not redirected, please use the link above.</p>
     </main>
 
-    <div data-site-footer></div>
-
-    <script src="assets/js/site.js"></script>
-    <script src="assets/js/pages.js"></script>
-    <script src="assets/js/service.js"></script>
+    <script>
+      // Ersetzt den Eintrag im Verlauf, damit "Zurück" nicht wieder hierher führt.
+      location.replace("https://alaasar58.github.io/Lynn-portfolio/#mosques");
+    </script>
   </body>
 </html>

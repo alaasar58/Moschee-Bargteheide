@@ -430,17 +430,17 @@
     const credit = state.settings.credit || {};
     if (!credit.name) return "";
 
-    // Der Name verweist auf die eigene Seite mit dem Angebot; ohne Adresse
-    // steht er einfach als Text da.
+    // Der Name verweist auf die Seite des Erstellers, wo das Angebot fuer
+    // andere Moscheen steht; ohne Adresse steht er einfach als Text da.
     const name = credit.url
-      ? `<a href="${escapeHtml(credit.url)}">${escapeHtml(credit.name)}</a>`
+      ? `<a href="${escapeHtml(credit.url)}" target="_blank" rel="noopener">${escapeHtml(credit.name)}</a>`
       : escapeHtml(credit.name);
 
     return `<span class="footer-credit">
       <span data-i18n="footer.credit">${escapeHtml(t("footer.credit"))}</span>: ${name}
       <span class="footer-credit__invite">
         <span data-i18n="footer.creditInvite">${escapeHtml(t("footer.creditInvite"))}</span>
-        <a href="website-fuer-moscheen.html" data-i18n="footer.creditCta">${escapeHtml(t("footer.creditCta"))}</a>
+        <a href="${escapeHtml(credit.url || "website-fuer-moscheen.html")}" target="_blank" rel="noopener" data-i18n="footer.creditCta">${escapeHtml(t("footer.creditCta"))}</a>
       </span>
     </span>`;
   }
