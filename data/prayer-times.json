@@ -4,7 +4,7 @@
   "mosqueName": "Islamische Gemeinde Bargteheide - BARGTEHEIDE",
   "url": "https://mawaqit.net/de/m/islamische-gemeinde-bargteheide-bargteheide-22941-germany-1",
   "timezone": "Europe/Berlin",
-  "updatedAt": "2026-10-30T08:40:27.944Z",
+  "updatedAt": "2026-10-31T08:27:20.570Z",
   "imsakOffsetMinutes": null,
   "jumua": [
     "12:30"
@@ -5554,11 +5554,11 @@
     }
   },
   "today": {
-    "fajr": "05:16",
-    "shuruq": "07:07",
+    "fajr": "05:18",
+    "shuruq": "07:09",
     "dhuhr": "12:09",
-    "asr": "14:27",
-    "maghrib": "17:00",
-    "isha": "18:38"
+    "asr": "14:26",
+    "maghrib": "16:58",
+    "isha": "18:36"
   }
 }
